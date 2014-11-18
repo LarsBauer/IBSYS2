@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<context:component-scan base-package="de.hska.scsim.*" />
+
+	<bean id="main" class="de.hska.scsim.Main" />
+	
+	<bean id="productionStepConfigDao" class="de.hska.scsim.dao.ProductionStepConfigDao" />
+	<bean id="capacityService" class="de.hska.scsim.service.CapacityService" />
+	
+	<bean id="itemConfigDao" class="de.hska.scsim.dao.ItemConfigDao" />
+	<bean id="productionService" class="de.hska.scsim.service.ProductionService" />
+	
+	<bean id="termsOfSaleConfigDao" class="de.hska.scsim.dao.TermsOfSaleConfigDao" />
+	<bean id="purchaseService" class="de.hska.scsim.service.PurchaseService" />
+	
+	<bean id="planningResultInspector" class="de.hska.scsim.util.PlanningResultInspector" />
+	
+	<bean id="xmlGenerator" class="de.hska.scsim.xml.XmlGenerator" />
+	<bean id="xmlParser" class="de.hska.scsim.xml.XmlParser" />
+	
+</beans>
