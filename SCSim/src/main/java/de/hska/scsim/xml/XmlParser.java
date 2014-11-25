@@ -21,6 +21,7 @@ import java.util.Map;
 
 import org.apache.commons.collections4.MultiMap;
 import org.apache.commons.collections4.map.MultiValueMap;
+import org.apache.commons.lang3.ArrayUtils;
 
 import org.jdom2.Document;
 import org.jdom2.Element;
@@ -281,7 +282,7 @@ public class XmlParser {
     public int getInwardStockMovementUntilGivenPeriod(String itemConfigId, double deliveryTime, double variance, Integer period) {
         itemConfigId = itemConfigId.substring(1);
         Collection<FutureInwardStockMovementOrder> orders = (Collection<FutureInwardStockMovementOrder>) futureInwardStockMovementOrders.get(itemConfigId);
-        if (orders.isEmpty()) {
+        if (orders == null || orders.isEmpty()) {
             return 0;
         }
 

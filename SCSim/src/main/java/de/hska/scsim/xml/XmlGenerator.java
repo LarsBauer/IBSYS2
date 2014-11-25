@@ -34,7 +34,7 @@ public class XmlGenerator {
 
         // Sellwish
         Element sellWish = new Element("sellwish");
-        List<String> planedSalesKeys = new ArrayList<String>(planedSales.keySet());
+        List<String> planedSalesKeys = new ArrayList<>(planedSales.keySet());
         Collections.sort(planedSalesKeys, new Comparator<String>() {
 
             @Override
@@ -71,7 +71,7 @@ public class XmlGenerator {
         input.addContent(sellWish);
 
         // Selldirect
-        Element sellDirect = new Element("sellDirect");
+        Element sellDirect = new Element("selldirect");
         
         for (int i = 1; i <= 3; i++) {
             Element item = new Element("item");
@@ -113,12 +113,12 @@ public class XmlGenerator {
             
             productionList.addContent(productionElement);
         }
-        input.addContent(orderList);
+        input.addContent(productionList);
 
         // Workingtimelist
         Element wtl = new Element("workingtimelist");
         for (CapacityPlanningResult result : capacity) {
-            double overtime = ((double) Integer.valueOf(result.getOvertime()) / 5);
+            double overtime = ((double) result.getOvertime() / 5);
             int roundedOvertime = (int) Math.ceil(overtime);
             Element workingTime = new Element("workingtime");
             workingTime.setAttribute("station", String.valueOf(result.getWorkplaceId()));
