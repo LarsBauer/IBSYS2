@@ -98,7 +98,7 @@ public class ProductionStepConfigDao {
             stmt = DriverManager.getConnection(Constants.JDBC_URL).createStatement();
             ResultSet rs = stmt.executeQuery(query);
             while (rs.next()) {
-                int id = rs.getInt("id");
+                int id = rs.getInt("workplaceId");
 
                 workplaceIds.add(id);
             }
