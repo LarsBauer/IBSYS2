@@ -1,5 +1,6 @@
 package de.hska.scsim.ui;
 
+import de.hska.scsim.util.Messages;
 import de.hska.scsim.util.IntegerDocumentFilter;
 import java.awt.Color;
 import java.awt.Component;
@@ -18,7 +19,7 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.text.AbstractDocument;
 
-public class Prognose extends JPanel {
+public class Forecast extends JPanel {
 
     private JTextField P3_Auftraege;
     private JTextField P1_Prognose1;
@@ -38,7 +39,7 @@ public class Prognose extends JPanel {
     /**
      * Create the dialog.
      */
-    public Prognose() {
+    public Forecast() {
 
         this.setBorder(new EmptyBorder(80, 80, 0, 0));
         this.setFont(new Font("Arial", Font.PLAIN, 11)); //$NON-NLS-1$

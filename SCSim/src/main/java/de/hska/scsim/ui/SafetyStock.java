@@ -1,5 +1,6 @@
 package de.hska.scsim.ui;
 
+import de.hska.scsim.util.Messages;
 import de.hska.scsim.util.IntegerDocumentFilter;
 import de.hska.scsim.xml.XmlParser;
 import java.awt.Color;
@@ -17,7 +18,7 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.text.AbstractDocument;
 
-public class Sicherheitsbestand extends JPanel {
+public class SafetyStock extends JPanel {
 
     private JTextField P1_Value;
     private JTextField P2_Value;
@@ -53,7 +54,7 @@ public class Sicherheitsbestand extends JPanel {
     /**
      * Create the dialog.
      */
-    public Sicherheitsbestand() {
+    public SafetyStock() {
 
         this.setFont(new Font("Arial", Font.PLAIN, 11));
         this.setAutoscrolls(true);
