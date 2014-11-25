@@ -25,8 +25,11 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.ResourceBundle;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
 
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
@@ -96,24 +99,28 @@ public class MainGUI extends JFrame {
             e.printStackTrace();
         }
 
-        // Erstellung Array vom Datentyp Object, Hinzufügen der Optionen
-        Object[] options = {"German", "English"};
+        //Erstellung Array vom Datentyp Object, Hinzufügen der Optionen
+//       Object[] options = {"German", "English"};
+//
+//        int selected = JOptionPane.showOptionDialog(contentPanel, "What language do you wish to use?", "",
+//                JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, null);
+//
+//        if (selected == 0) {
+//            Locale de = Locale.GERMANY;
+//            Locale.setDefault(de);
+//            createMainScreen();
+//        } else if (selected == 1) {
+//            Locale eng = Locale.ENGLISH;
+//            Locale.setDefault(eng);
+//            createMainScreen();
+//        } else {
+//            dispose();
+//            System.exit(0);
+//        }
+        //Ohne Sprachauswahl
+        Locale.setDefault(Locale.GERMANY);
+        createMainScreen();
 
-        int selected = JOptionPane.showOptionDialog(contentPanel, "What language do you wish to use?", "", //$NON-NLS-1$ //$NON-NLS-2$
-                JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, null);
-
-        if (selected == 0) {
-            Locale de = Locale.GERMANY;
-            Locale.setDefault(de);
-            createMainScreen();
-        } else if (selected == 1) {
-            Locale eng = Locale.ENGLISH;
-            Locale.setDefault(eng);
-            createMainScreen();
-        } else {
-            dispose();
-            System.exit(0);
-        }
     }
 
     public void createMainScreen() {
@@ -142,7 +149,7 @@ public class MainGUI extends JFrame {
 
         menu = new JLabel[8];
 
-        setTitle("Programmname");
+        setTitle(Messages.getString("MainGUI.ProgName"));
         setBounds(100, 100, 1000, 600);
         getContentPane().setLayout(new BorderLayout());
         contentPanel.setBackground(Color.WHITE);
@@ -157,7 +164,7 @@ public class MainGUI extends JFrame {
             contentPanel.add(panel, BorderLayout.WEST);
             panel.setLayout(new GridLayout(0, 1, 0, 0));
             {
-                JLabel lblNewLabel_1 = new JLabel(Messages.getString("MainGUI.0")); //$NON-NLS-1$
+                JLabel lblNewLabel_1 = new JLabel(Messages.getString("MainGUI.0"));
                 lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
                 panel.add(lblNewLabel_1);
                 menu[0] = lblNewLabel_1;
@@ -217,27 +224,25 @@ public class MainGUI extends JFrame {
             JPanel panel = new JPanel();
             panel.setBorder(new MatteBorder(0, 0, 1, 0, (Color) new Color(0, 0, 0)));
             panel.setBackground(Color.WHITE);
-            contentPanel.add(panel, BorderLayout.NORTH);
-            {
-                //Header
-                try {
-                    InputStream stream = null;
-                    try {
+//            contentPanel.add(panel, BorderLayout.NORTH);
+//            {
+//                //Header
+//                try {
+//                    InputStream stream = null;
+//                    try {
 //                        stream = new ClassPathResource("img/header.jpg").getInputStream();
 //                        BufferedImage picture = ImageIO.read(stream);
 //                        JLabel lblNewLabel_6 = new JLabel(new ImageIcon(picture));
-                        JLabel lblNewLabel_6 = new JLabel("Programmname", JLabel.CENTER);
-                        panel.add(lblNewLabel_6);
-                    } finally {
-                        if (stream != null) {
-                            stream.close();
-                        }
-                    }
-                } catch (IOException e) {
-                    JLabel lblNewLabel_6 = new JLabel("Programmname");
-                    panel.add(lblNewLabel_6);
-                }
-            }
+//                    } finally {
+//                        if (stream != null) {
+//                            stream.close();
+//                        }
+//                    }
+//                } catch (IOException e) {
+//                    JLabel lblNewLabel_6 = new JLabel(Messages.getString("MainGUI.ProgName"));
+//                    panel.add(lblNewLabel_6);
+//                }
+//            }
         }
         {
             JPanel buttonPane = new JPanel();
@@ -249,9 +254,9 @@ public class MainGUI extends JFrame {
             gbl_buttonPane.rowWeights = new double[]{0.0, Double.MIN_VALUE};
             buttonPane.setLayout(gbl_buttonPane);
             {
-                okButton = new JButton(Messages.getString("MainGUI.8")); //$NON-NLS-1$
+                okButton = new JButton(Messages.getString("MainGUI.8"));
                 okButton.setHorizontalAlignment(SwingConstants.LEFT);
-                okButton.setActionCommand(Messages.getString("MainGUI.9")); //$NON-NLS-1$
+                okButton.setActionCommand(Messages.getString("MainGUI.9"));
                 GridBagConstraints gbc_okButton = new GridBagConstraints();
                 gbc_okButton.anchor = GridBagConstraints.WEST;
                 gbc_okButton.insets = new Insets(0, 85, 0, 5);
@@ -265,7 +270,7 @@ public class MainGUI extends JFrame {
                     @Override
                     public void actionPerformed(ActionEvent e) {
 
-                        cancelButton.setText(Messages.getString("MainGUI.10")); //$NON-NLS-1$
+                        cancelButton.setText(Messages.getString("MainGUI.10"));
 
                         contentPanel.remove(screens[index]);
                         menu[index].setForeground(Color.LIGHT_GRAY);
@@ -289,7 +294,7 @@ public class MainGUI extends JFrame {
                 });
             }
             {
-                cancelButton = new JButton(Messages.getString("MainGUI.12")); //$NON-NLS-1$
+                cancelButton = new JButton(Messages.getString("MainGUI.12"));
                 cancelButton.setHorizontalAlignment(SwingConstants.RIGHT);
                 GridBagConstraints gbc_cancelButton = new GridBagConstraints();
                 gbc_cancelButton.insets = new Insets(0, 0, 0, 0);
@@ -298,149 +303,162 @@ public class MainGUI extends JFrame {
                 gbc_cancelButton.gridy = 0;
                 buttonPane.add(cancelButton, gbc_cancelButton);
                 {
-                    JMenuBar menuBar = new JMenuBar();
+
+//Sprachauswahl per Button
+                    //Erstellung Array vom Datentyp Object, Hinzufügen der Optionen
+                    JLabel languageLabel = new JLabel(Messages.getString("MainGUI.LangLabel"));
+                    Object[] options = {"German", "English"};
+                    JComboBox languageBox = new JComboBox(options);
+                    Box box = Box.createHorizontalBox();
+                    box.add(languageLabel);
+                    box.add(Box.createHorizontalGlue());
+                    box.add(languageBox);
+                    getContentPane().add(box, BorderLayout.NORTH);
+
+//Sprachauswahl als Menu                    
+//                    
+//                    JMenuBar menuBar = new JMenuBar();
 //					 getContentPane().add(menuBar, BorderLayout.NORTH);
-                    {
-                        JMenu mnNewMenu = new JMenu(Messages.getString("MainGUI.11")); //$NON-NLS-1$
-                        menuBar.add(mnNewMenu);
-                        {
-                            JMenuItem mntmSprache = new JMenuItem(Messages.getString("MainGUI.20")); //$NON-NLS-1$
-                            mnNewMenu.add(mntmSprache);
-                            mntmSprache.addActionListener(new ActionListener() {
+//                    {
+//                        JMenu mnNewMenu = new JMenu(Messages.getString("MainGUI.11"));
+//                        menuBar.add(mnNewMenu);
+//                        {
+//                            JMenuItem mntmSprache = new JMenuItem(Messages.getString("MainGUI.20"));
+//                            mnNewMenu.add(mntmSprache);
+//                            mntmSprache.addActionListener(new ActionListener() {
+//
+//                                @Override
+//                                public void actionPerformed(ActionEvent arg0) {
+//                                    ResourceBundle.clearCache();
+//                                    Locale de = Locale.GERMANY;
+//                                    Locale.setDefault(de);
+//                                    contentPanel.revalidate();
+//                                    contentPanel.repaint();
+//                                }
+//                            });
+//                        }
+//                        {
+//                            JMenuItem mntmNewMenuItem = new JMenuItem(Messages.getString("MainGUI.21"));
+//                            mnNewMenu.add(mntmNewMenuItem);
+//                            mntmNewMenuItem.addActionListener(new ActionListener() {
+//
+//                                @Override
+//                                public void actionPerformed(ActionEvent arg0) {
+//                                    ResourceBundle.clearCache();
+//                                    Locale eng = Locale.ENGLISH;
+//                                    Locale.setDefault(eng);
+//                                    contentPanel.revalidate();
+//                                    contentPanel.repaint();
+//                                }
+//                            });
+//                        }
+                }
+            }
+            cancelButton.addActionListener(new ActionListener() {
 
-                                @Override
-                                public void actionPerformed(ActionEvent arg0) {
-                                    ResourceBundle.clearCache();
-                                    Locale de = Locale.GERMANY;
-                                    Locale.setDefault(de);
-                                    contentPanel.revalidate();
-                                    contentPanel.repaint();
-                                }
-                            });
+                @Override
+                public void actionPerformed(ActionEvent e) {
+
+                    if (index == 0) {
+                        File xml = new File(screen1.getTextField().getText());
+                        if (!xml.exists()) {
+                            JOptionPane.showOptionDialog(contentPanel, Messages
+                                    .getString("MainGUI.17"), Messages.getString("MainGUI.18"), //$NON-NLS-1$ //$NON-NLS-2$
+                                    JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null,
+                                    null, null);
+                            return;
                         }
-                        {
-                            JMenuItem mntmNewMenuItem = new JMenuItem(Messages.getString("MainGUI.21")); //$NON-NLS-1$
-                            mnNewMenu.add(mntmNewMenuItem);
-                            mntmNewMenuItem.addActionListener(new ActionListener() {
-
-                                @Override
-                                public void actionPerformed(ActionEvent arg0) {
-                                    ResourceBundle.clearCache();
-                                    Locale eng = Locale.ENGLISH;
-                                    Locale.setDefault(eng);
-                                    contentPanel.revalidate();
-                                    contentPanel.repaint();
-                                }
-                            });
+                        try {
+                            xmlParser.checkXmlFile(xml);
+                            xmlParser.parse(xml);
+                        } catch (Exception ex) {
+                            JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.30"), Messages.getString("MainGUI.31"), //$NON-NLS-1$ //$NON-NLS-2$
+                                    JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null,
+                                    null, null);
+                            return;
                         }
                     }
-                }
-                cancelButton.addActionListener(new ActionListener() {
 
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
+                    if (index == 1) {
+                        if (screen2.getPlanedSales() == null
+                                || screen2.getPlanedSalesAndForecasts() == null) {
+                            JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.13"), //$NON-NLS-1$
+                                    Messages.getString("MainGUI.14"), JOptionPane.CLOSED_OPTION, //$NON-NLS-1$
+                                    JOptionPane.WARNING_MESSAGE, null, null, null);
+                            return;
+                        }
+                        screen3.setData(xmlParser);
+                    }
 
-                        if (index == 0) {
-                            File xml = new File(screen1.getTextField().getText());
-                            if (!xml.exists()) {
-                                JOptionPane.showOptionDialog(contentPanel, Messages
-                                        .getString("MainGUI.17"), Messages.getString("MainGUI.18"), //$NON-NLS-1$ //$NON-NLS-2$
-                                        JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null,
-                                        null, null);
+                    if (index == 2) {
+                        if (screen3.getSafetyStocks() == null) {
+                            JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.15"), //$NON-NLS-1$
+                                    Messages.getString("MainGUI.16"), JOptionPane.CLOSED_OPTION, //$NON-NLS-1$
+                                    JOptionPane.WARNING_MESSAGE, null, null, null);
+                            return;
+                        }
+                        productionPlanningResult = productionService.calculateProductionOutput(
+                                screen2.getPlanedSales(), screen3.getSafetyStocks());
+                        screen4.setDataLabels(productionPlanningResult);
+                        screen4.setDataFields(screen3.getSafetyStocks());
+                    }
+
+                    if (index == 3) {
+                        capacityPlanningResult = MainGUI.this.capacityService
+                                .calculateCapacityRequirements(productionPlanningResult);
+                        screen5.setData(capacityPlanningResult);
+                    }
+
+                    if (index == 4) {
+                        screen6.setData(MainGUI.this.purchaseService.calculateOrders(productionPlanningResult, screen2.getForecasts()));
+                    }
+
+                    if (index == 5) {
+                        screen7.setData(productionPlanningResult);
+
+                        // Erstellung Array vom Datentyp Object, Hinzufügen der Optionen
+                        Object[] options = {"Ändern", "Weiter"};
+
+                        double stockValue = inspector.checkStockValue(productionPlanningResult, screen6.getData(), screen2.getPlanedSales());
+
+                        if (stockValue < 250000.0) {
+                            JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.32") + stockValue + Messages.getString("MainGUI.27"), Messages.getString("MainGUI.28"), JOptionPane.CLOSED_OPTION, //$NON-NLS-1$
+                                    JOptionPane.INFORMATION_MESSAGE, null, null, null);
+                        } else {
+                            int selected = JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.32") + stockValue + Messages.getString("MainGUI.29"), "", //$NON-NLS-1$ //$NON-NLS-2$
+                                    JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, null);
+
+                            if (selected == 0) {
                                 return;
-                            }
-                            try {
-                                xmlParser.checkXmlFile(xml);
-                                xmlParser.parse(xml);
-                            } catch (Exception ex) {
-                                JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.30"), Messages.getString("MainGUI.31"), //$NON-NLS-1$ //$NON-NLS-2$
-                                        JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null,
-                                        null, null);
-                                return;
+                            } else if (selected == 1) {
+
                             }
                         }
+                    }
 
-                        if (index == 1) {
-                            if (screen2.getPlanedSales() == null
-                                    || screen2.getPlanedSalesAndForecasts() == null) {
-                                JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.13"), //$NON-NLS-1$
-                                        Messages.getString("MainGUI.14"), JOptionPane.CLOSED_OPTION, //$NON-NLS-1$
-                                        JOptionPane.WARNING_MESSAGE, null, null, null);
-                                return;
-                            }
-                            screen3.setData(xmlParser);
-                        }
+                    if (index == 7) {
+                        screen8.getSuc().saveAs(null, MainGUI.this, screen7.getData(), capacityPlanningResult, screen6.getData(), screen2.getPlanedSales(), xmlGenerator);
 
-                        if (index == 2) {
-                            if (screen3.getSafetyStocks() == null) {
-                                JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.15"), //$NON-NLS-1$
-                                        Messages.getString("MainGUI.16"), JOptionPane.CLOSED_OPTION, //$NON-NLS-1$
-                                        JOptionPane.WARNING_MESSAGE, null, null, null);
-                                return;
-                            }
-                            productionPlanningResult = productionService.calculateProductionOutput(
-                                    screen2.getPlanedSales(), screen3.getSafetyStocks());
-                            screen4.setDataLabels(productionPlanningResult);
-                            screen4.setDataFields(screen3.getSafetyStocks());
-                        }
+                    } else {
 
-                        if (index == 3) {
-                            capacityPlanningResult = MainGUI.this.capacityService
-                                    .calculateCapacityRequirements(productionPlanningResult);
-                            screen5.setData(capacityPlanningResult);
-                        }
+                        menu[index].setForeground(Color.LIGHT_GRAY);
+                        okButton.setVisible(true);
+                        contentPanel.remove(screens[index]);
 
-                        if (index == 4) {
-                            screen6.setData(MainGUI.this.purchaseService.calculateOrders(productionPlanningResult, screen2.getForecasts()));
-                        }
+                        index += 1;
 
-                        if (index == 5) {
-                            screen7.setData(productionPlanningResult);
-
-                            // Erstellung Array vom Datentyp Object, Hinzufügen der Optionen
-                            Object[] options = {"Ändern", "Weiter"};
-
-                            double stockValue = inspector.checkStockValue(productionPlanningResult, screen6.getData(), screen2.getPlanedSales());
-
-                            if (stockValue < 250000.0) {
-                                JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.32") + stockValue + Messages.getString("MainGUI.27"), Messages.getString("MainGUI.28"), JOptionPane.CLOSED_OPTION, //$NON-NLS-1$
-                                        JOptionPane.INFORMATION_MESSAGE, null, null, null);
-                            } else {
-                                int selected = JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.32") + stockValue + Messages.getString("MainGUI.29"), "", //$NON-NLS-1$ //$NON-NLS-2$
-                                        JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, null);
-
-                                if (selected == 0) {
-                                    return;
-                                } else if (selected == 1) {
-
-                                }
-                            }
-                        }
+                        contentPanel.add(screens[index]);
+                        menu[index].setForeground(Color.BLACK);
+                        contentPanel.revalidate();
+                        contentPanel.repaint();
 
                         if (index == 7) {
-                            screen8.getSuc().saveAs(null, MainGUI.this, screen7.getData(), capacityPlanningResult, screen6.getData(), screen2.getPlanedSales(), xmlGenerator);
-
-                        } else {
-
-                            menu[index].setForeground(Color.LIGHT_GRAY);
-                            okButton.setVisible(true);
-                            contentPanel.remove(screens[index]);
-
-                            index += 1;
-
-                            contentPanel.add(screens[index]);
-                            menu[index].setForeground(Color.BLACK);
-                            contentPanel.revalidate();
-                            contentPanel.repaint();
-
-                            if (index == 7) {
-                                cancelButton.setText(Messages.getString("MainGUI.19")); //$NON-NLS-1$
-                            }
+                            cancelButton.setText(Messages.getString("MainGUI.19")); //$NON-NLS-1$
                         }
-
                     }
-                });
-            }
+
+                }
+            });
         }
     }
 

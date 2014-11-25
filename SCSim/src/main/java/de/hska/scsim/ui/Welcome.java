@@ -130,10 +130,10 @@ public class Welcome extends JPanel {
         }
 
         public File oeffnen() {
-            final JFileChooser chooser = new JFileChooser(Messages.getString("Willkommen.3"));  //$NON-NLS-1$
+            final JFileChooser chooser = new JFileChooser(Messages.getString("Willkommen.3"));
             chooser.setDialogType(JFileChooser.OPEN_DIALOG);
             chooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
-            FileNameExtensionFilter xmlfilter = new FileNameExtensionFilter("xml files (*.xml)", "xml"); //$NON-NLS-1$ //$NON-NLS-2$
+            FileNameExtensionFilter xmlfilter = new FileNameExtensionFilter("xml files (*.xml)", "xml");
             chooser.setFileFilter(xmlfilter);
             chooser.setAcceptAllFileFilterUsed(false);
             final File file = new File(System.getProperty("user.dir"));  //$NON-NLS-1$
