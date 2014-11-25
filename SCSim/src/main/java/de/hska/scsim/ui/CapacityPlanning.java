@@ -1,5 +1,6 @@
 package de.hska.scsim.ui;
 
+import de.hska.scsim.util.Messages;
 import de.hska.scsim.domain.output.CapacityPlanningResult;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JPanel;
@@ -22,7 +23,7 @@ import java.awt.GridBagLayout;
 
 import java.awt.GridBagConstraints;
 
-public class Kapazitaetsplanung extends JPanel {
+public class CapacityPlanning extends JPanel {
 
     private Map<String, JLabel> platz1 = new HashMap<>();
     private Map<String, JLabel> platz2 = new HashMap<>();
@@ -45,7 +46,7 @@ public class Kapazitaetsplanung extends JPanel {
     /**
      * Create the dialog.
      */
-    public Kapazitaetsplanung() {
+    public CapacityPlanning() {
 
         this.setBorder(new EmptyBorder(10, 15, 0, 0));
         this.setFont(new Font("Arial", Font.PLAIN, 11));

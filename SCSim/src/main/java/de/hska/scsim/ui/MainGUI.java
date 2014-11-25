@@ -1,5 +1,6 @@
 package de.hska.scsim.ui;
 
+import de.hska.scsim.util.Messages;
 import de.hska.scsim.domain.output.CapacityPlanningResult;
 import de.hska.scsim.domain.output.ProductionPlanningResult;
 import de.hska.scsim.service.CapacityService;
@@ -59,14 +60,14 @@ public class MainGUI extends JFrame {
     private JLabel[] menu;
 
     private int index;
-    private Willkommen screen1;
-    private Prognose screen2;
-    private Sicherheitsbestand screen3;
-    private Fertigungsauftraege screen4;
-    private Kapazitaetsplanung screen5;
-    private Bestellung screen6;
-    private Nachplanung screen7;
-    private Fertigstellung screen8;
+    private Welcome screen1;
+    private Forecast screen2;
+    private SafetyStock screen3;
+    private ProductionOrder screen4;
+    private CapacityPlanning screen5;
+    private Order screen6;
+    private PostProcessing screen7;
+    private Completion screen8;
 
     private List<ProductionPlanningResult> productionPlanningResult;
     private List<CapacityPlanningResult> capacityPlanningResult;
@@ -119,14 +120,14 @@ public class MainGUI extends JFrame {
 
         index = 0;
 
-        screen1 = new Willkommen();
-        screen2 = new Prognose();
-        screen3 = new Sicherheitsbestand();
-        screen4 = new Fertigungsauftraege(MainGUI.this);
-        screen5 = new Kapazitaetsplanung();
-        screen6 = new Bestellung();
-        screen7 = new Nachplanung();
-        screen8 = new Fertigstellung();
+        screen1 = new Welcome();
+        screen2 = new Forecast();
+        screen3 = new SafetyStock();
+        screen4 = new ProductionOrder(MainGUI.this);
+        screen5 = new CapacityPlanning();
+        screen6 = new Order();
+        screen7 = new PostProcessing();
+        screen8 = new Completion();
 
         screens = new JPanel[8];
 

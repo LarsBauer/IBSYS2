@@ -1,5 +1,6 @@
 package de.hska.scsim.ui;
 
+import de.hska.scsim.util.Messages;
 import de.hska.scsim.domain.output.PurchasePlanningResult;
 import de.hska.scsim.util.IntegerDocumentFilter;
 import java.awt.BorderLayout;
@@ -26,7 +27,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.text.AbstractDocument;
 
 
-public class Bestellung extends JPanel {
+public class Order extends JPanel {
 
 	private JPanel content;
 	private List<PurchasePlanningResult> data;
@@ -41,7 +42,7 @@ public class Bestellung extends JPanel {
 	/**
 	 * Create the dialog.
 	 */
-	public Bestellung() {
+	public Order() {
 
 		this.setBorder(new EmptyBorder(10, 0, 10, 30));
 		this.setFont(new Font("Arial", Font.PLAIN, 11));

@@ -1,5 +1,6 @@
 package de.hska.scsim.ui;
 
+import de.hska.scsim.util.Messages;
 import de.hska.scsim.util.IntegerDocumentFilter;
 import de.hska.scsim.domain.output.ProductionPlanningResult;
 import java.awt.Color;
@@ -39,7 +40,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.text.AbstractDocument;
 
-public class Nachplanung extends JPanel {
+public class PostProcessing extends JPanel {
 
     private JButton btnNewButton_1;
     private JList list;
@@ -57,7 +58,7 @@ public class Nachplanung extends JPanel {
     /**
      * Create the dialog.
      */
-    public Nachplanung() {
+    public PostProcessing() {
 
         this.setBorder(new EmptyBorder(50, 100, 15, 100));
         this.setFont(new Font("Arial", Font.PLAIN, 11)); //$NON-NLS-1$
@@ -141,13 +142,12 @@ public class Nachplanung extends JPanel {
             public void actionPerformed(ActionEvent arg0) {
 
                 if (list.isSelectionEmpty()) {
-                    JOptionPane.showOptionDialog(Nachplanung.this,
+                    JOptionPane.showOptionDialog(PostProcessing.this,
                             "Wählen Sie bitte einen Auftrag aus", "Keine Auswahl", //$NON-NLS-1$ //$NON-NLS-2$
                             JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null);
                 } else if ((Integer.parseInt(textField.getText()) + Integer.parseInt(textField_1.getText())) != number) {
                     JOptionPane
-                            .showOptionDialog(
-                                    Nachplanung.this,
+                            .showOptionDialog(PostProcessing.this,
                                     "Verändern Sie bitte die Werte so dass die Summe der Werte mit dem Original Wert �bereinstimmt", "Werte Unterschiedlich", //$NON-NLS-1$ //$NON-NLS-2$
                                     JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null);
                 } else {
@@ -199,7 +199,7 @@ public class Nachplanung extends JPanel {
                         String ID = raw.substring(raw.indexOf("-") + 1, raw.lastIndexOf(":")); //$NON-NLS-1$ //$NON-NLS-2$
                         ID = ID.replace(" ", ""); //$NON-NLS-1$ //$NON-NLS-2$
                         if (i > 0 && savedID.equals(ID) == false) {
-                            JOptionPane.showOptionDialog(Nachplanung.this,
+                            JOptionPane.showOptionDialog(PostProcessing.this,
                                     Messages.getString("Nachplanung.11"), Messages.getString("Nachplanung.12"), //$NON-NLS-1$ //$NON-NLS-2$
                                     JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null);
                             return;
@@ -251,8 +251,7 @@ public class Nachplanung extends JPanel {
 
                 } else {
                     JOptionPane
-                            .showOptionDialog(
-                                    Nachplanung.this,
+                            .showOptionDialog(PostProcessing.this,
                                     Messages.getString("Nachplanung.9"), Messages.getString("Nachplanung.10"), //$NON-NLS-1$ //$NON-NLS-2$
                                     JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null);
                 }

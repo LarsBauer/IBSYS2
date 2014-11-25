@@ -1,5 +1,6 @@
 package de.hska.scsim.ui;
 
+import de.hska.scsim.util.Messages;
 import de.hska.scsim.util.IntegerDocumentFilter;
 import de.hska.scsim.domain.output.ProductionPlanningResult;
 import java.awt.Color;
@@ -22,7 +23,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.text.AbstractDocument;
 
-public class Fertigungsauftraege extends JPanel {
+public class ProductionOrder extends JPanel {
 
 	private JTextField P1_Value;
 	private JTextField P2_Value;
@@ -63,7 +64,7 @@ public class Fertigungsauftraege extends JPanel {
 	private Map<String, JLabel> containerLabel = new HashMap<>();
 	private MainGUI main;
 
-	public Fertigungsauftraege(MainGUI main) {
+	public ProductionOrder(MainGUI main) {
 		setBorder(null);
 
 		this.main = main;
@@ -1263,9 +1264,9 @@ public class Fertigungsauftraege extends JPanel {
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					Fertigungsauftraege.this.main.FertigungsauftraegeNeuGenerieren(getFieldsValues());
-					Fertigungsauftraege.this.main.getCancelButton().setEnabled(true);
-					Fertigungsauftraege.this.main.getCancelButton().requestFocus();
+					ProductionOrder.this.main.FertigungsauftraegeNeuGenerieren(getFieldsValues());
+					ProductionOrder.this.main.getCancelButton().setEnabled(true);
+					ProductionOrder.this.main.getCancelButton().requestFocus();
 					btnFertigungsauftrgeNeuBerechnen.setEnabled(false);
 					
 				}
@@ -1412,7 +1413,7 @@ public class Fertigungsauftraege extends JPanel {
 				public void focusLost(FocusEvent e) {
 					// TODO Auto-generated method stub
 					if(bar.getText().equals(text)){
-						Fertigungsauftraege.this.main.getCancelButton().setEnabled(true);
+						ProductionOrder.this.main.getCancelButton().setEnabled(true);
 						btnFertigungsauftrgeNeuBerechnen.setEnabled(false);
 					}
 				}
@@ -1421,7 +1422,7 @@ public class Fertigungsauftraege extends JPanel {
 				public void focusGained(FocusEvent e) {
 					// TODO Auto-generated method stub
 					text = bar.getText();
-					Fertigungsauftraege.this.main.getCancelButton().setEnabled(false);
+					ProductionOrder.this.main.getCancelButton().setEnabled(false);
 					btnFertigungsauftrgeNeuBerechnen.setEnabled(true);
 				}
 			});

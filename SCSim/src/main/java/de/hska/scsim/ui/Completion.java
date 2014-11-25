@@ -1,5 +1,6 @@
 package de.hska.scsim.ui;
 
+import de.hska.scsim.util.Messages;
 import de.hska.scsim.domain.output.CapacityPlanningResult;
 import de.hska.scsim.domain.output.PurchasePlanningResult;
 import de.hska.scsim.xml.XmlGenerator;
@@ -26,14 +27,14 @@ import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-public class Fertigstellung extends JPanel {
+public class Completion extends JPanel {
 
 	private SpeichernUnterClass suc;
 
 	/**
 	 * Create the dialog.
 	 */
-	public Fertigstellung() {
+	public Completion() {
 
 		suc = new SpeichernUnterClass();
 
@@ -98,7 +99,7 @@ public class Fertigstellung extends JPanel {
                                     try {
                                         xmlGenerator.generateXml(production, capacity, purchase, planedSales, path);
                                     } catch (IOException ex) {
-                                        Logger.getLogger(Fertigstellung.class.getName()).log(Level.SEVERE, null, ex);
+                                        Logger.getLogger(Completion.class.getName()).log(Level.SEVERE, null, ex);
                                     }
 					main.dispose();
 					System.exit(0);
@@ -108,7 +109,7 @@ public class Fertigstellung extends JPanel {
                                     try {
                                         xmlGenerator.generateXml(production, capacity, purchase, planedSales, path);
                                     } catch (IOException ex) {
-                                        Logger.getLogger(Fertigstellung.class.getName()).log(Level.SEVERE, null, ex);
+                                        Logger.getLogger(Completion.class.getName()).log(Level.SEVERE, null, ex);
                                     }
 					main.dispose();
 					System.exit(0);
