@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results game="242" group="7" period="3">
+	<warehousestock>
+		<article id="1" amount="100" startamount="100" pct="100,00" price="158,41" stockvalue="15840,80" />
+		<article id="2" amount="100" startamount="100" pct="100,00" price="165,15" stockvalue="16514,80" />
+		<article id="3" amount="0" startamount="100" pct="0,00" price="167,05" stockvalue="0,00" />
+		<article id="4" amount="100" startamount="100" pct="100,00" price="40,49" stockvalue="4049,36" />
+		<article id="5" amount="30" startamount="100" pct="30,00" price="39,68" stockvalue="1190,38" />
+		<article id="6" amount="80" startamount="100" pct="80,00" price="40,84" stockvalue="3267,37" />
+		<article id="7" amount="100" startamount="100" pct="100,00" price="36,41" stockvalue="3641,46" />
+		<article id="8" amount="90" startamount="100" pct="90,00" price="35,47" stockvalue="3192,45" />
+		<article id="9" amount="0" startamount="100" pct="0,00" price="35,85" stockvalue="0,00" />
+		<article id="10" amount="100" startamount="100" pct="100,00" price="13,53" stockvalue="1352,93" />
+		<article id="11" amount="100" startamount="100" pct="100,00" price="14,42" stockvalue="1441,61" />
+		<article id="12" amount="30" startamount="100" pct="30,00" price="14,43" stockvalue="432,76" />
+		<article id="13" amount="80" startamount="100" pct="80,00" price="14,18" stockvalue="1134,56" />
+		<article id="14" amount="110" startamount="100" pct="110,00" price="14,44" stockvalue="1588,23" />
+		<article id="15" amount="100" startamount="100" pct="100,00" price="14,48" stockvalue="1447,90" />
+		<article id="16" amount="300" startamount="300" pct="100,00" price="7,06" stockvalue="2118,31" />
+		<article id="17" amount="300" startamount="300" pct="100,00" price="7,31" stockvalue="2193,57" />
+		<article id="18" amount="80" startamount="100" pct="80,00" price="14,78" stockvalue="1182,42" />
+		<article id="19" amount="70" startamount="100" pct="70,00" price="19,47" stockvalue="1362,63" />
+		<article id="20" amount="100" startamount="100" pct="100,00" price="16,43" stockvalue="1643,50" />
+		<article id="21" amount="135" startamount="300" pct="45,00" price="4,67" stockvalue="630,74" />
+		<article id="22" amount="240" startamount="300" pct="80,00" price="6,14" stockvalue="1473,00" />
+		<article id="23" amount="170" startamount="300" pct="56,67" price="6,50" stockvalue="1105,00" />
+		<article id="24" amount="5335" startamount="6100" pct="87,46" price="0,19" stockvalue="1001,89" />
+		<article id="25" amount="3400" startamount="3600" pct="94,44" price="0,07" stockvalue="224,37" />
+		<article id="26" amount="409" startamount="300" pct="136,33" price="10,70" stockvalue="4376,91" />
+		<article id="27" amount="1590" startamount="1800" pct="88,33" price="0,12" stockvalue="197,57" />
+		<article id="28" amount="4990" startamount="4500" pct="110,89" price="1,10" stockvalue="5501,87" />
+		<article id="29" amount="0" startamount="100" pct="0,00" price="69,42" stockvalue="0,00" />
+		<article id="30" amount="80" startamount="100" pct="80,00" price="127,89" stockvalue="10231,52" />
+		<article id="31" amount="190" startamount="100" pct="190,00" price="145,29" stockvalue="27604,91" />
+		<article id="32" amount="2755" startamount="2700" pct="102,04" price="0,70" stockvalue="1939,13" />
+		<article id="33" amount="680" startamount="900" pct="75,56" price="22,00" stockvalue="14960,00" />
+		<article id="34" amount="14080" startamount="22000" pct="64,00" price="0,10" stockvalue="1408,00" />
+		<article id="35" amount="4080" startamount="3600" pct="113,33" price="1,09" stockvalue="4443,45" />
+		<article id="36" amount="855" startamount="900" pct="95,00" price="7,44" stockvalue="6360,27" />
+		<article id="37" amount="1035" startamount="900" pct="115,00" price="1,44" stockvalue="1490,33" />
+		<article id="38" amount="585" startamount="300" pct="195,00" price="1,86" stockvalue="1089,51" />
+		<article id="39" amount="1390" startamount="900" pct="154,44" price="1,73" stockvalue="2406,44" />
+		<article id="40" amount="745" startamount="900" pct="82,78" price="2,35" stockvalue="1749,62" />
+		<article id="41" amount="745" startamount="900" pct="82,78" price="0,10" stockvalue="77,76" />
+		<article id="42" amount="1490" startamount="1800" pct="82,78" price="0,12" stockvalue="175,34" />
+		<article id="43" amount="845" startamount="1900" pct="44,47" price="5,00" stockvalue="4225,00" />
+		<article id="44" amount="1317" startamount="2700" pct="48,78" price="0,50" stockvalue="664,44" />
+		<article id="45" amount="745" startamount="900" pct="82,78" price="0,10" stockvalue="77,44" />
+		<article id="46" amount="745" startamount="900" pct="82,78" price="0,14" stockvalue="100,95" />
+		<article id="47" amount="736" startamount="900" pct="81,78" price="3,26" stockvalue="2398,04" />
+		<article id="48" amount="1472" startamount="1800" pct="81,78" price="1,40" stockvalue="2065,33" />
+		<article id="49" amount="100" startamount="100" pct="100,00" price="68,88" stockvalue="6887,55" />
+		<article id="50" amount="100" startamount="100" pct="100,00" price="124,34" stockvalue="12434,00" />
+		<article id="51" amount="100" startamount="100" pct="100,00" price="140,41" stockvalue="14041,00" />
+		<article id="52" amount="300" startamount="600" pct="50,00" price="20,78" stockvalue="6233,34" />
+		<article id="53" amount="11520" startamount="22000" pct="52,36" price="0,11" stockvalue="1314,47" />
+		<article id="54" amount="30" startamount="100" pct="30,00" price="69,39" stockvalue="2081,80" />
+		<article id="55" amount="100" startamount="100" pct="100,00" price="127,73" stockvalue="12773,30" />
+		<article id="56" amount="110" startamount="100" pct="110,00" price="144,58" stockvalue="15903,69" />
+		<article id="57" amount="610" startamount="600" pct="101,67" price="20,54" stockvalue="12529,52" />
+		<article id="58" amount="760" startamount="22000" pct="3,45" price="0,10" stockvalue="76,00" />
+		<article id="59" amount="1950" startamount="1800" pct="108,33" price="0,16" stockvalue="308,02" />
+		<totalstockvalue>246156,55</totalstockvalue>
+	</warehousestock>
+	<inwardstockmovement>
+		<order orderperiod="1" id="5" mode="5" article="35" amount="3600" time="15840" materialcosts="3240,00" ordercosts="75,00" entirecosts="3315,00" piececosts="0,92" />
+		<order orderperiod="2" id="4" mode="4" article="35" amount="300" time="15840" materialcosts="300,00" ordercosts="750,00" entirecosts="1050,00" piececosts="3,50" />
+		<order orderperiod="2" id="5" mode="5" article="36" amount="900" time="15840" materialcosts="6480,00" ordercosts="100,00" entirecosts="6580,00" piececosts="7,31" />
+		<order orderperiod="2" id="8" mode="5" article="41" amount="900" time="15840" materialcosts="48,60" ordercosts="50,00" entirecosts="98,60" piececosts="0,11" />
+		<order orderperiod="2" id="12" mode="5" article="47" amount="900" time="15840" materialcosts="2835,00" ordercosts="50,00" entirecosts="2885,00" piececosts="3,21" />
+		<order orderperiod="2" id="13" mode="5" article="48" amount="1800" time="15840" materialcosts="2430,00" ordercosts="75,00" entirecosts="2505,00" piececosts="1,39" />
+		<order orderperiod="1" id="10" mode="5" article="45" amount="900" time="17280" materialcosts="48,60" ordercosts="50,00" entirecosts="98,60" piececosts="0,11" />
+		<order orderperiod="1" id="4" mode="5" article="32" amount="2700" time="18720" materialcosts="1822,50" ordercosts="50,00" entirecosts="1872,50" piececosts="0,69" />
+		<order orderperiod="2" id="3" mode="5" article="28" amount="4500" time="18720" materialcosts="4860,00" ordercosts="50,00" entirecosts="4910,00" piececosts="1,09" />
+		<order orderperiod="2" id="6" mode="5" article="38" amount="300" time="18720" materialcosts="405,00" ordercosts="50,00" entirecosts="455,00" piececosts="1,52" />
+		<order orderperiod="2" id="9" mode="5" article="42" amount="1800" time="18720" materialcosts="162,00" ordercosts="50,00" entirecosts="212,00" piececosts="0,12" />
+		<order orderperiod="3" id="6" mode="5" article="44" amount="900" time="18720" materialcosts="405,00" ordercosts="50,00" entirecosts="455,00" piececosts="0,51" />
+		<!--mode 5: normal-->
+		<!--mode 4: fast-->
+		<!--mode 3: JIT-->
+		<!--mode 2: cheap vendor-->
+		<!--mode 1: special order-->
+	</inwardstockmovement>
+	<futureinwardstockmovement>
+		<order orderperiod="3" id="3" mode="5" article="32" amount="2700" />
+		<order orderperiod="3" id="8" mode="5" article="53" amount="35000" />
+		<order orderperiod="1" id="14" mode="5" article="58" amount="22000" />
+		<order orderperiod="3" id="7" mode="5" article="52" amount="1000" />
+		<order orderperiod="3" id="5" mode="5" article="43" amount="2700" />
+		<order orderperiod="3" id="4" mode="5" article="35" amount="3600" />
+		<order orderperiod="3" id="1" mode="5" article="21" amount="500" />
+		<order orderperiod="3" id="2" mode="5" article="24" amount="6500" />
+	</futureinwardstockmovement>
+	<idletimecosts>
+		<workplace id="1" setupevents="3" idletime="960" wageidletimecosts="464,40" wagecosts="723,60" machineidletimecosts="9,60" />
+		<workplace id="2" setupevents="6" idletime="280" wageidletimecosts="126,00" wagecosts="954,00" machineidletimecosts="2,80" />
+		<workplace id="3" setupevents="3" idletime="690" wageidletimecosts="396,90" wagecosts="1115,10" machineidletimecosts="6,90" />
+		<workplace id="4" setupevents="2" idletime="60" wageidletimecosts="27,00" wagecosts="1053,00" machineidletimecosts="0,60" />
+		<workplace id="6" setupevents="3" idletime="905" wageidletimecosts="407,25" wagecosts="672,75" machineidletimecosts="90,50" />
+		<workplace id="7" setupevents="21" idletime="192" wageidletimecosts="143,55" wagecosts="1836,45" machineidletimecosts="19,20" />
+		<workplace id="8" setupevents="26" idletime="500" wageidletimecosts="272,25" wagecosts="1257,75" machineidletimecosts="50,00" />
+		<workplace id="9" setupevents="8" idletime="850" wageidletimecosts="507,15" wagecosts="1774,35" machineidletimecosts="212,50" />
+		<workplace id="10" setupevents="6" idletime="40" wageidletimecosts="18,00" wagecosts="1566,00" machineidletimecosts="4,00" />
+		<workplace id="11" setupevents="7" idletime="240" wageidletimecosts="108,00" wagecosts="972,00" machineidletimecosts="24,00" />
+		<workplace id="12" setupevents="7" idletime="0" wageidletimecosts="0,00" wagecosts="1080,00" machineidletimecosts="0,00" />
+		<workplace id="13" setupevents="6" idletime="880" wageidletimecosts="396,00" wagecosts="684,00" machineidletimecosts="132,00" />
+		<workplace id="14" setupevents="0" idletime="1170" wageidletimecosts="526,50" wagecosts="553,50" machineidletimecosts="11,70" />
+		<workplace id="15" setupevents="6" idletime="93" wageidletimecosts="55,35" wagecosts="1159,65" machineidletimecosts="0,93" />
+		<sum setupevents="104" idletime="6860" wageidletimecosts="3448,35" wagecosts="15402,15" machineidletimecosts="564,73" />
+	</idletimecosts>
+	<waitinglistworkstations>
+		<workplace id="1" timeneed="0" />
+		<workplace id="2" timeneed="0" />
+		<workplace id="3" timeneed="0" />
+		<workplace id="4" timeneed="840">
+			<waitinglist period="3" order="3" firstbatch="4" lastbatch="15" item="3" amount="120" timeneed="840" />
+		</workplace>
+		<workplace id="6" timeneed="0" />
+		<workplace id="7" timeneed="0" />
+		<workplace id="8" timeneed="20">
+			<waitinglist period="3" order="26" firstbatch="3" lastbatch="3" item="12" amount="10" timeneed="20" />
+		</workplace>
+		<workplace id="9" timeneed="30">
+			<waitinglist period="3" order="26" firstbatch="1" lastbatch="1" item="12" amount="10" timeneed="30" />
+		</workplace>
+		<workplace id="10" timeneed="200">
+			<waitinglist period="3" order="28" firstbatch="5" lastbatch="9" item="9" amount="50" timeneed="200" />
+		</workplace>
+		<workplace id="11" timeneed="60">
+			<waitinglist period="3" order="28" firstbatch="2" lastbatch="3" item="9" amount="20" timeneed="60" />
+		</workplace>
+		<workplace id="12" timeneed="150">
+			<waitinglist period="3" order="26" firstbatch="5" lastbatch="9" item="12" amount="50" timeneed="150" />
+		</workplace>
+		<workplace id="13" timeneed="0" />
+		<workplace id="14" timeneed="0" />
+		<workplace id="15" timeneed="0" />
+	</waitinglistworkstations>
+	<waitingliststock>
+		<missingpart id="9">
+			<waitinglist period="3" order="27" firstbatch="1" lastbatch="9" item="29" amount="90" />
+		</missingpart>
+		<missingpart id="29">
+			<waitinglist period="3" order="24" firstbatch="8" lastbatch="9" item="30" amount="20" />
+		</missingpart>
+	</waitingliststock>
+	<ordersinwork>
+		<workplace id="4" period="3" order="3" batch="3" item="3" amount="10" timeneed="30" />
+		<workplace id="8" period="3" order="26" batch="2" item="12" amount="10" timeneed="20" />
+		<workplace id="9" period="3" order="22" batch="8" item="19" amount="10" timeneed="7" />
+		<workplace id="10" period="3" order="28" batch="4" item="9" amount="10" timeneed="20" />
+		<workplace id="11" period="3" order="28" batch="1" item="9" amount="10" timeneed="50" />
+		<workplace id="12" period="3" order="26" batch="4" item="12" amount="10" timeneed="20" />
+	</ordersinwork>
+	<completedorders>
+		<order period="2" id="1" item="1" quantity="20" cost="3170,26" averageunitcosts="158,51">
+			<batch id="15" amount="10" cycletime="90" cost="1591,83" />
+			<batch id="16" amount="10" cycletime="60" cost="1578,43" />
+		</order>
+		<order period="2" id="10" item="7" quantity="30" cost="1007,86" averageunitcosts="33,60">
+			<batch id="14" amount="10" cycletime="60" cost="293,85" />
+			<batch id="15" amount="10" cycletime="80" cost="357,00" />
+			<batch id="16" amount="10" cycletime="70" cost="357,00" />
+		</order>
+		<order period="2" id="16" item="11" quantity="90" cost="386,81" averageunitcosts="4,30">
+			<batch id="2" amount="10" cycletime="1175" cost="73,81" />
+			<batch id="3" amount="10" cycletime="1160" cost="58,81" />
+			<batch id="4" amount="10" cycletime="20" cost="36,31" />
+			<batch id="5" amount="10" cycletime="20" cost="36,31" />
+			<batch id="6" amount="10" cycletime="20" cost="36,31" />
+			<batch id="7" amount="10" cycletime="20" cost="36,31" />
+			<batch id="8" amount="10" cycletime="20" cost="36,31" />
+			<batch id="9" amount="10" cycletime="20" cost="36,31" />
+			<batch id="10" amount="10" cycletime="20" cost="36,31" />
+		</order>
+		<order period="2" id="19" item="14" quantity="30" cost="206,44" averageunitcosts="6,88">
+			<batch id="1" amount="10" cycletime="20" cost="36,31" />
+			<batch id="2" amount="10" cycletime="980" cost="36,31" />
+			<batch id="3" amount="10" cycletime="453" cost="133,81" />
+		</order>
+		<order period="2" id="23" item="12" quantity="30" cost="490,54" averageunitcosts="16,35">
+			<batch id="1" amount="10" cycletime="478" cost="195,91" />
+			<batch id="2" amount="10" cycletime="488" cost="147,31" />
+			<batch id="3" amount="10" cycletime="498" cost="147,31" />
+		</order>
+		<order period="3" id="1" item="1" quantity="150" cost="23840,50" averageunitcosts="158,94">
+			<batch id="1" amount="10" cycletime="60" cost="1579,82" />
+			<batch id="2" amount="10" cycletime="60" cost="1580,74" />
+			<batch id="3" amount="10" cycletime="60" cost="1581,74" />
+			<batch id="4" amount="10" cycletime="60" cost="1584,41" />
+			<batch id="5" amount="10" cycletime="60" cost="1585,33" />
+			<batch id="6" amount="10" cycletime="1020" cost="1586,25" />
+			<batch id="7" amount="10" cycletime="60" cost="1591,23" />
+			<batch id="8" amount="10" cycletime="60" cost="1593,23" />
+			<batch id="9" amount="10" cycletime="60" cost="1594,02" />
+			<batch id="10" amount="10" cycletime="60" cost="1594,39" />
+			<batch id="11" amount="10" cycletime="60" cost="1594,46" />
+			<batch id="12" amount="10" cycletime="60" cost="1594,42" />
+			<batch id="13" amount="10" cycletime="60" cost="1593,91" />
+			<batch id="14" amount="10" cycletime="1020" cost="1593,43" />
+			<batch id="15" amount="10" cycletime="60" cost="1593,12" />
+		</order>
+		<order period="3" id="2" item="2" quantity="160" cost="26419,41" averageunitcosts="165,12">
+			<batch id="1" amount="10" cycletime="90" cost="1657,25" />
+			<batch id="2" amount="10" cycletime="70" cost="1647,75" />
+			<batch id="3" amount="10" cycletime="70" cost="1647,88" />
+			<batch id="4" amount="10" cycletime="70" cost="1647,86" />
+			<batch id="5" amount="10" cycletime="70" cost="1647,99" />
+			<batch id="6" amount="10" cycletime="1030" cost="1648,12" />
+			<batch id="7" amount="10" cycletime="70" cost="1651,86" />
+			<batch id="8" amount="10" cycletime="70" cost="1652,30" />
+			<batch id="9" amount="10" cycletime="70" cost="1652,30" />
+			<batch id="10" amount="10" cycletime="70" cost="1652,30" />
+			<batch id="11" amount="10" cycletime="70" cost="1652,30" />
+			<batch id="12" amount="10" cycletime="70" cost="1652,30" />
+			<batch id="13" amount="10" cycletime="1030" cost="1652,30" />
+			<batch id="14" amount="10" cycletime="70" cost="1652,30" />
+			<batch id="15" amount="10" cycletime="70" cost="1652,30" />
+			<batch id="16" amount="10" cycletime="70" cost="1652,30" />
+		</order>
+		<order period="3" id="3" item="3" quantity="20" cost="3341,06" averageunitcosts="167,05">
+			<batch id="1" amount="10" cycletime="100" cost="1678,03" />
+			<batch id="2" amount="10" cycletime="70" cost="1663,03" />
+		</order>
+		<order period="3" id="4" item="26" quantity="379" cost="4080,10" averageunitcosts="10,77">
+			<batch id="0" amount="9" cycletime="102" cost="124,56" />
+			<batch id="1" amount="10" cycletime="124" cost="135,06" />
+			<batch id="2" amount="10" cycletime="1034" cost="154,24" />
+			<batch id="3" amount="10" cycletime="1014" cost="111,64" />
+			<batch id="4" amount="10" cycletime="1024" cost="111,64" />
+			<batch id="5" amount="10" cycletime="1034" cost="111,64" />
+			<batch id="6" amount="10" cycletime="1044" cost="111,64" />
+			<batch id="7" amount="10" cycletime="1054" cost="111,64" />
+			<batch id="8" amount="10" cycletime="1064" cost="111,64" />
+			<batch id="9" amount="10" cycletime="1074" cost="111,64" />
+			<batch id="10" amount="10" cycletime="1084" cost="108,04" />
+			<batch id="11" amount="10" cycletime="334" cost="100,71" />
+			<batch id="12" amount="10" cycletime="344" cost="100,71" />
+			<batch id="13" amount="10" cycletime="354" cost="100,71" />
+			<batch id="14" amount="10" cycletime="364" cost="100,71" />
+			<batch id="15" amount="10" cycletime="374" cost="100,71" />
+			<batch id="16" amount="10" cycletime="384" cost="106,11" />
+			<batch id="17" amount="10" cycletime="1324" cost="108,81" />
+			<batch id="18" amount="10" cycletime="1334" cost="100,71" />
+			<batch id="19" amount="10" cycletime="1344" cost="100,71" />
+			<batch id="20" amount="10" cycletime="1354" cost="100,71" />
+			<batch id="21" amount="10" cycletime="1364" cost="100,71" />
+			<batch id="22" amount="10" cycletime="1374" cost="100,71" />
+			<batch id="23" amount="10" cycletime="1384" cost="100,71" />
+			<batch id="24" amount="10" cycletime="1394" cost="100,71" />
+			<batch id="25" amount="10" cycletime="1404" cost="100,71" />
+			<batch id="26" amount="10" cycletime="1414" cost="100,71" />
+			<batch id="27" amount="10" cycletime="1424" cost="100,71" />
+			<batch id="28" amount="10" cycletime="1434" cost="100,71" />
+			<batch id="29" amount="10" cycletime="1444" cost="100,71" />
+			<batch id="30" amount="10" cycletime="1454" cost="100,71" />
+			<batch id="31" amount="10" cycletime="1464" cost="100,71" />
+			<batch id="32" amount="10" cycletime="1474" cost="100,71" />
+			<batch id="33" amount="10" cycletime="1484" cost="106,11" />
+			<batch id="34" amount="10" cycletime="2424" cost="112,41" />
+			<batch id="35" amount="10" cycletime="2434" cost="109,71" />
+			<batch id="36" amount="10" cycletime="2444" cost="109,71" />
+			<batch id="37" amount="10" cycletime="2454" cost="109,71" />
+		</order>
+		<order period="3" id="5" item="51" quantity="150" cost="21148,95" averageunitcosts="140,99">
+			<batch id="1" amount="10" cycletime="70" cost="1408,69" />
+			<batch id="2" amount="10" cycletime="50" cost="1399,08" />
+			<batch id="3" amount="10" cycletime="50" cost="1402,87" />
+			<batch id="4" amount="10" cycletime="50" cost="1404,64" />
+			<batch id="5" amount="10" cycletime="50" cost="1405,78" />
+			<batch id="6" amount="10" cycletime="50" cost="1406,72" />
+			<batch id="7" amount="10" cycletime="50" cost="1407,55" />
+			<batch id="8" amount="10" cycletime="50" cost="1408,49" />
+			<batch id="9" amount="10" cycletime="50" cost="1408,80" />
+			<batch id="10" amount="10" cycletime="50" cost="1426,83" />
+			<batch id="11" amount="10" cycletime="50" cost="1431,56" />
+			<batch id="12" amount="10" cycletime="914" cost="1411,76" />
+			<batch id="13" amount="10" cycletime="50" cost="1409,05" />
+			<batch id="14" amount="10" cycletime="50" cost="1408,57" />
+			<batch id="15" amount="10" cycletime="50" cost="1408,56" />
+		</order>
+		<order period="3" id="6" item="16" quantity="410" cost="2896,92" averageunitcosts="7,07">
+			<batch id="1" amount="10" cycletime="65" cost="81,21" />
+			<batch id="2" amount="10" cycletime="60" cost="69,96" />
+			<batch id="3" amount="10" cycletime="70" cost="69,96" />
+			<batch id="4" amount="10" cycletime="80" cost="69,96" />
+			<batch id="5" amount="10" cycletime="90" cost="69,96" />
+			<batch id="6" amount="10" cycletime="100" cost="69,96" />
+			<batch id="7" amount="10" cycletime="110" cost="69,96" />
+			<batch id="8" amount="10" cycletime="120" cost="69,96" />
+			<batch id="9" amount="10" cycletime="130" cost="69,96" />
+			<batch id="10" amount="10" cycletime="140" cost="69,96" />
+			<batch id="11" amount="10" cycletime="150" cost="69,96" />
+			<batch id="12" amount="10" cycletime="160" cost="69,96" />
+			<batch id="13" amount="10" cycletime="170" cost="69,96" />
+			<batch id="14" amount="10" cycletime="180" cost="69,96" />
+			<batch id="15" amount="10" cycletime="1150" cost="69,96" />
+			<batch id="16" amount="10" cycletime="1160" cost="70,41" />
+			<batch id="17" amount="10" cycletime="1170" cost="70,41" />
+			<batch id="18" amount="10" cycletime="1180" cost="70,41" />
+			<batch id="19" amount="10" cycletime="1190" cost="70,41" />
+			<batch id="20" amount="10" cycletime="1200" cost="70,41" />
+			<batch id="21" amount="10" cycletime="1210" cost="70,41" />
+			<batch id="22" amount="10" cycletime="1220" cost="70,41" />
+			<batch id="23" amount="10" cycletime="1230" cost="70,41" />
+			<batch id="24" amount="10" cycletime="1240" cost="70,41" />
+			<batch id="25" amount="10" cycletime="290" cost="70,41" />
+			<batch id="26" amount="10" cycletime="2875" cost="70,76" />
+			<batch id="27" amount="10" cycletime="2885" cost="70,76" />
+			<batch id="28" amount="10" cycletime="2895" cost="70,76" />
+			<batch id="29" amount="10" cycletime="2905" cost="70,76" />
+			<batch id="30" amount="10" cycletime="2915" cost="70,76" />
+			<batch id="31" amount="10" cycletime="2925" cost="70,76" />
+			<batch id="32" amount="10" cycletime="2935" cost="70,76" />
+			<batch id="33" amount="10" cycletime="2945" cost="70,76" />
+			<batch id="34" amount="10" cycletime="2955" cost="70,76" />
+			<batch id="35" amount="10" cycletime="2965" cost="70,76" />
+			<batch id="36" amount="10" cycletime="2975" cost="70,76" />
+			<batch id="37" amount="10" cycletime="2985" cost="70,76" />
+			<batch id="38" amount="10" cycletime="2995" cost="70,76" />
+			<batch id="39" amount="10" cycletime="3005" cost="70,76" />
+			<batch id="40" amount="10" cycletime="3015" cost="70,76" />
+			<batch id="41" amount="10" cycletime="3025" cost="70,76" />
+		</order>
+		<order period="3" id="7" item="17" quantity="410" cost="3013,17" averageunitcosts="7,35">
+			<batch id="1" amount="10" cycletime="30" cost="71,99" />
+			<batch id="2" amount="10" cycletime="30" cost="71,99" />
+			<batch id="3" amount="10" cycletime="45" cost="79,49" />
+			<batch id="4" amount="10" cycletime="30" cost="71,99" />
+			<batch id="5" amount="10" cycletime="30" cost="71,99" />
+			<batch id="6" amount="10" cycletime="30" cost="71,99" />
+			<batch id="7" amount="10" cycletime="30" cost="71,99" />
+			<batch id="8" amount="10" cycletime="45" cost="79,49" />
+			<batch id="9" amount="10" cycletime="30" cost="71,99" />
+			<batch id="10" amount="10" cycletime="30" cost="71,99" />
+			<batch id="11" amount="10" cycletime="30" cost="71,99" />
+			<batch id="12" amount="10" cycletime="30" cost="71,99" />
+			<batch id="13" amount="10" cycletime="30" cost="84,14" />
+			<batch id="14" amount="10" cycletime="960" cost="73,34" />
+			<batch id="15" amount="10" cycletime="45" cost="79,94" />
+			<batch id="16" amount="10" cycletime="30" cost="72,44" />
+			<batch id="17" amount="10" cycletime="30" cost="72,44" />
+			<batch id="18" amount="10" cycletime="30" cost="72,44" />
+			<batch id="19" amount="10" cycletime="30" cost="72,44" />
+			<batch id="20" amount="10" cycletime="30" cost="72,44" />
+			<batch id="21" amount="10" cycletime="30" cost="72,44" />
+			<batch id="22" amount="10" cycletime="30" cost="72,44" />
+			<batch id="23" amount="10" cycletime="30" cost="72,44" />
+			<batch id="24" amount="10" cycletime="30" cost="72,44" />
+			<batch id="25" amount="10" cycletime="30" cost="72,44" />
+			<batch id="26" amount="10" cycletime="30" cost="72,44" />
+			<batch id="27" amount="10" cycletime="30" cost="84,59" />
+			<batch id="28" amount="10" cycletime="960" cost="73,79" />
+			<batch id="29" amount="10" cycletime="30" cost="72,44" />
+			<batch id="30" amount="10" cycletime="30" cost="72,44" />
+			<batch id="31" amount="10" cycletime="30" cost="72,44" />
+			<batch id="32" amount="10" cycletime="30" cost="72,44" />
+			<batch id="33" amount="10" cycletime="30" cost="72,44" />
+			<batch id="34" amount="10" cycletime="30" cost="72,44" />
+			<batch id="35" amount="10" cycletime="30" cost="72,44" />
+			<batch id="36" amount="10" cycletime="30" cost="72,44" />
+			<batch id="37" amount="10" cycletime="30" cost="72,44" />
+			<batch id="38" amount="10" cycletime="30" cost="72,44" />
+			<batch id="39" amount="10" cycletime="30" cost="72,44" />
+			<batch id="40" amount="10" cycletime="30" cost="72,44" />
+			<batch id="41" amount="10" cycletime="30" cost="72,44" />
+		</order>
+		<order period="3" id="8" item="50" quantity="150" cost="18680,95" averageunitcosts="124,54">
+			<batch id="1" amount="10" cycletime="80" cost="1262,41" />
+			<batch id="2" amount="10" cycletime="50" cost="1245,86" />
+			<batch id="3" amount="10" cycletime="50" cost="1244,45" />
+			<batch id="4" amount="10" cycletime="50" cost="1243,53" />
+			<batch id="5" amount="10" cycletime="50" cost="1243,53" />
+			<batch id="6" amount="10" cycletime="50" cost="1243,03" />
+			<batch id="7" amount="10" cycletime="50" cost="1240,52" />
+			<batch id="8" amount="10" cycletime="50" cost="1238,34" />
+			<batch id="9" amount="10" cycletime="50" cost="1236,43" />
+			<batch id="10" amount="10" cycletime="1010" cost="1234,16" />
+			<batch id="11" amount="10" cycletime="80" cost="1273,83" />
+			<batch id="12" amount="10" cycletime="50" cost="1247,84" />
+			<batch id="13" amount="10" cycletime="50" cost="1245,55" />
+			<batch id="14" amount="10" cycletime="50" cost="1241,98" />
+			<batch id="15" amount="10" cycletime="50" cost="1239,49" />
+		</order>
+		<order period="3" id="9" item="4" quantity="150" cost="6066,42" averageunitcosts="40,44">
+			<batch id="1" amount="10" cycletime="100" cost="423,86" />
+			<batch id="2" amount="10" cycletime="70" cost="401,36" />
+			<batch id="3" amount="10" cycletime="70" cost="401,36" />
+			<batch id="4" amount="10" cycletime="70" cost="401,36" />
+			<batch id="5" amount="10" cycletime="70" cost="401,36" />
+			<batch id="6" amount="10" cycletime="70" cost="401,36" />
+			<batch id="7" amount="10" cycletime="70" cost="401,36" />
+			<batch id="8" amount="10" cycletime="1030" cost="401,36" />
+			<batch id="9" amount="10" cycletime="1020" cost="415,53" />
+			<batch id="10" amount="10" cycletime="1010" cost="415,53" />
+			<batch id="11" amount="10" cycletime="1000" cost="411,93" />
+			<batch id="12" amount="10" cycletime="142" cost="397,53" />
+			<batch id="13" amount="10" cycletime="132" cost="397,53" />
+			<batch id="14" amount="10" cycletime="122" cost="397,53" />
+			<batch id="15" amount="10" cycletime="112" cost="397,53" />
+		</order>
+		<order period="3" id="10" item="10" quantity="150" cost="2070,64" averageunitcosts="13,80">
+			<batch id="1" amount="10" cycletime="1973" cost="209,56" />
+			<batch id="2" amount="10" cycletime="1983" cost="148,81" />
+			<batch id="3" amount="10" cycletime="1993" cost="148,81" />
+			<batch id="4" amount="10" cycletime="2003" cost="148,81" />
+			<batch id="5" amount="10" cycletime="2706" cost="146,11" />
+			<batch id="6" amount="10" cycletime="2718" cost="131,71" />
+			<batch id="7" amount="10" cycletime="2728" cost="126,31" />
+			<batch id="8" amount="10" cycletime="2738" cost="126,31" />
+			<batch id="9" amount="10" cycletime="2748" cost="126,31" />
+			<batch id="10" amount="10" cycletime="2758" cost="126,31" />
+			<batch id="11" amount="10" cycletime="2768" cost="126,31" />
+			<batch id="12" amount="10" cycletime="2778" cost="126,31" />
+			<batch id="13" amount="10" cycletime="2788" cost="126,31" />
+			<batch id="14" amount="10" cycletime="2798" cost="126,31" />
+			<batch id="15" amount="10" cycletime="2808" cost="126,31" />
+		</order>
+		<order period="3" id="11" item="49" quantity="150" cost="10179,21" averageunitcosts="67,86">
+			<batch id="1" amount="10" cycletime="60" cost="662,18" />
+			<batch id="2" amount="10" cycletime="60" cost="662,18" />
+			<batch id="3" amount="10" cycletime="60" cost="665,51" />
+			<batch id="4" amount="10" cycletime="60" cost="661,70" />
+			<batch id="5" amount="10" cycletime="60" cost="661,70" />
+			<batch id="6" amount="10" cycletime="60" cost="661,70" />
+			<batch id="7" amount="10" cycletime="60" cost="661,70" />
+			<batch id="8" amount="10" cycletime="60" cost="661,70" />
+			<batch id="9" amount="10" cycletime="996" cost="672,50" />
+			<batch id="10" amount="10" cycletime="60" cost="661,70" />
+			<batch id="11" amount="10" cycletime="80" cost="770,60" />
+			<batch id="12" amount="10" cycletime="60" cost="698,24" />
+			<batch id="13" amount="10" cycletime="60" cost="697,04" />
+			<batch id="14" amount="10" cycletime="60" cost="691,90" />
+			<batch id="15" amount="10" cycletime="60" cost="688,84" />
+		</order>
+		<order period="3" id="12" item="7" quantity="150" cost="5462,19" averageunitcosts="36,41">
+			<batch id="1" amount="10" cycletime="122" cost="388,79" />
+			<batch id="2" amount="10" cycletime="92" cost="358,79" />
+			<batch id="3" amount="10" cycletime="82" cost="358,79" />
+			<batch id="4" amount="10" cycletime="72" cost="358,79" />
+			<batch id="5" amount="10" cycletime="70" cost="358,79" />
+			<batch id="6" amount="10" cycletime="70" cost="358,79" />
+			<batch id="7" amount="10" cycletime="1030" cost="358,79" />
+			<batch id="8" amount="10" cycletime="1020" cost="371,39" />
+			<batch id="9" amount="10" cycletime="1010" cost="376,79" />
+			<batch id="10" amount="10" cycletime="1000" cost="376,79" />
+			<batch id="11" amount="10" cycletime="990" cost="360,59" />
+			<batch id="12" amount="10" cycletime="132" cost="358,79" />
+			<batch id="13" amount="10" cycletime="122" cost="358,79" />
+			<batch id="14" amount="10" cycletime="112" cost="358,79" />
+			<batch id="15" amount="10" cycletime="102" cost="358,79" />
+		</order>
+		<order period="3" id="13" item="13" quantity="130" cost="1843,66" averageunitcosts="14,18">
+			<batch id="1" amount="10" cycletime="2833" cost="171,31" />
+			<batch id="2" amount="10" cycletime="2843" cost="128,56" />
+			<batch id="3" amount="10" cycletime="2853" cost="130,81" />
+			<batch id="4" amount="10" cycletime="2863" cost="137,56" />
+			<batch id="5" amount="10" cycletime="2873" cost="126,31" />
+			<batch id="6" amount="10" cycletime="1923" cost="147,91" />
+			<batch id="7" amount="10" cycletime="1933" cost="139,81" />
+			<batch id="8" amount="10" cycletime="1943" cost="139,81" />
+			<batch id="9" amount="10" cycletime="1953" cost="139,81" />
+			<batch id="10" amount="10" cycletime="1963" cost="151,06" />
+			<batch id="11" amount="10" cycletime="1973" cost="139,81" />
+			<batch id="12" amount="10" cycletime="1983" cost="139,81" />
+			<batch id="13" amount="10" cycletime="1993" cost="151,06" />
+		</order>
+		<order period="3" id="14" item="18" quantity="130" cost="2013,83" averageunitcosts="15,49">
+			<batch id="1" amount="10" cycletime="2526" cost="219,56" />
+			<batch id="2" amount="10" cycletime="2501" cost="177,70" />
+			<batch id="3" amount="10" cycletime="2491" cost="153,70" />
+			<batch id="4" amount="10" cycletime="2481" cost="140,20" />
+			<batch id="5" amount="10" cycletime="1511" cost="155,20" />
+			<batch id="6" amount="10" cycletime="1501" cost="155,20" />
+			<batch id="7" amount="10" cycletime="1491" cost="155,20" />
+			<batch id="8" amount="10" cycletime="1481" cost="155,20" />
+			<batch id="9" amount="10" cycletime="1471" cost="140,20" />
+			<batch id="10" amount="10" cycletime="1461" cost="136,60" />
+			<batch id="11" amount="10" cycletime="1451" cost="135,70" />
+			<batch id="12" amount="10" cycletime="1441" cost="144,70" />
+			<batch id="13" amount="10" cycletime="1431" cost="144,70" />
+		</order>
+		<order period="3" id="15" item="56" quantity="170" cost="24709,08" averageunitcosts="145,35">
+			<batch id="1" amount="10" cycletime="80" cost="1451,16" />
+			<batch id="2" amount="10" cycletime="60" cost="1442,16" />
+			<batch id="3" amount="10" cycletime="60" cost="1444,12" />
+			<batch id="4" amount="10" cycletime="60" cost="1445,30" />
+			<batch id="5" amount="10" cycletime="60" cost="1461,68" />
+			<batch id="6" amount="10" cycletime="60" cost="1474,39" />
+			<batch id="7" amount="10" cycletime="924" cost="1448,29" />
+			<batch id="8" amount="10" cycletime="60" cost="1448,39" />
+			<batch id="9" amount="10" cycletime="60" cost="1448,39" />
+			<batch id="10" amount="10" cycletime="60" cost="1448,39" />
+			<batch id="11" amount="10" cycletime="60" cost="1448,39" />
+			<batch id="12" amount="10" cycletime="60" cost="1448,39" />
+			<batch id="13" amount="10" cycletime="60" cost="1448,39" />
+			<batch id="14" amount="10" cycletime="60" cost="1452,11" />
+			<batch id="15" amount="10" cycletime="60" cost="1478,21" />
+			<batch id="16" amount="10" cycletime="924" cost="1469,21" />
+			<batch id="17" amount="10" cycletime="60" cost="1452,11" />
+		</order>
+		<order period="3" id="16" item="54" quantity="100" cost="7074,79" averageunitcosts="70,75">
+			<batch id="1" amount="10" cycletime="80" cost="727,02" />
+			<batch id="2" amount="10" cycletime="60" cost="717,02" />
+			<batch id="3" amount="10" cycletime="60" cost="717,02" />
+			<batch id="4" amount="10" cycletime="80" cost="749,73" />
+			<batch id="5" amount="10" cycletime="60" cost="691,13" />
+			<batch id="6" amount="10" cycletime="60" cost="695,63" />
+			<batch id="7" amount="10" cycletime="60" cost="695,44" />
+			<batch id="8" amount="10" cycletime="60" cost="690,11" />
+			<batch id="9" amount="10" cycletime="60" cost="691,83" />
+			<batch id="10" amount="10" cycletime="60" cost="699,86" />
+		</order>
+		<order period="3" id="17" item="55" quantity="170" cost="21769,18" averageunitcosts="128,05">
+			<batch id="1" amount="10" cycletime="80" cost="1287,21" />
+			<batch id="2" amount="10" cycletime="50" cost="1272,21" />
+			<batch id="3" amount="10" cycletime="50" cost="1276,76" />
+			<batch id="4" amount="10" cycletime="50" cost="1276,76" />
+			<batch id="5" amount="10" cycletime="50" cost="1280,05" />
+			<batch id="6" amount="10" cycletime="50" cost="1282,94" />
+			<batch id="7" amount="10" cycletime="50" cost="1282,94" />
+			<batch id="8" amount="10" cycletime="50" cost="1282,94" />
+			<batch id="9" amount="10" cycletime="1010" cost="1282,94" />
+			<batch id="10" amount="10" cycletime="80" cost="1297,94" />
+			<batch id="11" amount="10" cycletime="80" cost="1307,34" />
+			<batch id="12" amount="10" cycletime="1010" cost="1258,14" />
+			<batch id="13" amount="10" cycletime="50" cost="1261,60" />
+			<batch id="14" amount="10" cycletime="50" cost="1324,12" />
+			<batch id="15" amount="10" cycletime="50" cost="1262,16" />
+			<batch id="16" amount="10" cycletime="50" cost="1266,66" />
+			<batch id="17" amount="10" cycletime="50" cost="1266,47" />
+		</order>
+		<order period="3" id="18" item="8" quantity="160" cost="5675,47" averageunitcosts="35,47">
+			<batch id="1" amount="10" cycletime="112" cost="381,33" />
+			<batch id="2" amount="10" cycletime="82" cost="351,33" />
+			<batch id="3" amount="10" cycletime="72" cost="351,33" />
+			<batch id="4" amount="10" cycletime="70" cost="351,33" />
+			<batch id="5" amount="10" cycletime="70" cost="351,33" />
+			<batch id="6" amount="10" cycletime="1030" cost="351,33" />
+			<batch id="7" amount="10" cycletime="1020" cost="355,91" />
+			<batch id="8" amount="10" cycletime="1010" cost="366,71" />
+			<batch id="9" amount="10" cycletime="1000" cost="366,71" />
+			<batch id="10" amount="10" cycletime="990" cost="355,91" />
+			<batch id="11" amount="10" cycletime="132" cost="348,71" />
+			<batch id="12" amount="10" cycletime="122" cost="348,71" />
+			<batch id="13" amount="10" cycletime="112" cost="348,71" />
+			<batch id="14" amount="10" cycletime="102" cost="348,71" />
+			<batch id="15" amount="10" cycletime="92" cost="348,71" />
+			<batch id="16" amount="10" cycletime="82" cost="348,71" />
+		</order>
+		<order period="3" id="19" item="5" quantity="100" cost="3973,63" averageunitcosts="39,74">
+			<batch id="1" amount="10" cycletime="100" cost="412,57" />
+			<batch id="2" amount="10" cycletime="70" cost="390,07" />
+			<batch id="3" amount="10" cycletime="70" cost="390,07" />
+			<batch id="4" amount="10" cycletime="70" cost="390,07" />
+			<batch id="5" amount="10" cycletime="1026" cost="391,87" />
+			<batch id="6" amount="10" cycletime="1016" cost="408,07" />
+			<batch id="7" amount="10" cycletime="1006" cost="408,07" />
+			<batch id="8" amount="10" cycletime="996" cost="402,67" />
+			<batch id="9" amount="10" cycletime="138" cost="390,07" />
+			<batch id="10" amount="10" cycletime="128" cost="390,07" />
+		</order>
+		<order period="3" id="20" item="11" quantity="170" cost="2456,87" averageunitcosts="14,45">
+			<batch id="1" amount="10" cycletime="2986" cost="191,85" />
+			<batch id="2" amount="10" cycletime="2996" cost="133,35" />
+			<batch id="3" amount="10" cycletime="3006" cost="133,35" />
+			<batch id="4" amount="10" cycletime="3016" cost="133,35" />
+			<batch id="5" amount="10" cycletime="3026" cost="133,35" />
+			<batch id="6" amount="10" cycletime="3036" cost="133,35" />
+			<batch id="7" amount="10" cycletime="3046" cost="133,35" />
+			<batch id="8" amount="10" cycletime="3056" cost="140,55" />
+			<batch id="9" amount="10" cycletime="3066" cost="146,85" />
+			<batch id="10" amount="10" cycletime="3076" cost="146,85" />
+			<batch id="11" amount="10" cycletime="3086" cost="146,85" />
+			<batch id="12" amount="10" cycletime="3096" cost="146,85" />
+			<batch id="13" amount="10" cycletime="3106" cost="146,85" />
+			<batch id="14" amount="10" cycletime="3116" cost="146,85" />
+			<batch id="15" amount="10" cycletime="3126" cost="146,85" />
+			<batch id="16" amount="10" cycletime="3136" cost="158,10" />
+			<batch id="17" amount="10" cycletime="2879" cost="138,30" />
+		</order>
+		<order period="3" id="21" item="14" quantity="180" cost="2639,72" averageunitcosts="14,67">
+			<batch id="1" amount="10" cycletime="2904" cost="190,95" />
+			<batch id="2" amount="10" cycletime="2914" cost="142,35" />
+			<batch id="3" amount="10" cycletime="2924" cost="142,35" />
+			<batch id="4" amount="10" cycletime="2934" cost="146,85" />
+			<batch id="5" amount="10" cycletime="2944" cost="151,35" />
+			<batch id="6" amount="10" cycletime="2954" cost="159,60" />
+			<batch id="7" amount="10" cycletime="2964" cost="133,35" />
+			<batch id="8" amount="10" cycletime="2974" cost="133,35" />
+			<batch id="9" amount="10" cycletime="2984" cost="133,35" />
+			<batch id="10" amount="10" cycletime="2994" cost="133,35" />
+			<batch id="11" amount="10" cycletime="3004" cost="159,60" />
+			<batch id="12" amount="10" cycletime="3014" cost="133,35" />
+			<batch id="13" amount="10" cycletime="3024" cost="133,35" />
+			<batch id="14" amount="10" cycletime="3034" cost="133,35" />
+			<batch id="15" amount="10" cycletime="3044" cost="135,15" />
+			<batch id="16" amount="10" cycletime="3054" cost="146,85" />
+			<batch id="17" amount="10" cycletime="3064" cost="146,85" />
+			<batch id="18" amount="10" cycletime="3074" cost="184,35" />
+		</order>
+		<order period="3" id="22" item="19" quantity="70" cost="1362,63" averageunitcosts="19,47">
+			<batch id="1" amount="10" cycletime="3214" cost="231,20" />
+			<batch id="2" amount="10" cycletime="3189" cost="228,70" />
+			<batch id="3" amount="10" cycletime="3179" cost="158,95" />
+			<batch id="4" amount="10" cycletime="3169" cost="152,20" />
+			<batch id="5" amount="10" cycletime="3159" cost="185,95" />
+			<batch id="6" amount="10" cycletime="3149" cost="185,95" />
+			<batch id="7" amount="10" cycletime="3139" cost="219,70" />
+		</order>
+		<order period="3" id="23" item="31" quantity="60" cost="8743,53" averageunitcosts="145,73">
+			<batch id="1" amount="10" cycletime="80" cost="1464,68" />
+			<batch id="2" amount="10" cycletime="60" cost="1455,87" />
+			<batch id="3" amount="10" cycletime="60" cost="1455,79" />
+			<batch id="4" amount="10" cycletime="60" cost="1455,76" />
+			<batch id="5" amount="10" cycletime="60" cost="1455,76" />
+			<batch id="6" amount="10" cycletime="60" cost="1455,67" />
+		</order>
+		<order period="3" id="24" item="30" quantity="70" cost="8970,28" averageunitcosts="128,15">
+			<batch id="1" amount="10" cycletime="70" cost="1290,04" />
+			<batch id="2" amount="10" cycletime="1010" cost="1280,04" />
+			<batch id="3" amount="10" cycletime="50" cost="1280,04" />
+			<batch id="4" amount="10" cycletime="50" cost="1280,04" />
+			<batch id="5" amount="10" cycletime="50" cost="1280,04" />
+			<batch id="6" amount="10" cycletime="50" cost="1280,04" />
+			<batch id="7" amount="10" cycletime="50" cost="1280,04" />
+		</order>
+		<order period="3" id="25" item="6" quantity="80" cost="3267,37" averageunitcosts="40,84">
+			<batch id="1" amount="10" cycletime="138" cost="434,67" />
+			<batch id="2" amount="10" cycletime="108" cost="404,67" />
+			<batch id="3" amount="10" cycletime="98" cost="404,67" />
+			<batch id="4" amount="10" cycletime="88" cost="404,67" />
+			<batch id="5" amount="10" cycletime="78" cost="404,67" />
+			<batch id="6" amount="10" cycletime="70" cost="404,67" />
+			<batch id="7" amount="10" cycletime="70" cost="404,67" />
+			<batch id="8" amount="10" cycletime="70" cost="404,67" />
+		</order>
+	</completedorders>
+	<cycletimes startedorders="3" waitingorders="3">
+		<order id="1" period="2" starttime="2-1-0-0" finishtime="3-1-2-30" cycletimemin="1020" cycletimefactor="7,21" />
+		<order id="10" period="2" starttime="2-2-3-12" finishtime="3-1-2-50" cycletimemin="710" cycletimefactor="8,08" />
+		<order id="16" period="2" starttime="2-5-4-20" finishtime="3-1-6-8" cycletimemin="440" cycletimefactor="3,52" />
+		<order id="19" period="2" starttime="2-5-7-40" finishtime="3-1-7-53" cycletimemin="230" cycletimefactor="6,32" />
+		<order id="23" period="2" starttime="3-1-0-40" finishtime="3-1-9-38" cycletimemin="230" cycletimefactor="2,34" />
+		<order id="5" period="3" starttime="3-1-0-0" finishtime="3-2-3-14" cycletimemin="770" cycletimefactor="2,12" />
+		<order id="9" period="3" starttime="3-1-2-20" finishtime="3-2-4-0" cycletimemin="650" cycletimefactor="2,37" />
+		<order id="1" period="3" starttime="3-1-2-30" finishtime="3-3-1-30" cycletimemin="930" cycletimefactor="3,03" />
+		<order id="12" period="3" starttime="3-2-2-48" finishtime="3-3-4-18" cycletimemin="650" cycletimefactor="2,35" />
+		<order id="10" period="3" starttime="3-1-1-40" finishtime="3-3-5-8" cycletimemin="580" cycletimefactor="5,32" />
+		<order id="8" period="3" starttime="3-1-0-0" finishtime="3-3-5-30" cycletimemin="780" cycletimefactor="4,12" />
+		<order id="13" period="3" starttime="3-1-6-40" finishtime="3-3-11-53" cycletimemin="520" cycletimefactor="6,14" />
+		<order id="15" period="3" starttime="3-2-3-14" finishtime="3-4-1-22" cycletimemin="1040" cycletimefactor="2,66" />
+		<order id="4" period="3" starttime="3-1-0-0" finishtime="3-4-1-42" cycletimemin="1200" cycletimefactor="3,68" />
+		<order id="14" period="3" starttime="3-2-5-55" finishtime="3-4-4-1" cycletimemin="495" cycletimefactor="5,59" />
+		<order id="18" period="3" starttime="3-3-3-16" finishtime="3-4-5-6" cycletimemin="690" cycletimefactor="2,25" />
+		<order id="11" period="3" starttime="3-1-0-0" finishtime="3-4-5-21" cycletimemin="920" cycletimefactor="5,04" />
+		<order id="23" period="3" starttime="3-4-1-22" finishtime="3-4-7-42" cycletimemin="380" cycletimefactor="1,00" />
+		<order id="6" period="3" starttime="3-1-0-0" finishtime="3-4-8-0" cycletimemin="1265" cycletimefactor="3,79" />
+		<order id="20" period="3" starttime="3-2-3-0" finishtime="3-5-0-19" cycletimemin="650" cycletimefactor="6,40" />
+		<order id="19" period="3" starttime="3-4-4-24" finishtime="3-5-3-0" cycletimemin="450" cycletimefactor="3,01" />
+		<order id="2" period="3" starttime="3-3-1-30" finishtime="3-5-4-30" cycletimemin="1140" cycletimefactor="2,68" />
+		<order id="17" period="3" starttime="3-2-0-50" finishtime="3-5-6-14" cycletimemin="880" cycletimefactor="5,28" />
+		<order id="7" period="3" starttime="3-1-0-0" finishtime="3-5-6-57" cycletimemin="1245" cycletimefactor="4,96" />
+		<order id="25" period="3" starttime="3-5-1-32" finishtime="3-5-7-42" cycletimemin="370" cycletimefactor="1,00" />
+		<order id="16" period="3" starttime="3-2-1-36" finishtime="3-5-8-24" cycletimemin="620" cycletimefactor="7,63" />
+		<order id="21" period="3" starttime="3-3-0-40" finishtime="3-5-9-34" cycletimemin="680" cycletimefactor="5,02" />
+	</cycletimes>
+	<result>
+		<general>
+			<capacity current="33600" average="33600,00" all="100800" />
+			<possiblecapacity current="37745" average="35800,00" all="107400" />
+			<relpossiblenormalcapacity current="112,34%" average="106,55%" all="-" />
+			<productivetime current="30885" average="27298,33" all="81895" />
+			<effiency current="81,83%" average="76,25%" all="-" />
+			<sellwish current="300" average="366,67" all="1100" />
+			<salesquantity current="270" average="336,67" all="1010" />
+			<deliveryreliability current="90,00%" average="91,82%" all="-" />
+			<idletime current="6860" average="8501,67" all="25505" />
+			<idletimecosts current="4013,08" average="4702,37" all="14107,10" />
+			<storevalue current="240048,00" average="243567,33" all="-" />
+			<storagecosts current="1440,29" average="1461,41" all="4384,22" />
+		</general>
+		<defectivegoods>
+			<quantity current="0" average="11,67" all="35" />
+			<costs current="0,00" average="1885,68" all="5657,05" />
+		</defectivegoods>
+		<normalsale>
+			<salesprice current="200,00" average="200,00" all="-" />
+			<profit current="5006,77" average="6839,77" all="20519,30" />
+			<profitperunit current="18,54" average="20,32" all="-" />
+		</normalsale>
+		<directsale>
+			<profit current="0,00" average="0,00" all="0,00" />
+			<contractpenalty current="0,00" average="0,00" all="0,00" />
+		</directsale>
+		<marketplacesale>
+			<profit current="0,00" average="0,00" all="0,00" />
+		</marketplacesale>
+		<summary>
+			<profit current="5006,77" average="4954,07" all="14862,20" />
+		</summary>
+	</result>
+</results>

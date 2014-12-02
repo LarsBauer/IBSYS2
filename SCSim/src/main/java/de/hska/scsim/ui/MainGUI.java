@@ -19,22 +19,13 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import java.util.ResourceBundle;
-import javax.swing.Box;
-import javax.swing.BoxLayout;
 
 import javax.swing.JButton;
-import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
@@ -46,7 +37,7 @@ import javax.swing.border.MatteBorder;
  *
  * @author Andi
  */
-public class MainGUI extends JFrame {
+public class MainGUI extends JFrame{
 
     private final ProductionService productionService;
     private final CapacityService capacityService;
@@ -58,6 +49,7 @@ public class MainGUI extends JFrame {
     private final JPanel contentPanel = new JPanel();
     private JButton okButton;
     private JButton cancelButton;
+    //private JComboBox languageBox;
 
     private JPanel[] screens;
     private JLabel[] menu;
@@ -100,26 +92,26 @@ public class MainGUI extends JFrame {
         }
 
         //Erstellung Array vom Datentyp Object, Hinzufügen der Optionen
-//       Object[] options = {"German", "English"};
-//
-//        int selected = JOptionPane.showOptionDialog(contentPanel, "What language do you wish to use?", "",
-//                JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, null);
-//
-//        if (selected == 0) {
-//            Locale de = Locale.GERMANY;
-//            Locale.setDefault(de);
-//            createMainScreen();
-//        } else if (selected == 1) {
-//            Locale eng = Locale.ENGLISH;
-//            Locale.setDefault(eng);
-//            createMainScreen();
-//        } else {
-//            dispose();
-//            System.exit(0);
-//        }
+       Object[] options = {"German", "English"};
+
+        int selected = JOptionPane.showOptionDialog(contentPanel, "Please choose your language:", "",
+                JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, null);
+
+        if (selected == 0) {
+            Locale de = Locale.GERMANY;
+            Locale.setDefault(de);
+            createMainScreen();
+        } else if (selected == 1) {
+            Locale eng = Locale.ENGLISH;
+            Locale.setDefault(eng);
+            createMainScreen();
+        } else {
+            dispose();
+            System.exit(0);
+        }
         //Ohne Sprachauswahl
-        Locale.setDefault(Locale.GERMANY);
-        createMainScreen();
+        //Locale.setDefault(Locale.GERMANY);
+        //createMainScreen();
 
     }
 
@@ -157,62 +149,64 @@ public class MainGUI extends JFrame {
         getContentPane().add(contentPanel, BorderLayout.CENTER);
         contentPanel.setLayout(new BorderLayout(0, 0));
         {
+            //Panel mit Navigation
             JPanel panel = new JPanel();
-            panel.setBorder(new MatteBorder(0, 0, 0, 1, (Color) new Color(0, 0, 0)));
-            panel.setPreferredSize(new Dimension(130, 10));
+            panel.setBorder(new MatteBorder(0, 0, 1, 0, (Color) new Color(0, 0, 0)));
+            panel.setPreferredSize(new Dimension(10, 130));
             panel.setBackground(Color.WHITE);
-            contentPanel.add(panel, BorderLayout.WEST);
-            panel.setLayout(new GridLayout(0, 1, 0, 0));
+            contentPanel.add(panel, BorderLayout.NORTH);
+
+            panel.setLayout(new GridLayout(1, 0, 0, 0));
             {
-                JLabel lblNewLabel_1 = new JLabel(Messages.getString("MainGUI.0"));
+                JLabel lblNewLabel_1 = new JLabel(Messages.getString("MainGUI.0")); //Willkommen
                 lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
                 panel.add(lblNewLabel_1);
                 menu[0] = lblNewLabel_1;
             }
             {
-                JLabel lblNewLabel = new JLabel(Messages.getString("MainGUI.1")); //$NON-NLS-1$
+                JLabel lblNewLabel = new JLabel(Messages.getString("MainGUI.1")); //Prognose
                 lblNewLabel.setForeground(Color.LIGHT_GRAY);
                 lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
                 panel.add(lblNewLabel);
                 menu[1] = lblNewLabel;
             }
             {
-                JLabel lblNewLabel_2 = new JLabel(Messages.getString("MainGUI.2")); //$NON-NLS-1$
+                JLabel lblNewLabel_2 = new JLabel(Messages.getString("MainGUI.2")); //Sicherheitsbestand
                 lblNewLabel_2.setForeground(Color.LIGHT_GRAY);
                 lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
                 panel.add(lblNewLabel_2);
                 menu[2] = lblNewLabel_2;
             }
             {
-                JLabel lblNewLabel_3 = new JLabel(Messages.getString("MainGUI.3")); //$NON-NLS-1$
+                JLabel lblNewLabel_3 = new JLabel(Messages.getString("MainGUI.3")); //Fertigungsaufträge
                 lblNewLabel_3.setForeground(Color.LIGHT_GRAY);
                 lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
                 panel.add(lblNewLabel_3);
                 menu[3] = lblNewLabel_3;
             }
             {
-                JLabel lblNewLabel_4 = new JLabel(Messages.getString("MainGUI.4")); //$NON-NLS-1$
+                JLabel lblNewLabel_4 = new JLabel(Messages.getString("MainGUI.4")); //Kapazitätsplanung
                 lblNewLabel_4.setForeground(Color.LIGHT_GRAY);
                 lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
                 panel.add(lblNewLabel_4);
                 menu[4] = lblNewLabel_4;
             }
             {
-                JLabel lblNewLabel_5 = new JLabel(Messages.getString("MainGUI.5")); //$NON-NLS-1$
+                JLabel lblNewLabel_5 = new JLabel(Messages.getString("MainGUI.5")); //Bestellung
                 lblNewLabel_5.setForeground(Color.LIGHT_GRAY);
                 lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
                 panel.add(lblNewLabel_5);
                 menu[5] = lblNewLabel_5;
             }
             {
-                JLabel lblFertigstellung = new JLabel(Messages.getString("MainGUI.4")); //$NON-NLS-1$
+                JLabel lblFertigstellung = new JLabel(Messages.getString("MainGUI.Nachplanung")); //Nachplanung
                 lblFertigstellung.setForeground(Color.LIGHT_GRAY);
                 lblFertigstellung.setHorizontalAlignment(SwingConstants.CENTER);
                 panel.add(lblFertigstellung);
                 menu[6] = lblFertigstellung;
             }
             {
-                JLabel lblFertigstellung = new JLabel(Messages.getString("MainGUI.6")); //$NON-NLS-1$
+                JLabel lblFertigstellung = new JLabel(Messages.getString("MainGUI.6")); //
                 lblFertigstellung.setForeground(Color.LIGHT_GRAY);
                 lblFertigstellung.setHorizontalAlignment(SwingConstants.CENTER);
                 panel.add(lblFertigstellung);
@@ -304,16 +298,7 @@ public class MainGUI extends JFrame {
                 buttonPane.add(cancelButton, gbc_cancelButton);
                 {
 
-//Sprachauswahl per Button
-                    //Erstellung Array vom Datentyp Object, Hinzufügen der Optionen
-                    JLabel languageLabel = new JLabel(Messages.getString("MainGUI.LangLabel"));
-                    Object[] options = {"German", "English"};
-                    JComboBox languageBox = new JComboBox(options);
-                    Box box = Box.createHorizontalBox();
-                    box.add(languageLabel);
-                    box.add(Box.createHorizontalGlue());
-                    box.add(languageBox);
-                    getContentPane().add(box, BorderLayout.NORTH);
+
 
 //Sprachauswahl als Menu                    
 //                    
@@ -354,6 +339,30 @@ public class MainGUI extends JFrame {
 //                        }
                 }
             }
+
+//            languageBox.addActionListener(new ActionListener() {
+//                public void actionPerformed(ActionEvent e) {
+//                    if (languageBox.getSelectedItem() != null) {
+//                        String lang = languageBox.getSelectedItem().toString();
+//                        //System.out.println("Language: "+lang);
+//                        if (lang.equals(langoptions[1])) {
+//                            Locale.setDefault(Locale.ENGLISH);
+//                            LocaleChangeEvent e = new LocaleChangeEvent(this, Locale.ENGLISH);
+//                        } else if (lang.equals(langoptions[0])) {
+//                            Locale.setDefault(Locale.GERMANY);
+//                        } else {
+//                            //Das sollte nicht passieren...
+//                        }
+//                        
+//                        SwingUtilities.updateComponentTreeUI(MainGUI.this);
+//                        invalidate();
+//                        validate();
+//                        repaint();
+//                        System.out.println("aha");
+//                    }
+//                }
+//            });
+
             cancelButton.addActionListener(new ActionListener() {
 
                 @Override
@@ -453,7 +462,7 @@ public class MainGUI extends JFrame {
                         contentPanel.repaint();
 
                         if (index == 7) {
-                            cancelButton.setText(Messages.getString("MainGUI.19")); //$NON-NLS-1$
+                            cancelButton.setText(Messages.getString("MainGUI.19"));
                         }
                     }
 
@@ -471,4 +480,5 @@ public class MainGUI extends JFrame {
     public JButton getCancelButton() {
         return cancelButton;
     }
+
 }
