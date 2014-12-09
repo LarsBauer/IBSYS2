@@ -323,21 +323,18 @@ public class MainGUI extends JFrame {
                     screen7.setData(productionPlanningResult);
 
                     // Erstellung Array vom Datentyp Object, Hinzufügen der Optionen
-                    Object[] options = {"Ändern", "Weiter"};
+                    Object[] options = {Messages.getString("MainGUI.26"), Messages.getString("MainGUI.25")};
 
                     double stockValue = inspector.checkStockValue(productionPlanningResult, screen6.getData(), screen2.getPlanedSales());
 
                     if (stockValue < 250000.0) {
-                        JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.32") + stockValue + Messages.getString("MainGUI.27"), Messages.getString("MainGUI.28"), JOptionPane.CLOSED_OPTION, //$NON-NLS-1$
-                                JOptionPane.INFORMATION_MESSAGE, null, null, null);
+                        JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.32") + stockValue + Messages.getString("MainGUI.27"), Messages.getString("MainGUI.28"), JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null);
+                        
                     } else {
-                        int selected = JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.32") + stockValue + Messages.getString("MainGUI.29"), "", //$NON-NLS-1$ //$NON-NLS-2$
-                                JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, null);
-
-                        if (selected == 0) {
+                        int selected = JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.32") + stockValue + Messages.getString("MainGUI.29"), Messages.getString("MainGUI.28"), JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE, null, options, 0);
+                        
+                        if(selected == 1) {
                             return;
-                        } else if (selected == 1) {
-
                         }
                     }
                 }

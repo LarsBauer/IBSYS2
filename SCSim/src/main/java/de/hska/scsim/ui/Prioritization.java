@@ -121,163 +121,164 @@ public class Prioritization extends JPanel {
         panel.setBorder(new EmptyBorder(0, 50, 0, 0));
         panel.setBackground(Color.WHITE);
         add(panel);
-        GridBagLayout gbl_panel = new GridBagLayout();
-        gbl_panel.columnWidths = new int[]{62, 62, 0};
-        gbl_panel.rowHeights = new int[]{78, 78, 78, 0};
-        gbl_panel.columnWeights = new double[]{0.0, 0.0, Double.MIN_VALUE};
-        gbl_panel.rowWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
-        panel.setLayout(gbl_panel);
-
-        JButton btnNewButton = new JButton(Messages.getString("Nachplanung.5")); //$NON-NLS-1$
-        btnNewButton.setHorizontalTextPosition(SwingConstants.CENTER);
-        GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
-        gbc_btnNewButton.fill = GridBagConstraints.HORIZONTAL;
-        gbc_btnNewButton.insets = new Insets(0, 0, 5, 5);
-        gbc_btnNewButton.gridx = 0;
-        gbc_btnNewButton.gridy = 0;
-        panel.add(btnNewButton, gbc_btnNewButton);
-        btnNewButton.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent arg0) {
-
-                if (list.isSelectionEmpty()) {
-                    JOptionPane.showOptionDialog(Prioritization.this,
-                            "Wählen Sie bitte einen Auftrag aus", "Keine Auswahl", //$NON-NLS-1$ //$NON-NLS-2$
-                            JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null);
-                } else if ((Integer.parseInt(textField.getText()) + Integer.parseInt(textField_1.getText())) != number) {
-                    JOptionPane
-                            .showOptionDialog(Prioritization.this,
-                                    "Verändern Sie bitte die Werte so dass die Summe der Werte mit dem Original Wert �bereinstimmt", "Werte Unterschiedlich", //$NON-NLS-1$ //$NON-NLS-2$
-                                    JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null);
-                } else {
-
-                    int index = list.getSelectedIndex();
-                    dataSaved.get(index).setQuantity(value1);
-                    ProductionPlanningResult newProd = new ProductionPlanningResult(dataSaved.get(index)
-                            .getItemConfigId(), value2);
-                    dataSaved.add(index + 1, newProd);
-                    rebuildListFromSplit();
-                }
-
-            }
-        });
-
-        textField_1 = new JTextField();
-        textField_1.setHorizontalAlignment(SwingConstants.CENTER);
-        textField_1.setText("0"); //$NON-NLS-1$
-        ((AbstractDocument) textField_1.getDocument()).setDocumentFilter(new IntegerDocumentFilter());
-
-        textField = new JTextField();
-        textField.setHorizontalAlignment(SwingConstants.CENTER);
-        textField.setText("0"); //$NON-NLS-1$
-        ((AbstractDocument) textField.getDocument()).setDocumentFilter(new IntegerDocumentFilter());
-
-        btnNewButton_1 = new JButton(Messages.getString("Nachplanung.8")); //$NON-NLS-1$
-        btnNewButton_1.setHorizontalTextPosition(SwingConstants.CENTER);
-        GridBagConstraints gbc_btnNewButton_1 = new GridBagConstraints();
-        gbc_btnNewButton_1.fill = GridBagConstraints.HORIZONTAL;
-        gbc_btnNewButton_1.insets = new Insets(0, 0, 5, 0);
-        gbc_btnNewButton_1.gridx = 1;
-        gbc_btnNewButton_1.gridy = 0;
-        panel.add(btnNewButton_1, gbc_btnNewButton_1);
-        btnNewButton_1.addActionListener(new ActionListener() {
-
-            @SuppressWarnings({"unchecked", "rawtypes"})
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                if (list.getSelectedValuesList().size() > 1) {
-
-                    List liste = list.getSelectedValuesList();
-
-                    String savedID = ""; //$NON-NLS-1$
-                    int sum = 0;
-
-                    for (int i = 0; i < liste.size(); ++i) {
-                        String raw = liste.get(i).toString();
-                        String ID = raw.substring(raw.indexOf("-") + 1, raw.lastIndexOf(":")); //$NON-NLS-1$ //$NON-NLS-2$
-                        ID = ID.replace(" ", ""); //$NON-NLS-1$ //$NON-NLS-2$
-                        if (i > 0 && savedID.equals(ID) == false) {
-                            JOptionPane.showOptionDialog(Prioritization.this,
-                                    Messages.getString("Nachplanung.11"), Messages.getString("Nachplanung.12"), //$NON-NLS-1$ //$NON-NLS-2$
-                                    JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null);
-                            return;
-                        }
-                        savedID = ID;
-                    }
-
-                    for (int i = 0; i < liste.size(); ++i) {
-                        String raw = liste.get(i).toString();
-                        int value = Integer.parseInt(raw.substring(raw.lastIndexOf(":") + 2)); //$NON-NLS-1$
-                        sum += value;
-                    }
-
-                    ArrayList<Integer> positions = new ArrayList<>();
-                    List selectedValues = list.getSelectedValuesList();
-
-                    List<ProductionPlanningResult> sortedList = new ArrayList<>();
-
-                    int start = 0;
-
-                    for (int i = 0; i < selectedValues.size(); ++i) {
-                        String raw = selectedValues.get(i).toString();
-                        String cutted = raw.substring(raw.indexOf(":") + 2, raw.lastIndexOf("-") - 1); //$NON-NLS-1$ //$NON-NLS-2$
-                        cutted = cutted.replace(" ", ""); //$NON-NLS-1$ //$NON-NLS-2$
-                        positions.add(Integer.parseInt(cutted) - 1);
-                        if (i == 0) {
-                            start += Integer.parseInt(cutted) - 1;
-                        }
-                    }
-
-                    for (int i = 0; i < positions.size(); ++i) {
-                        System.out.println("position: " + i); //$NON-NLS-1$
-                        dataSaved.remove(positions.get(i) - i);
-                    }
-
-                    ProductionPlanningResult merged = new ProductionPlanningResult(savedID, sum);
-                    dataSaved.add(start, merged);
-
-                    for (ProductionPlanningResult p : dataSaved) {
-                        System.out.println(p.getItemConfigId());
-                    }
-
-                    lm1.removeAllElements();
-
-                    for (int i = 0; i < dataSaved.size(); ++i) {
-                        lm1.addElement("Pos: " + (i + 1) + " - " + dataSaved.get(i).getItemConfigId() + " : " //$NON-NLS-1$ //$NON-NLS-3$
-                                + dataSaved.get(i).getQuantity());
-                    }
-
-                } else {
-                    JOptionPane
-                            .showOptionDialog(Prioritization.this,
-                                    Messages.getString("Nachplanung.9"), Messages.getString("Nachplanung.10"), //$NON-NLS-1$ //$NON-NLS-2$
-                                    JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null);
-                }
-            }
-        });
-        GridBagConstraints gbc_textField = new GridBagConstraints();
-        gbc_textField.fill = GridBagConstraints.HORIZONTAL;
-        gbc_textField.insets = new Insets(0, 0, 5, 5);
-        gbc_textField.gridx = 0;
-        gbc_textField.gridy = 1;
-        panel.add(textField, gbc_textField);
-        textField.setColumns(10);
-
-        lblNewLabel = new JLabel(""); //$NON-NLS-1$
-        GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
-        gbc_lblNewLabel.insets = new Insets(0, 0, 5, 0);
-        gbc_lblNewLabel.gridx = 1;
-        gbc_lblNewLabel.gridy = 1;
-        panel.add(lblNewLabel, gbc_lblNewLabel);
-        GridBagConstraints gbc_textField_1 = new GridBagConstraints();
-        gbc_textField_1.fill = GridBagConstraints.HORIZONTAL;
-        gbc_textField_1.insets = new Insets(0, 0, 0, 5);
-        gbc_textField_1.gridx = 0;
-        gbc_textField_1.gridy = 2;
-        panel.add(textField_1, gbc_textField_1);
-        textField_1.setColumns(10);
+        panel.add(new JLabel("Platzhalter"));
+//        GridBagLayout gbl_panel = new GridBagLayout();
+//        gbl_panel.columnWidths = new int[]{62, 62, 0};
+//        gbl_panel.rowHeights = new int[]{78, 78, 78, 0};
+//        gbl_panel.columnWeights = new double[]{0.0, 0.0, Double.MIN_VALUE};
+//        gbl_panel.rowWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
+//        panel.setLayout(gbl_panel);
+//
+//        JButton btnNewButton = new JButton(Messages.getString("Nachplanung.5")); //$NON-NLS-1$
+//        btnNewButton.setHorizontalTextPosition(SwingConstants.CENTER);
+//        GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
+//        gbc_btnNewButton.fill = GridBagConstraints.HORIZONTAL;
+//        gbc_btnNewButton.insets = new Insets(0, 0, 5, 5);
+//        gbc_btnNewButton.gridx = 0;
+//        gbc_btnNewButton.gridy = 0;
+//        panel.add(btnNewButton, gbc_btnNewButton);
+//        btnNewButton.addActionListener(new ActionListener() {
+//
+//            @Override
+//            public void actionPerformed(ActionEvent arg0) {
+//
+//                if (list.isSelectionEmpty()) {
+//                    JOptionPane.showOptionDialog(Prioritization.this,
+//                            "Wählen Sie bitte einen Auftrag aus", "Keine Auswahl", //$NON-NLS-1$ //$NON-NLS-2$
+//                            JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null);
+//                } else if ((Integer.parseInt(textField.getText()) + Integer.parseInt(textField_1.getText())) != number) {
+//                    JOptionPane
+//                            .showOptionDialog(Prioritization.this,
+//                                    "Verändern Sie bitte die Werte so dass die Summe der Werte mit dem Original Wert �bereinstimmt", "Werte Unterschiedlich", //$NON-NLS-1$ //$NON-NLS-2$
+//                                    JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null);
+//                } else {
+//
+//                    int index = list.getSelectedIndex();
+//                    dataSaved.get(index).setQuantity(value1);
+//                    ProductionPlanningResult newProd = new ProductionPlanningResult(dataSaved.get(index)
+//                            .getItemConfigId(), value2);
+//                    dataSaved.add(index + 1, newProd);
+//                    rebuildListFromSplit();
+//                }
+//
+//            }
+//        });
+//
+//        textField_1 = new JTextField();
+//        textField_1.setHorizontalAlignment(SwingConstants.CENTER);
+//        textField_1.setText("0"); //$NON-NLS-1$
+//        ((AbstractDocument) textField_1.getDocument()).setDocumentFilter(new IntegerDocumentFilter());
+//
+//        textField = new JTextField();
+//        textField.setHorizontalAlignment(SwingConstants.CENTER);
+//        textField.setText("0"); //$NON-NLS-1$
+//        ((AbstractDocument) textField.getDocument()).setDocumentFilter(new IntegerDocumentFilter());
+//
+//        btnNewButton_1 = new JButton(Messages.getString("Nachplanung.8")); //$NON-NLS-1$
+//        btnNewButton_1.setHorizontalTextPosition(SwingConstants.CENTER);
+//        GridBagConstraints gbc_btnNewButton_1 = new GridBagConstraints();
+//        gbc_btnNewButton_1.fill = GridBagConstraints.HORIZONTAL;
+//        gbc_btnNewButton_1.insets = new Insets(0, 0, 5, 0);
+//        gbc_btnNewButton_1.gridx = 1;
+//        gbc_btnNewButton_1.gridy = 0;
+//        panel.add(btnNewButton_1, gbc_btnNewButton_1);
+//        btnNewButton_1.addActionListener(new ActionListener() {
+//
+//            @SuppressWarnings({"unchecked", "rawtypes"})
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//
+//                if (list.getSelectedValuesList().size() > 1) {
+//
+//                    List liste = list.getSelectedValuesList();
+//
+//                    String savedID = ""; //$NON-NLS-1$
+//                    int sum = 0;
+//
+//                    for (int i = 0; i < liste.size(); ++i) {
+//                        String raw = liste.get(i).toString();
+//                        String ID = raw.substring(raw.indexOf("-") + 1, raw.lastIndexOf(":")); //$NON-NLS-1$ //$NON-NLS-2$
+//                        ID = ID.replace(" ", ""); //$NON-NLS-1$ //$NON-NLS-2$
+//                        if (i > 0 && savedID.equals(ID) == false) {
+//                            JOptionPane.showOptionDialog(Prioritization.this,
+//                                    Messages.getString("Nachplanung.11"), Messages.getString("Nachplanung.12"), //$NON-NLS-1$ //$NON-NLS-2$
+//                                    JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null);
+//                            return;
+//                        }
+//                        savedID = ID;
+//                    }
+//
+//                    for (int i = 0; i < liste.size(); ++i) {
+//                        String raw = liste.get(i).toString();
+//                        int value = Integer.parseInt(raw.substring(raw.lastIndexOf(":") + 2)); //$NON-NLS-1$
+//                        sum += value;
+//                    }
+//
+//                    ArrayList<Integer> positions = new ArrayList<>();
+//                    List selectedValues = list.getSelectedValuesList();
+//
+//                    List<ProductionPlanningResult> sortedList = new ArrayList<>();
+//
+//                    int start = 0;
+//
+//                    for (int i = 0; i < selectedValues.size(); ++i) {
+//                        String raw = selectedValues.get(i).toString();
+//                        String cutted = raw.substring(raw.indexOf(":") + 2, raw.lastIndexOf("-") - 1); //$NON-NLS-1$ //$NON-NLS-2$
+//                        cutted = cutted.replace(" ", ""); //$NON-NLS-1$ //$NON-NLS-2$
+//                        positions.add(Integer.parseInt(cutted) - 1);
+//                        if (i == 0) {
+//                            start += Integer.parseInt(cutted) - 1;
+//                        }
+//                    }
+//
+//                    for (int i = 0; i < positions.size(); ++i) {
+//                        System.out.println("position: " + i); //$NON-NLS-1$
+//                        dataSaved.remove(positions.get(i) - i);
+//                    }
+//
+//                    ProductionPlanningResult merged = new ProductionPlanningResult(savedID, sum);
+//                    dataSaved.add(start, merged);
+//
+//                    for (ProductionPlanningResult p : dataSaved) {
+//                        System.out.println(p.getItemConfigId());
+//                    }
+//
+//                    lm1.removeAllElements();
+//
+//                    for (int i = 0; i < dataSaved.size(); ++i) {
+//                        lm1.addElement("Pos: " + (i + 1) + " - " + dataSaved.get(i).getItemConfigId() + " : " //$NON-NLS-1$ //$NON-NLS-3$
+//                                + dataSaved.get(i).getQuantity());
+//                    }
+//
+//                } else {
+//                    JOptionPane
+//                            .showOptionDialog(Prioritization.this,
+//                                    Messages.getString("Nachplanung.9"), Messages.getString("Nachplanung.10"), //$NON-NLS-1$ //$NON-NLS-2$
+//                                    JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null);
+//                }
+//            }
+//        });
+//        GridBagConstraints gbc_textField = new GridBagConstraints();
+//        gbc_textField.fill = GridBagConstraints.HORIZONTAL;
+//        gbc_textField.insets = new Insets(0, 0, 5, 5);
+//        gbc_textField.gridx = 0;
+//        gbc_textField.gridy = 1;
+//        panel.add(textField, gbc_textField);
+//        textField.setColumns(10);
+//
+//        lblNewLabel = new JLabel(""); //$NON-NLS-1$
+//        GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
+//        gbc_lblNewLabel.insets = new Insets(0, 0, 5, 0);
+//        gbc_lblNewLabel.gridx = 1;
+//        gbc_lblNewLabel.gridy = 1;
+//        panel.add(lblNewLabel, gbc_lblNewLabel);
+//        GridBagConstraints gbc_textField_1 = new GridBagConstraints();
+//        gbc_textField_1.fill = GridBagConstraints.HORIZONTAL;
+//        gbc_textField_1.insets = new Insets(0, 0, 0, 5);
+//        gbc_textField_1.gridx = 0;
+//        gbc_textField_1.gridy = 2;
+//        panel.add(textField_1, gbc_textField_1);
+//        textField_1.setColumns(10);
 
     }
 
