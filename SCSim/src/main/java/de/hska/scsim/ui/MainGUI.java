@@ -22,7 +22,6 @@ import java.io.File;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import javax.swing.GroupLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -150,16 +149,19 @@ public class MainGUI extends JFrame {
         contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
         getContentPane().add(contentPanel, BorderLayout.CENTER);
         contentPanel.setLayout(new BorderLayout(0, 0));
-        {
-            //Panel mit Navigation
-            JPanel panel = new JPanel();
-            panel.setBorder(new MatteBorder(0, 0, 1, 0, (Color) new Color(0, 0, 0)));
-            panel.setPreferredSize(new Dimension(10, 50));
-            panel.setBackground(Color.WHITE);
-            contentPanel.add(panel, BorderLayout.NORTH);
 
-            panel.setLayout(new BorderLayout());
-            panel.add(new JProgressBar(), BorderLayout.NORTH);
+            //Panel mit Navigation
+            JPanel northPanel = new JPanel();
+            northPanel.setBorder(new MatteBorder(0, 0, 1, 0, (Color) new Color(0, 0, 0)));
+            northPanel.setPreferredSize(new Dimension(10, 50));
+            northPanel.setBackground(Color.WHITE);
+            contentPanel.add(northPanel, BorderLayout.NORTH);
+            
+            final JProgressBar bar = new  JProgressBar(0,screens.length);
+            bar.setValue(index+1);
+            
+            northPanel.setLayout(new BorderLayout());
+            northPanel.add(bar, BorderLayout.NORTH);
             JPanel innerPanel = new JPanel(new GridLayout(1, 6));
 
             JLabel welcomeLbl = new JLabel(Messages.getString("MainGUI.0")); //Willkommen
@@ -209,32 +211,13 @@ public class MainGUI extends JFrame {
             innerPanel.add(finishLbl);
             menu[7] = finishLbl;
 
-            panel.add(innerPanel, BorderLayout.CENTER);
-        }
+            northPanel.add(innerPanel, BorderLayout.CENTER);
+
         contentPanel.add(screen1, BorderLayout.CENTER);
         {
             JPanel panel = new JPanel();
             panel.setBorder(new MatteBorder(0, 0, 1, 0, (Color) new Color(0, 0, 0)));
             panel.setBackground(Color.WHITE);
-//            contentPanel.add(panel, BorderLayout.NORTH);
-//            {
-//                //Header
-//                try {
-//                    InputStream stream = null;
-//                    try {
-//                        stream = new ClassPathResource("img/header.jpg").getInputStream();
-//                        BufferedImage picture = ImageIO.read(stream);
-//                        JLabel lblNewLabel_6 = new JLabel(new ImageIcon(picture));
-//                    } finally {
-//                        if (stream != null) {
-//                            stream.close();
-//                        }
-//                    }
-//                } catch (IOException e) {
-//                    JLabel lblNewLabel_6 = new JLabel(Messages.getString("MainGUI.ProgName"));
-//                    panel.add(lblNewLabel_6);
-//                }
-//            }
         }
         {
             JPanel buttonPane = new JPanel();
@@ -279,6 +262,8 @@ public class MainGUI extends JFrame {
                         if (index == 0) {
                             okButton.setVisible(false);
                         }
+                        
+                        bar.setValue(index+1);
 
                         contentPanel.revalidate();
                         contentPanel.repaint();
@@ -294,70 +279,8 @@ public class MainGUI extends JFrame {
                 gbc_cancelButton.gridx = 1;
                 gbc_cancelButton.gridy = 0;
                 buttonPane.add(cancelButton, gbc_cancelButton);
-                {
-
-//Sprachauswahl als Menu                    
-//                    
-//                    JMenuBar menuBar = new JMenuBar();
-//					 getContentPane().add(menuBar, BorderLayout.NORTH);
-//                    {
-//                        JMenu mnNewMenu = new JMenu(Messages.getString("MainGUI.11"));
-//                        menuBar.add(mnNewMenu);
-//                        {
-//                            JMenuItem mntmSprache = new JMenuItem(Messages.getString("MainGUI.20"));
-//                            mnNewMenu.add(mntmSprache);
-//                            mntmSprache.addActionListener(new ActionListener() {
-//
-//                                @Override
-//                                public void actionPerformed(ActionEvent arg0) {
-//                                    ResourceBundle.clearCache();
-//                                    Locale de = Locale.GERMANY;
-//                                    Locale.setDefault(de);
-//                                    contentPanel.revalidate();
-//                                    contentPanel.repaint();
-//                                }
-//                            });
-//                        }
-//                        {
-//                            JMenuItem mntmNewMenuItem = new JMenuItem(Messages.getString("MainGUI.21"));
-//                            mnNewMenu.add(mntmNewMenuItem);
-//                            mntmNewMenuItem.addActionListener(new ActionListener() {
-//
-//                                @Override
-//                                public void actionPerformed(ActionEvent arg0) {
-//                                    ResourceBundle.clearCache();
-//                                    Locale eng = Locale.ENGLISH;
-//                                    Locale.setDefault(eng);
-//                                    contentPanel.revalidate();
-//                                    contentPanel.repaint();
-//                                }
-//                            });
-//                        }
-                }
             }
 
-//            languageBox.addActionListener(new ActionListener() {
-//                public void actionPerformed(ActionEvent e) {
-//                    if (languageBox.getSelectedItem() != null) {
-//                        String lang = languageBox.getSelectedItem().toString();
-//                        //System.out.println("Language: "+lang);
-//                        if (lang.equals(langoptions[1])) {
-//                            Locale.setDefault(Locale.ENGLISH);
-//                            LocaleChangeEvent e = new LocaleChangeEvent(this, Locale.ENGLISH);
-//                        } else if (lang.equals(langoptions[0])) {
-//                            Locale.setDefault(Locale.GERMANY);
-//                        } else {
-//                            //Das sollte nicht passieren...
-//                        }
-//                        
-//                        SwingUtilities.updateComponentTreeUI(MainGUI.this);
-//                        invalidate();
-//                        validate();
-//                        repaint();
-//                        System.out.println("aha");
-//                    }
-//                }
-//            });
             cancelButton.addActionListener(new ActionListener() {
 
                 @Override
@@ -453,6 +376,7 @@ public class MainGUI extends JFrame {
 
                         contentPanel.add(screens[index]);
                         menu[index].setForeground(Color.BLACK);
+                        bar.setValue(index+1);
                         contentPanel.revalidate();
                         contentPanel.repaint();
 
