@@ -232,7 +232,12 @@ public class Order extends JPanel {
 		int sum = 0;
 
 		for(int i = 0; i < data.size(); ++i) {
-			data.get(i).setQuantity(Integer.parseInt(textFieldsHash.get(data.get(i).getItemConfigId()).getText()));
+                        String input = textFieldsHash.get(data.get(i).getItemConfigId()).getText();
+			if(input.isEmpty()) {
+                            data.get(i).setQuantity(0);
+                        } else {
+                            data.get(i).setQuantity(Integer.parseInt(input));
+                        }
 			
 			JComboBox box = comboBoxesHash.get(data.get(i).getItemConfigId());
 			
