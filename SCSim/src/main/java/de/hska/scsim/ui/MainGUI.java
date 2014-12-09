@@ -22,12 +22,14 @@ import java.io.File;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import javax.swing.GroupLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JProgressBar;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
@@ -37,7 +39,7 @@ import javax.swing.border.MatteBorder;
  *
  * @author Andi
  */
-public class MainGUI extends JFrame{
+public class MainGUI extends JFrame {
 
     private final ProductionService productionService;
     private final CapacityService capacityService;
@@ -92,7 +94,7 @@ public class MainGUI extends JFrame{
         }
 
         //Erstellung Array vom Datentyp Object, Hinzufügen der Optionen
-       Object[] options = {"German", "English"};
+        Object[] options = {"German", "English"};
 
         int selected = JOptionPane.showOptionDialog(contentPanel, "Please choose your language:", "",
                 JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, null);
@@ -152,66 +154,62 @@ public class MainGUI extends JFrame{
             //Panel mit Navigation
             JPanel panel = new JPanel();
             panel.setBorder(new MatteBorder(0, 0, 1, 0, (Color) new Color(0, 0, 0)));
-            panel.setPreferredSize(new Dimension(10, 130));
+            panel.setPreferredSize(new Dimension(10, 50));
             panel.setBackground(Color.WHITE);
             contentPanel.add(panel, BorderLayout.NORTH);
 
-            panel.setLayout(new GridLayout(1, 0, 0, 0));
-            {
-                JLabel lblNewLabel_1 = new JLabel(Messages.getString("MainGUI.0")); //Willkommen
-                lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-                panel.add(lblNewLabel_1);
-                menu[0] = lblNewLabel_1;
-            }
-            {
-                JLabel lblNewLabel = new JLabel(Messages.getString("MainGUI.1")); //Prognose
-                lblNewLabel.setForeground(Color.LIGHT_GRAY);
-                lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-                panel.add(lblNewLabel);
-                menu[1] = lblNewLabel;
-            }
-            {
-                JLabel lblNewLabel_2 = new JLabel(Messages.getString("MainGUI.2")); //Sicherheitsbestand
-                lblNewLabel_2.setForeground(Color.LIGHT_GRAY);
-                lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-                panel.add(lblNewLabel_2);
-                menu[2] = lblNewLabel_2;
-            }
-            {
-                JLabel lblNewLabel_3 = new JLabel(Messages.getString("MainGUI.3")); //Fertigungsaufträge
-                lblNewLabel_3.setForeground(Color.LIGHT_GRAY);
-                lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
-                panel.add(lblNewLabel_3);
-                menu[3] = lblNewLabel_3;
-            }
-            {
-                JLabel lblNewLabel_4 = new JLabel(Messages.getString("MainGUI.4")); //Kapazitätsplanung
-                lblNewLabel_4.setForeground(Color.LIGHT_GRAY);
-                lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
-                panel.add(lblNewLabel_4);
-                menu[4] = lblNewLabel_4;
-            }
-            {
-                JLabel lblNewLabel_5 = new JLabel(Messages.getString("MainGUI.5")); //Bestellung
-                lblNewLabel_5.setForeground(Color.LIGHT_GRAY);
-                lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
-                panel.add(lblNewLabel_5);
-                menu[5] = lblNewLabel_5;
-            }
-            {
-                JLabel lblFertigstellung = new JLabel(Messages.getString("MainGUI.Nachplanung")); //Nachplanung
-                lblFertigstellung.setForeground(Color.LIGHT_GRAY);
-                lblFertigstellung.setHorizontalAlignment(SwingConstants.CENTER);
-                panel.add(lblFertigstellung);
-                menu[6] = lblFertigstellung;
-            }
-            {
-                JLabel lblFertigstellung = new JLabel(Messages.getString("MainGUI.6")); //
-                lblFertigstellung.setForeground(Color.LIGHT_GRAY);
-                lblFertigstellung.setHorizontalAlignment(SwingConstants.CENTER);
-                panel.add(lblFertigstellung);
-                menu[7] = lblFertigstellung;
-            }
+            panel.setLayout(new BorderLayout());
+            panel.add(new JProgressBar(), BorderLayout.NORTH);
+            JPanel innerPanel = new JPanel(new GridLayout(1, 6));
+
+            JLabel welcomeLbl = new JLabel(Messages.getString("MainGUI.0")); //Willkommen
+            welcomeLbl.setHorizontalAlignment(SwingConstants.CENTER);
+            innerPanel.add(welcomeLbl);
+            menu[0] = welcomeLbl;
+
+            JLabel forecastLbl = new JLabel(Messages.getString("MainGUI.1")); //Prognose
+            forecastLbl.setForeground(Color.LIGHT_GRAY);
+            forecastLbl.setHorizontalAlignment(SwingConstants.CENTER);
+            innerPanel.add(forecastLbl);
+            menu[1] = forecastLbl;
+
+            JLabel safetyLbl = new JLabel(Messages.getString("MainGUI.2")); //Sicherheitsbestand
+            safetyLbl.setForeground(Color.LIGHT_GRAY);
+            safetyLbl.setHorizontalAlignment(SwingConstants.CENTER);
+            innerPanel.add(safetyLbl);
+            menu[2] = safetyLbl;
+
+            JLabel productionLbl = new JLabel(Messages.getString("MainGUI.3")); //Fertigungsaufträge
+            productionLbl.setForeground(Color.LIGHT_GRAY);
+            productionLbl.setHorizontalAlignment(SwingConstants.CENTER);
+            innerPanel.add(productionLbl);
+            menu[3] = productionLbl;
+
+            JLabel capacityLbl = new JLabel(Messages.getString("MainGUI.4")); //Kapazitätsplanung
+            capacityLbl.setForeground(Color.LIGHT_GRAY);
+            capacityLbl.setHorizontalAlignment(SwingConstants.CENTER);
+            innerPanel.add(capacityLbl);
+            menu[4] = capacityLbl;
+
+            JLabel orderLbl = new JLabel(Messages.getString("MainGUI.5")); //Bestellung
+            orderLbl.setForeground(Color.LIGHT_GRAY);
+            orderLbl.setHorizontalAlignment(SwingConstants.CENTER);
+            innerPanel.add(orderLbl);
+            menu[5] = orderLbl;
+
+            JLabel lblFertigstellung = new JLabel(Messages.getString("MainGUI.Nachplanung")); //Nachplanung
+            lblFertigstellung.setForeground(Color.LIGHT_GRAY);
+            lblFertigstellung.setHorizontalAlignment(SwingConstants.CENTER);
+            innerPanel.add(lblFertigstellung);
+            menu[6] = lblFertigstellung;
+
+            JLabel finishLbl = new JLabel(Messages.getString("MainGUI.6")); //
+            finishLbl.setForeground(Color.LIGHT_GRAY);
+            finishLbl.setHorizontalAlignment(SwingConstants.CENTER);
+            innerPanel.add(finishLbl);
+            menu[7] = finishLbl;
+
+            panel.add(innerPanel, BorderLayout.CENTER);
         }
         contentPanel.add(screen1, BorderLayout.CENTER);
         {
@@ -298,8 +296,6 @@ public class MainGUI extends JFrame{
                 buttonPane.add(cancelButton, gbc_cancelButton);
                 {
 
-
-
 //Sprachauswahl als Menu                    
 //                    
 //                    JMenuBar menuBar = new JMenuBar();
@@ -362,7 +358,6 @@ public class MainGUI extends JFrame{
 //                    }
 //                }
 //            });
-
             cancelButton.addActionListener(new ActionListener() {
 
                 @Override
