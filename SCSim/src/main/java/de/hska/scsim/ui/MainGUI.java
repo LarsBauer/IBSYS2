@@ -13,10 +13,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
 import java.awt.GridLayout;
-import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -63,7 +60,7 @@ public class MainGUI extends JFrame {
     private ProductionOrder screen4;
     private CapacityPlanning screen5;
     private Order screen6;
-    private PostProcessing screen7;
+    private Prioritization screen7;
     private Completion screen8;
 
     private List<ProductionPlanningResult> productionPlanningResult;
@@ -127,7 +124,7 @@ public class MainGUI extends JFrame {
         screen4 = new ProductionOrder(MainGUI.this);
         screen5 = new CapacityPlanning();
         screen6 = new Order();
-        screen7 = new PostProcessing();
+        screen7 = new Prioritization();
         screen8 = new Completion();
 
         screens = new JPanel[8];

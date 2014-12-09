@@ -40,7 +40,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.text.AbstractDocument;
 
-public class PostProcessing extends JPanel {
+public class Prioritization extends JPanel {
 
     private JButton btnNewButton_1;
     private JList list;
@@ -58,7 +58,7 @@ public class PostProcessing extends JPanel {
     /**
      * Create the dialog.
      */
-    public PostProcessing() {
+    public Prioritization() {
 
         this.setBorder(new EmptyBorder(50, 100, 15, 100));
         this.setFont(new Font("Arial", Font.PLAIN, 11)); //$NON-NLS-1$
@@ -142,12 +142,12 @@ public class PostProcessing extends JPanel {
             public void actionPerformed(ActionEvent arg0) {
 
                 if (list.isSelectionEmpty()) {
-                    JOptionPane.showOptionDialog(PostProcessing.this,
+                    JOptionPane.showOptionDialog(Prioritization.this,
                             "Wählen Sie bitte einen Auftrag aus", "Keine Auswahl", //$NON-NLS-1$ //$NON-NLS-2$
                             JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null);
                 } else if ((Integer.parseInt(textField.getText()) + Integer.parseInt(textField_1.getText())) != number) {
                     JOptionPane
-                            .showOptionDialog(PostProcessing.this,
+                            .showOptionDialog(Prioritization.this,
                                     "Verändern Sie bitte die Werte so dass die Summe der Werte mit dem Original Wert �bereinstimmt", "Werte Unterschiedlich", //$NON-NLS-1$ //$NON-NLS-2$
                                     JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null);
                 } else {
@@ -199,7 +199,7 @@ public class PostProcessing extends JPanel {
                         String ID = raw.substring(raw.indexOf("-") + 1, raw.lastIndexOf(":")); //$NON-NLS-1$ //$NON-NLS-2$
                         ID = ID.replace(" ", ""); //$NON-NLS-1$ //$NON-NLS-2$
                         if (i > 0 && savedID.equals(ID) == false) {
-                            JOptionPane.showOptionDialog(PostProcessing.this,
+                            JOptionPane.showOptionDialog(Prioritization.this,
                                     Messages.getString("Nachplanung.11"), Messages.getString("Nachplanung.12"), //$NON-NLS-1$ //$NON-NLS-2$
                                     JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null);
                             return;
@@ -251,7 +251,7 @@ public class PostProcessing extends JPanel {
 
                 } else {
                     JOptionPane
-                            .showOptionDialog(PostProcessing.this,
+                            .showOptionDialog(Prioritization.this,
                                     Messages.getString("Nachplanung.9"), Messages.getString("Nachplanung.10"), //$NON-NLS-1$ //$NON-NLS-2$
                                     JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null, null, null);
                 }
