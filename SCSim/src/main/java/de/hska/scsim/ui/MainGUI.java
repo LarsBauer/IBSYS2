@@ -327,13 +327,14 @@ public class MainGUI extends JFrame {
 
                     double stockValue = inspector.checkStockValue(productionPlanningResult, screen6.getData(), screen2.getPlanedSales());
 
+                    //Dialog Lagermenge
                     if (stockValue < 250000.0) {
                         JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.32") + stockValue + Messages.getString("MainGUI.27"), Messages.getString("MainGUI.28"), JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null);
-                        
+
                     } else {
                         int selected = JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.32") + stockValue + Messages.getString("MainGUI.29"), Messages.getString("MainGUI.28"), JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE, null, options, 0);
-                        
-                        if(selected == 1) {
+
+                        if (selected == 1) {
                             return;
                         }
                     }
