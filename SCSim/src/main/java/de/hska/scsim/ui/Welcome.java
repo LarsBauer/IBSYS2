@@ -61,7 +61,7 @@ public class Welcome extends JPanel {
         {
             textField = new JTextField();
             textField.setMinimumSize(new Dimension(330, 20));
-            textField.setPreferredSize(new Dimension(200, 20));
+            textField.setPreferredSize(new Dimension(300, 20));
             GridBagConstraints gbc_textField = new GridBagConstraints();
             gbc_textField.fill = GridBagConstraints.HORIZONTAL;
             gbc_textField.anchor = GridBagConstraints.EAST;
@@ -69,7 +69,6 @@ public class Welcome extends JPanel {
             gbc_textField.gridx = 1;
             gbc_textField.gridy = 1;
             this.add(textField, gbc_textField);
-            textField.setColumns(10);
         }
         {
             JButton btnNewButton = new JButton(Messages.getString("Willkommen.2"));

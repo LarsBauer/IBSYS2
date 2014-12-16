@@ -62,8 +62,8 @@ public class SafetyStock extends JPanel {
         this.setAlignmentX(Component.RIGHT_ALIGNMENT);
         this.setBackground(Color.WHITE);
         GridBagLayout gbl_this = new GridBagLayout();
-        gbl_this.columnWidths = new int[]{72, 124, 124, 124, 124, 124, 15};
-        gbl_this.rowHeights = new int[]{33, 22, 22, 22, 22, 22, 22, 22, 22, 22, 33, 22, 22, 22, 0};
+        gbl_this.columnWidths = new int[]{0, 124, 124, 124, 124, 124, 15};
+        gbl_this.rowHeights = new int[]{0, 22, 22, 22, 22, 22, 22, 22, 22, 22, 33, 22, 22, 22, 0};
         gbl_this.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
         gbl_this.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
             0.0, 0.0, 0.0, Double.MIN_VALUE};
@@ -127,7 +127,7 @@ public class SafetyStock extends JPanel {
         }
         {
             JLabel lblNewLabel_7 = new JLabel("P1");
-            lblNewLabel_7.setBorder(new EmptyBorder(0, 42, 0, 0));
+            //lblNewLabel_7.setBorder(new EmptyBorder(0, 42, 0, 0));
             GridBagConstraints gbc_lblNewLabel_7 = new GridBagConstraints();
             gbc_lblNewLabel_7.fill = GridBagConstraints.BOTH;
             gbc_lblNewLabel_7.insets = new Insets(0, 0, 5, 5);
@@ -196,7 +196,7 @@ public class SafetyStock extends JPanel {
         }
         {
             JLabel lblNewLabel_10 = new JLabel("E51");
-            lblNewLabel_10.setBorder(new EmptyBorder(0, 42, 0, 0));
+            //lblNewLabel_10.setBorder(new EmptyBorder(0, 42, 0, 0));
             GridBagConstraints gbc_lblNewLabel_10 = new GridBagConstraints();
             gbc_lblNewLabel_10.fill = GridBagConstraints.BOTH;
             gbc_lblNewLabel_10.insets = new Insets(0, 0, 5, 5);
@@ -265,7 +265,7 @@ public class SafetyStock extends JPanel {
         }
         {
             JLabel lblNewLabel_14 = new JLabel("E50");
-            lblNewLabel_14.setBorder(new EmptyBorder(0, 42, 0, 0));
+            //lblNewLabel_14.setBorder(new EmptyBorder(0, 42, 0, 0));
             GridBagConstraints gbc_lblNewLabel_14 = new GridBagConstraints();
             gbc_lblNewLabel_14.fill = GridBagConstraints.BOTH;
             gbc_lblNewLabel_14.insets = new Insets(0, 0, 5, 5);
@@ -334,7 +334,7 @@ public class SafetyStock extends JPanel {
         }
         {
             JLabel lblNewLabel_17 = new JLabel("E4");
-            lblNewLabel_17.setBorder(new EmptyBorder(0, 42, 0, 0));
+            //lblNewLabel_17.setBorder(new EmptyBorder(0, 42, 0, 0));
             GridBagConstraints gbc_lblNewLabel_17 = new GridBagConstraints();
             gbc_lblNewLabel_17.fill = GridBagConstraints.BOTH;
             gbc_lblNewLabel_17.insets = new Insets(0, 0, 5, 5);
@@ -403,7 +403,7 @@ public class SafetyStock extends JPanel {
         }
         {
             JLabel lblNewLabel_20 = new JLabel("E10");
-            lblNewLabel_20.setBorder(new EmptyBorder(0, 42, 0, 0));
+            //lblNewLabel_20.setBorder(new EmptyBorder(0, 42, 0, 0));
             GridBagConstraints gbc_lblNewLabel_20 = new GridBagConstraints();
             gbc_lblNewLabel_20.fill = GridBagConstraints.BOTH;
             gbc_lblNewLabel_20.insets = new Insets(0, 0, 5, 5);
@@ -472,7 +472,7 @@ public class SafetyStock extends JPanel {
         }
         {
             JLabel lblNewLabel_22 = new JLabel("E49");
-            lblNewLabel_22.setBorder(new EmptyBorder(0, 42, 0, 0));
+            //lblNewLabel_22.setBorder(new EmptyBorder(0, 42, 0, 0));
             GridBagConstraints gbc_lblNewLabel_22 = new GridBagConstraints();
             gbc_lblNewLabel_22.fill = GridBagConstraints.BOTH;
             gbc_lblNewLabel_22.insets = new Insets(0, 0, 5, 5);
@@ -541,7 +541,7 @@ public class SafetyStock extends JPanel {
         }
         {
             JLabel lblNewLabel_25 = new JLabel("E7");
-            lblNewLabel_25.setBorder(new EmptyBorder(0, 42, 0, 0));
+            //lblNewLabel_25.setBorder(new EmptyBorder(0, 42, 0, 0));
             GridBagConstraints gbc_lblNewLabel_25 = new GridBagConstraints();
             gbc_lblNewLabel_25.fill = GridBagConstraints.BOTH;
             gbc_lblNewLabel_25.insets = new Insets(0, 0, 5, 5);
@@ -610,7 +610,7 @@ public class SafetyStock extends JPanel {
         }
         {
             JLabel lblNewLabel_28 = new JLabel("E13");
-            lblNewLabel_28.setBorder(new EmptyBorder(0, 42, 0, 0));
+            //lblNewLabel_28.setBorder(new EmptyBorder(0, 42, 0, 0));
             GridBagConstraints gbc_lblNewLabel_28 = new GridBagConstraints();
             gbc_lblNewLabel_28.fill = GridBagConstraints.BOTH;
             gbc_lblNewLabel_28.insets = new Insets(0, 0, 5, 5);
@@ -679,7 +679,7 @@ public class SafetyStock extends JPanel {
         }
         {
             JLabel lblNewLabel_31 = new JLabel("E18");
-            lblNewLabel_31.setBorder(new EmptyBorder(0, 42, 0, 0));
+            //lblNewLabel_31.setBorder(new EmptyBorder(0, 42, 0, 0));
             GridBagConstraints gbc_lblNewLabel_31 = new GridBagConstraints();
             gbc_lblNewLabel_31.fill = GridBagConstraints.BOTH;
             gbc_lblNewLabel_31.insets = new Insets(0, 0, 5, 5);
@@ -803,7 +803,7 @@ public class SafetyStock extends JPanel {
         }
         {
             JLabel lblNewLabel_34 = new JLabel("E26");
-            lblNewLabel_34.setBorder(new EmptyBorder(0, 42, 0, 0));
+            //lblNewLabel_34.setBorder(new EmptyBorder(0, 42, 0, 0));
             GridBagConstraints gbc_lblNewLabel_34 = new GridBagConstraints();
             gbc_lblNewLabel_34.fill = GridBagConstraints.BOTH;
             gbc_lblNewLabel_34.insets = new Insets(0, 0, 5, 5);
@@ -862,7 +862,7 @@ public class SafetyStock extends JPanel {
         }
         {
             JLabel lblNewLabel_35 = new JLabel("E16");
-            lblNewLabel_35.setBorder(new EmptyBorder(0, 42, 0, 0));
+            //lblNewLabel_35.setBorder(new EmptyBorder(0, 42, 0, 0));
             GridBagConstraints gbc_lblNewLabel_35 = new GridBagConstraints();
             gbc_lblNewLabel_35.fill = GridBagConstraints.BOTH;
             gbc_lblNewLabel_35.insets = new Insets(0, 0, 5, 5);
@@ -921,7 +921,7 @@ public class SafetyStock extends JPanel {
         }
         {
             JLabel lblNewLabel_36 = new JLabel("E17");
-            lblNewLabel_36.setBorder(new EmptyBorder(0, 42, 0, 0));
+            //lblNewLabel_36.setBorder(new EmptyBorder(0, 42, 0, 0));
             GridBagConstraints gbc_lblNewLabel_36 = new GridBagConstraints();
             gbc_lblNewLabel_36.fill = GridBagConstraints.BOTH;
             gbc_lblNewLabel_36.insets = new Insets(0, 0, 0, 5);

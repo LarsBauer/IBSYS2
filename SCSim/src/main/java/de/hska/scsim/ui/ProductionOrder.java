@@ -75,12 +75,10 @@ public class ProductionOrder extends JPanel {
 		this.setAlignmentX(Component.RIGHT_ALIGNMENT);
 		this.setBackground(Color.WHITE);
 		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[] { 78, 78, 78, 78, 78, 78, 78, 0 };
-		gridBagLayout.rowHeights = new int[] { 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26,
-				26, 26, 0 };
-		gridBagLayout.columnWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
-		gridBagLayout.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-				0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
+		gridBagLayout.columnWidths = new int[] { 0, 78, 78, 78, 78, 78, 78, 0 };
+		gridBagLayout.rowHeights = new int[] { 70, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 0 };
+		//gridBagLayout.columnWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
+		//gridBagLayout.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
 		setLayout(gridBagLayout);
 		{
 			JLabel label = new JLabel("");

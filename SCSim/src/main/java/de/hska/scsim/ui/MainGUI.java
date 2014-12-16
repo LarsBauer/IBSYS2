@@ -150,7 +150,7 @@ public class MainGUI extends JFrame {
         menu = new JLabel[8];
 
         setTitle(Messages.getString("MainGUI.ProgName"));
-        setBounds(100, 100, 1000, 600);
+        setBounds(100, 100, 1200, 600);
         getContentPane().setLayout(new BorderLayout());
         contentPanel.setBackground(Color.WHITE);
         contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));

@@ -41,7 +41,7 @@ public class Forecast extends JPanel {
      */
     public Forecast() {
 
-        this.setBorder(new EmptyBorder(80, 80, 0, 0));
+        //this.setBorder(new EmptyBorder(80, 80, 0, 0));
         this.setFont(new Font("Arial", Font.PLAIN, 11)); //$NON-NLS-1$
         this.setAutoscrolls(true);
         this.setAlignmentY(Component.BOTTOM_ALIGNMENT);
