@@ -13,13 +13,20 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Graphics2D;
 import java.awt.GridLayout;
+import java.awt.RenderingHints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -32,6 +39,7 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
+import org.springframework.core.io.ClassPathResource;
 
 /**
  *
@@ -117,6 +125,7 @@ public class MainGUI extends JFrame {
     public void createMainScreen() {
 
         index = 0;
+        BufferedImage icon;
 
         screen1 = new Welcome();
         screen2 = new Forecast();
@@ -212,6 +221,14 @@ public class MainGUI extends JFrame {
 
         northPanel.add(innerPanel, BorderLayout.CENTER);
 
+        final JPanel iconPanel = new JPanel();
+        iconPanel.setBorder(new MatteBorder(0, 0, 0, 0, (Color) new Color(0, 0, 0)));
+        iconPanel.setPreferredSize(new Dimension(200, 500));
+        iconPanel.setBackground(Color.WHITE);
+        iconPanel.add(loadImage());
+        
+        contentPanel.add(iconPanel, BorderLayout.WEST);
+
         //Content
         contentPanel.add(screen1, BorderLayout.CENTER);
         JPanel panel = new JPanel();
@@ -249,7 +266,10 @@ public class MainGUI extends JFrame {
                     backButton.setVisible(false);
                 }
 
+                iconPanel.removeAll();
+                iconPanel.add(loadImage());
                 bar.setValue(index + 1);
+                
 
                 contentPanel.revalidate();
                 contentPanel.repaint();
@@ -354,6 +374,9 @@ public class MainGUI extends JFrame {
                     contentPanel.add(screens[index]);
                     menu[index].setForeground(Color.BLACK);
                     bar.setValue(index + 1);
+                    iconPanel.removeAll();
+                    iconPanel.add(loadImage());
+                    
                     contentPanel.revalidate();
                     contentPanel.repaint();
 
@@ -374,6 +397,50 @@ public class MainGUI extends JFrame {
 
         productionPlanningResult = productionService.calculateProductionOutput(screen2.getPlanedSales(), data);
         screen4.setDataLabels(productionPlanningResult);
+    }
+    
+    public JLabel loadImage(){
+        //Bilddatei zuweisen nach index
+        String picpath = "src/main/resources/icon/";
+        switch(index){
+            case 0: picpath += "1_welcome";
+                break;
+            case 1: picpath += "2_forecast";
+                break;
+            case 2: picpath += "3_safetystock";
+                break;
+            case 3: picpath += "4_production";
+                break;
+            case 4: picpath += "5_capacity";
+                break;
+            case 5: picpath += "6_purchase";
+                break;
+            case 6: picpath += "7_priorization";
+                break;
+            case 7: picpath += "8_finish";
+                break;
+            default: picpath = "";
+        }
+        picpath += ".png";
+            
+        
+        try {
+            BufferedImage icon = ImageIO.read(new File(picpath));
+            icon = resize(icon, 150, 150);
+            JLabel picLabel = new JLabel(new ImageIcon(icon));
+            return picLabel;
+        } catch (IOException e) {
+            return new JLabel("Image not found");
+        }
+    }
+
+    public static BufferedImage resize(BufferedImage image, int width, int height) {
+        BufferedImage bi = new BufferedImage(width, height, BufferedImage.TRANSLUCENT);
+        Graphics2D g2d = (Graphics2D) bi.createGraphics();
+        g2d.addRenderingHints(new RenderingHints(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY));
+        g2d.drawImage(image, 0, 0, width, height, null);
+        g2d.dispose();
+        return bi;
     }
 
     public JButton getCancelButton() {
