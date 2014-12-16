@@ -1411,7 +1411,6 @@ public class ProductionOrder extends JPanel {
 				
 				@Override
 				public void focusLost(FocusEvent e) {
-					// TODO Auto-generated method stub
 					if(bar.getText().equals(text)){
 						ProductionOrder.this.main.getCancelButton().setEnabled(true);
 						btnFertigungsauftrgeNeuBerechnen.setEnabled(false);
@@ -1420,7 +1419,6 @@ public class ProductionOrder extends JPanel {
 
 				@Override
 				public void focusGained(FocusEvent e) {
-					// TODO Auto-generated method stub
 					text = bar.getText();
 					ProductionOrder.this.main.getCancelButton().setEnabled(false);
 					btnFertigungsauftrgeNeuBerechnen.setEnabled(true);

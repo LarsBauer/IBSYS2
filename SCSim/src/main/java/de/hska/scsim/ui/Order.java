@@ -148,7 +148,6 @@ public class Order extends JPanel {
 
 					@Override
 					public void focusLost(FocusEvent arg0) {
-						// TODO Auto-generated method stub
 						if (textField.getText().equals("")) {
 							textField.setText("0");
 						}
@@ -156,7 +155,6 @@ public class Order extends JPanel {
 
 					@Override
 					public void focusGained(FocusEvent arg0) {
-						// TODO Auto-generated method stub
 
 					}
 				});
@@ -184,7 +182,6 @@ public class Order extends JPanel {
 					
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						// TODO Auto-generated method stub
 						if(comboBox.getSelectedIndex() == 2) {
 							LabeltoField.get(comboBox).setText("0");
 						}
