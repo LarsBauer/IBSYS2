@@ -12,6 +12,7 @@ import java.awt.event.MouseListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.File;
+import java.util.Locale;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JPanel;
@@ -49,7 +50,7 @@ public class Welcome extends JPanel {
             txtrHerzlichWillkommenDas.setEditable(false);
             txtrHerzlichWillkommenDas.setBorder(new EmptyBorder(30, 30, 0, 30));
             txtrHerzlichWillkommenDas.setLineWrap(true);
-            txtrHerzlichWillkommenDas.setText(Messages.getString("Willkommen.1"));
+            txtrHerzlichWillkommenDas.setText(Messages.getString("welcome.text"));
             GridBagConstraints gbc_txtrHerzlichWillkommenDas = new GridBagConstraints();
             gbc_txtrHerzlichWillkommenDas.gridwidth = 3;
             gbc_txtrHerzlichWillkommenDas.fill = GridBagConstraints.BOTH;
@@ -72,7 +73,7 @@ public class Welcome extends JPanel {
             textField.setColumns(10);
         }
         {
-            JButton btnNewButton = new JButton(Messages.getString("Willkommen.2"));
+            JButton btnNewButton = new JButton(Messages.getString("welcome.browse"));
             GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
             gbc_btnNewButton.anchor = GridBagConstraints.WEST;
             gbc_btnNewButton.insets = new Insets(0, 0, 5, 0);
@@ -125,13 +126,14 @@ public class Welcome extends JPanel {
         }
 
         public File oeffnen() {
-            final JFileChooser chooser = new JFileChooser(Messages.getString("Willkommen.3"));
+            final JFileChooser chooser = new JFileChooser();
+            chooser.setLocale(Locale.getDefault());
             chooser.setDialogType(JFileChooser.OPEN_DIALOG);
             chooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
             FileNameExtensionFilter xmlfilter = new FileNameExtensionFilter("xml files (*.xml)", "xml");
             chooser.setFileFilter(xmlfilter);
             chooser.setAcceptAllFileFilterUsed(false);
-            final File file = new File(System.getProperty("user.dir"));  //$NON-NLS-1$
+            final File file = new File(System.getProperty("user.home"));
 
             chooser.setCurrentDirectory(file);
 

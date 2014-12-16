@@ -21,7 +21,6 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -39,7 +38,6 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
-import org.springframework.core.io.ClassPathResource;
 
 /**
  *
@@ -105,12 +103,10 @@ public class MainGUI extends JFrame {
                 JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, null);
 
         if (selected == 0) {
-            Locale de = Locale.GERMANY;
-            Locale.setDefault(de);
+            Locale.setDefault(Locale.GERMANY);
             createMainScreen();
         } else if (selected == 1) {
-            Locale eng = Locale.ENGLISH;
-            Locale.setDefault(eng);
+            Locale.setDefault(Locale.US);
             createMainScreen();
         } else {
             dispose();

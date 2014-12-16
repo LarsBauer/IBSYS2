@@ -62,7 +62,7 @@ public class Order extends JPanel {
 		add(panel_1, BorderLayout.SOUTH);
 		panel_1.setLayout(new GridLayout(0, 2, 0, 0));
 
-		JLabel lblNewLabel = new JLabel(Messages.getString("Bestellung.6"));
+		JLabel lblNewLabel = new JLabel(Messages.getString("order.discount"));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel);
 
@@ -79,9 +79,9 @@ public class Order extends JPanel {
 		content.removeAll();
 
 		String[] StringsWith = {
-				Messages.getString("Bestellung.3"), Messages.getString("Bestellung.4"), "-" }; //$NON-NLS-2$
+				Messages.getString("order.normal"), Messages.getString("order.fast"), "-" }; //$NON-NLS-2$
 		String[] StringsWithout = {
-				Messages.getString("Bestellung.3"), Messages.getString("Bestellung.4") }; //$NON-NLS-2$
+				Messages.getString("order.normal"), Messages.getString("order.fast") }; //$NON-NLS-2$
 
 		int sum = 0;
 
@@ -119,7 +119,7 @@ public class Order extends JPanel {
 
 					@Override
 					public void keyReleased(KeyEvent arg0) {
-						lblNewLabel22.setText(Messages.getString("Bestellung.5") + summeBerechnen());
+						lblNewLabel22.setText(Messages.getString("order.totalcosts") + summeBerechnen());
 						if(textField.getText().equals("0")) {
 							FieldtoLabel.get(textField).removeItemAt(0);
 							FieldtoLabel.get(textField).removeItemAt(0);
@@ -128,8 +128,8 @@ public class Order extends JPanel {
 						}
 						else if(!textField.getText().equals("0") && (FieldtoLabel.get(textField).getItemCount() == 1)) {
 							FieldtoLabel.get(textField).removeItemAt(0);
-							FieldtoLabel.get(textField).addItem(makeObj(Messages.getString("Bestellung.3")));
-							FieldtoLabel.get(textField).addItem(makeObj(Messages.getString("Bestellung.4")));
+							FieldtoLabel.get(textField).addItem(makeObj(Messages.getString("order.normal")));
+							FieldtoLabel.get(textField).addItem(makeObj(Messages.getString("order.fast")));
 							FieldtoLabel.get(textField).addItem(makeObj("-"));
 							FieldtoLabel.get(textField).setSelectedIndex(0);					
 						}
@@ -165,9 +165,9 @@ public class Order extends JPanel {
 				comboBoxesHash.put(data.get(i).getItemConfigId(), comboBox);
 				content.add(comboBox);
 				if (data.get(i).getPurchaseMode() == 5) {
-					comboBox.setSelectedItem(Messages.getString("Bestellung.3"));
+					comboBox.setSelectedItem(Messages.getString("order.normal"));
 				} else if (data.get(i).getPurchaseMode() == 4) {
-					comboBox.setSelectedItem(Messages.getString("Bestellung.4"));
+					comboBox.setSelectedItem(Messages.getString("order.fast"));
 				}
 				if (data.get(i).getQuantity() == 0) {
 					comboBox.setSelectedItem("-");
@@ -185,12 +185,12 @@ public class Order extends JPanel {
 						if(comboBox.getSelectedIndex() == 2) {
 							LabeltoField.get(comboBox).setText("0");
 						}
-						lblNewLabel22.setText(Messages.getString("Bestellung.5") + summeBerechnen());
+						lblNewLabel22.setText(Messages.getString("order.totalcosts") + summeBerechnen());
 					}
 				});
 			}
 			{
-				JLabel rabatt = new JLabel(Messages.getString("Bestellung.7") + data.get(i).getDiscountQuantity());
+				JLabel rabatt = new JLabel(Messages.getString("order.discountlabel") + data.get(i).getDiscountQuantity());
 				content.add(rabatt);
 			}
 			LabeltoField.put(comboBox, textField);
