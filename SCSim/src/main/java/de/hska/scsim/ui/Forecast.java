@@ -63,7 +63,7 @@ public class Forecast extends JPanel {
             this.add(Filler, gbc_Filler);
         }
         {
-            JLabel lblNewLabel_8 = new JLabel(Messages.getString("Prognose.4")); //$NON-NLS-1$
+            JLabel lblNewLabel_8 = new JLabel(Messages.getString("forecast.children")); //$NON-NLS-1$
             lblNewLabel_8.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblNewLabel_8 = new GridBagConstraints();
             gbc_lblNewLabel_8.fill = GridBagConstraints.BOTH;
@@ -73,7 +73,7 @@ public class Forecast extends JPanel {
             this.add(lblNewLabel_8, gbc_lblNewLabel_8);
         }
         {
-            JLabel lblNewLabel_9 = new JLabel(Messages.getString("Prognose.3")); //$NON-NLS-1$
+            JLabel lblNewLabel_9 = new JLabel(Messages.getString("forecast.ladies")); //$NON-NLS-1$
             lblNewLabel_9.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblNewLabel_9 = new GridBagConstraints();
             gbc_lblNewLabel_9.fill = GridBagConstraints.BOTH;
@@ -83,7 +83,7 @@ public class Forecast extends JPanel {
             this.add(lblNewLabel_9, gbc_lblNewLabel_9);
         }
         {
-            JLabel lblNewLabel_10 = new JLabel(Messages.getString("Prognose.2")); //$NON-NLS-1$
+            JLabel lblNewLabel_10 = new JLabel(Messages.getString("forecast.men")); //$NON-NLS-1$
             lblNewLabel_10.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblNewLabel_10 = new GridBagConstraints();
             gbc_lblNewLabel_10.fill = GridBagConstraints.BOTH;
@@ -102,7 +102,7 @@ public class Forecast extends JPanel {
             this.add(lblNewLabel_15, gbc_lblNewLabel_15);
         }
         {
-            JLabel lblNewLabel_11 = new JLabel(Messages.getString("Prognose.6")); //$NON-NLS-1$
+            JLabel lblNewLabel_11 = new JLabel(Messages.getString("forecast.orders")); //$NON-NLS-1$
             lblNewLabel_11.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblNewLabel_11 = new GridBagConstraints();
             gbc_lblNewLabel_11.fill = GridBagConstraints.BOTH;
@@ -164,7 +164,7 @@ public class Forecast extends JPanel {
             this.add(lblNewLabel_16, gbc_lblNewLabel_16);
         }
         {
-            JLabel lblNewLabel_13 = new JLabel(Messages.getString("Prognose.11")); //$NON-NLS-1$
+            JLabel lblNewLabel_13 = new JLabel(Messages.getString("forecast.period1")); //$NON-NLS-1$
             lblNewLabel_13.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblNewLabel_13 = new GridBagConstraints();
             gbc_lblNewLabel_13.fill = GridBagConstraints.BOTH;
@@ -286,7 +286,7 @@ public class Forecast extends JPanel {
             this.add(lblNewLabel_18, gbc_lblNewLabel_18);
         }
         {
-            JLabel lblNewLabel_14 = new JLabel(Messages.getString("Prognose.21")); //$NON-NLS-1$
+            JLabel lblNewLabel_14 = new JLabel(Messages.getString("forecast.men1")); //$NON-NLS-1$
             lblNewLabel_14.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblNewLabel_14 = new GridBagConstraints();
             gbc_lblNewLabel_14.fill = GridBagConstraints.BOTH;
