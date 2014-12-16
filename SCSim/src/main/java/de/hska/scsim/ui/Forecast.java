@@ -50,8 +50,8 @@ public class Forecast extends JPanel {
         GridBagLayout gbl_panel = new GridBagLayout();
         gbl_panel.columnWidths = new int[]{136, 136, 136, 136, 136, 0};
         gbl_panel.rowHeights = new int[]{51, 30, 30, 30, 30, 51, 0};
-        gbl_panel.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
-        gbl_panel.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+        //gbl_panel.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+        //gbl_panel.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
         this.setLayout(gbl_panel);
         {
             JLabel Filler = new JLabel(""); //$NON-NLS-1$
@@ -225,7 +225,7 @@ public class Forecast extends JPanel {
             this.add(lblNewLabel_17, gbc_lblNewLabel_17);
         }
         {
-            JLabel lblNewLabel_12 = new JLabel(Messages.getString("Prognose.16")); //$NON-NLS-1$
+            JLabel lblNewLabel_12 = new JLabel(Messages.getString("forecast.period2")); //$NON-NLS-1$
             lblNewLabel_12.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblNewLabel_12 = new GridBagConstraints();
             gbc_lblNewLabel_12.fill = GridBagConstraints.BOTH;

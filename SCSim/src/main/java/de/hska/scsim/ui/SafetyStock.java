@@ -64,9 +64,8 @@ public class SafetyStock extends JPanel {
         GridBagLayout gbl_this = new GridBagLayout();
         gbl_this.columnWidths = new int[]{0, 124, 124, 124, 124, 124, 15};
         gbl_this.rowHeights = new int[]{0, 22, 22, 22, 22, 22, 22, 22, 22, 22, 33, 22, 22, 22, 0};
-        gbl_this.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
-        gbl_this.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-            0.0, 0.0, 0.0, Double.MIN_VALUE};
+        //gbl_this.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+        //gbl_this.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
         this.setLayout(gbl_this);
         {
             JLabel label = new JLabel("");

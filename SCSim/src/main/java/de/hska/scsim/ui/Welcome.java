@@ -39,16 +39,16 @@ public class Welcome extends JPanel {
 
         this.setBackground(Color.WHITE);
         GridBagLayout gbl_panel = new GridBagLayout();
-        gbl_panel.columnWidths = new int[]{30, 0, 360, 360, 0};
+        gbl_panel.columnWidths = new int[]{0, 0, 360, 360, 0};
         gbl_panel.rowHeights = new int[]{128, 128, 50, 0};
-        gbl_panel.columnWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
-        gbl_panel.rowWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
+        //gbl_panel.columnWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
+        //gbl_panel.rowWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
         this.setLayout(gbl_panel);
         {
             JTextArea txtrHerzlichWillkommenDas = new JTextArea();
             txtrHerzlichWillkommenDas.setFont(new Font("Segoe UI", Font.PLAIN, 12));
             txtrHerzlichWillkommenDas.setEditable(false);
-            txtrHerzlichWillkommenDas.setBorder(new EmptyBorder(30, 30, 0, 30));
+            //txtrHerzlichWillkommenDas.setBorder(new EmptyBorder(30, 30, 0, 30));
             txtrHerzlichWillkommenDas.setLineWrap(true);
             txtrHerzlichWillkommenDas.setText(Messages.getString("welcome.text"));
             GridBagConstraints gbc_txtrHerzlichWillkommenDas = new GridBagConstraints();
