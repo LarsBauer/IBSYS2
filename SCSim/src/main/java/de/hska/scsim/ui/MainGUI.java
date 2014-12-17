@@ -9,6 +9,7 @@ import de.hska.scsim.service.PurchaseService;
 import de.hska.scsim.util.PlanningResultInspector;
 import de.hska.scsim.xml.XmlGenerator;
 import de.hska.scsim.xml.XmlParser;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -21,12 +22,13 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -397,7 +399,7 @@ public class MainGUI extends JFrame {
     
     public JLabel loadImage(){
         //Bilddatei zuweisen nach index
-        String picpath = "src/main/resources/icon/";
+        String picpath = "icon/";
         switch(index){
             case 0: picpath += "1_welcome";
                 break;
@@ -421,7 +423,8 @@ public class MainGUI extends JFrame {
             
         
         try {
-            BufferedImage icon = ImageIO.read(new File(picpath));
+        	InputStream stream = this.getClass().getClassLoader().getResourceAsStream(picpath);
+            BufferedImage icon = ImageIO.read(stream);
             icon = resize(icon, 150, 150);
             JLabel picLabel = new JLabel(new ImageIcon(icon));
             return picLabel;
