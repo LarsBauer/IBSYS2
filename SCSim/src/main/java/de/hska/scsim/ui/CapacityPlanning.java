@@ -70,7 +70,7 @@ public class CapacityPlanning extends JPanel {
             this.add(lblNewLabel_7, gbc_lblNewLabel_7);
         }
         {
-            JLabel lblNewLabel = new JLabel(Messages.getString("Kapazitaetsplanung.100"));
+            JLabel lblNewLabel = new JLabel(Messages.getString("capacity.components"));
             lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
             gbc_lblNewLabel.fill = GridBagConstraints.BOTH;
@@ -80,7 +80,7 @@ public class CapacityPlanning extends JPanel {
             add(lblNewLabel, gbc_lblNewLabel);
         }
         {
-            JLabel lblNewLabel_8 = new JLabel(Messages.getString("Kapazitaetsplanung.2"));
+            JLabel lblNewLabel_8 = new JLabel(Messages.getString("capacity.requirement"));
             lblNewLabel_8.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblNewLabel_8 = new GridBagConstraints();
             gbc_lblNewLabel_8.fill = GridBagConstraints.BOTH;
@@ -90,7 +90,7 @@ public class CapacityPlanning extends JPanel {
             this.add(lblNewLabel_8, gbc_lblNewLabel_8);
         }
         {
-            JLabel lblNewLabel_9 = new JLabel(Messages.getString("Kapazitaetsplanung.3"));
+            JLabel lblNewLabel_9 = new JLabel(Messages.getString("capacity.shifts"));
             lblNewLabel_9.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblNewLabel_9 = new GridBagConstraints();
             gbc_lblNewLabel_9.fill = GridBagConstraints.BOTH;
@@ -100,7 +100,7 @@ public class CapacityPlanning extends JPanel {
             this.add(lblNewLabel_9, gbc_lblNewLabel_9);
         }
         {
-            JLabel lblNewLabel_10 = new JLabel(Messages.getString("Kapazitaetsplanung.4"));
+            JLabel lblNewLabel_10 = new JLabel(Messages.getString("capacity.overtime"));
             lblNewLabel_10.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblNewLabel_10 = new GridBagConstraints();
             gbc_lblNewLabel_10.fill = GridBagConstraints.BOTH;
@@ -110,7 +110,7 @@ public class CapacityPlanning extends JPanel {
             this.add(lblNewLabel_10, gbc_lblNewLabel_10);
         }
         {
-            JLabel lblEffiziens = new JLabel(Messages.getString("Kapazitaetsplanung.5"));
+            JLabel lblEffiziens = new JLabel(Messages.getString("capacity.efficiency"));
             lblEffiziens.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblEffiziens = new GridBagConstraints();
             gbc_lblEffiziens.fill = GridBagConstraints.BOTH;
@@ -120,7 +120,7 @@ public class CapacityPlanning extends JPanel {
             add(lblEffiziens, gbc_lblEffiziens);
         }
         {
-            JLabel lblNewLabel_11 = new JLabel(Messages.getString("Kapazitaetsplanung.6"));
+            JLabel lblNewLabel_11 = new JLabel(Messages.getString("capacity.place1"));
             lblNewLabel_11.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblNewLabel_11 = new GridBagConstraints();
             gbc_lblNewLabel_11.fill = GridBagConstraints.BOTH;
@@ -185,7 +185,7 @@ public class CapacityPlanning extends JPanel {
             platz1.put("E", E_1);
         }
         {
-            JLabel lblStation = new JLabel(Messages.getString("Kapazitaetsplanung.15"));
+            JLabel lblStation = new JLabel(Messages.getString("capacity.place2"));
             lblStation.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblStation = new GridBagConstraints();
             gbc_lblStation.fill = GridBagConstraints.BOTH;
@@ -250,7 +250,7 @@ public class CapacityPlanning extends JPanel {
             platz2.put("E", E_2);
         }
         {
-            JLabel lblStation_1 = new JLabel(Messages.getString("Kapazitaetsplanung.24"));
+            JLabel lblStation_1 = new JLabel(Messages.getString("capacity.place3"));
             lblStation_1.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblStation_1 = new GridBagConstraints();
             gbc_lblStation_1.fill = GridBagConstraints.BOTH;
@@ -315,7 +315,7 @@ public class CapacityPlanning extends JPanel {
             platz3.put("E", E_3);
         }
         {
-            JLabel lblStation_2 = new JLabel(Messages.getString("Kapazitaetsplanung.33"));
+            JLabel lblStation_2 = new JLabel(Messages.getString("capacity.place4"));
             lblStation_2.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblStation_2 = new GridBagConstraints();
             gbc_lblStation_2.fill = GridBagConstraints.BOTH;
@@ -380,7 +380,7 @@ public class CapacityPlanning extends JPanel {
             platz4.put("E", E_4);
         }
         {
-            JLabel lblStation_3 = new JLabel(Messages.getString("Kapazitaetsplanung.42"));
+            JLabel lblStation_3 = new JLabel(Messages.getString("capacity.place5"));
             lblStation_3.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblStation_3 = new GridBagConstraints();
             gbc_lblStation_3.fill = GridBagConstraints.BOTH;
@@ -445,7 +445,7 @@ public class CapacityPlanning extends JPanel {
             platz5.put("E", E_5);
         }
         {
-            JLabel lblStation_4 = new JLabel(Messages.getString("Kapazitaetsplanung.51"));
+            JLabel lblStation_4 = new JLabel(Messages.getString("capacity.place6"));
             lblStation_4.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblStation_4 = new GridBagConstraints();
             gbc_lblStation_4.fill = GridBagConstraints.BOTH;
@@ -510,7 +510,7 @@ public class CapacityPlanning extends JPanel {
             platz6.put("E", E_6);
         }
         {
-            JLabel lblStation_5 = new JLabel(Messages.getString("Kapazitaetsplanung.60"));
+            JLabel lblStation_5 = new JLabel(Messages.getString("capacity.place7"));
             lblStation_5.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblStation_5 = new GridBagConstraints();
             gbc_lblStation_5.fill = GridBagConstraints.BOTH;
@@ -575,7 +575,7 @@ public class CapacityPlanning extends JPanel {
             platz7.put("E", E_7);
         }
         {
-            JLabel lblStation_6 = new JLabel(Messages.getString("Kapazitaetsplanung.69"));
+            JLabel lblStation_6 = new JLabel(Messages.getString("capacity.place8"));
             lblStation_6.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblStation_6 = new GridBagConstraints();
             gbc_lblStation_6.fill = GridBagConstraints.BOTH;
@@ -640,7 +640,7 @@ public class CapacityPlanning extends JPanel {
             platz8.put("E", E_8);
         }
         {
-            JLabel lblStation_7 = new JLabel(Messages.getString("Kapazitaetsplanung.78"));
+            JLabel lblStation_7 = new JLabel(Messages.getString("capacity.place9"));
             lblStation_7.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblStation_7 = new GridBagConstraints();
             gbc_lblStation_7.fill = GridBagConstraints.BOTH;
@@ -705,7 +705,7 @@ public class CapacityPlanning extends JPanel {
             platz9.put("E", E_9);
         }
         {
-            JLabel lblStation_8 = new JLabel(Messages.getString("Kapazitaetsplanung.87"));
+            JLabel lblStation_8 = new JLabel(Messages.getString("capacity.place10"));
             lblStation_8.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblStation_8 = new GridBagConstraints();
             gbc_lblStation_8.fill = GridBagConstraints.BOTH;
@@ -770,7 +770,7 @@ public class CapacityPlanning extends JPanel {
             platz10.put("E", E_10);
         }
         {
-            JLabel lblStation_9 = new JLabel(Messages.getString("Kapazitaetsplanung.96"));
+            JLabel lblStation_9 = new JLabel(Messages.getString("capacity.place11"));
             lblStation_9.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblStation_9 = new GridBagConstraints();
             gbc_lblStation_9.fill = GridBagConstraints.BOTH;
@@ -835,7 +835,7 @@ public class CapacityPlanning extends JPanel {
             platz11.put("E", E_11);
         }
         {
-            JLabel lblStation_10 = new JLabel(Messages.getString("Kapazitaetsplanung.105"));
+            JLabel lblStation_10 = new JLabel(Messages.getString("capacity.place12"));
             lblStation_10.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblStation_10 = new GridBagConstraints();
             gbc_lblStation_10.fill = GridBagConstraints.BOTH;
@@ -900,7 +900,7 @@ public class CapacityPlanning extends JPanel {
             platz12.put("E", E_12);
         }
         {
-            JLabel lblStation_11 = new JLabel(Messages.getString("Kapazitaetsplanung.114"));
+            JLabel lblStation_11 = new JLabel(Messages.getString("capacity.place13"));
             lblStation_11.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblStation_11 = new GridBagConstraints();
             gbc_lblStation_11.fill = GridBagConstraints.BOTH;
@@ -965,7 +965,7 @@ public class CapacityPlanning extends JPanel {
             platz13.put("E", E_13);
         }
         {
-            JLabel lblStation_12 = new JLabel(Messages.getString("Kapazitaetsplanung.123"));
+            JLabel lblStation_12 = new JLabel(Messages.getString("capacity.place14"));
             lblStation_12.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblStation_12 = new GridBagConstraints();
             gbc_lblStation_12.fill = GridBagConstraints.BOTH;
@@ -1030,7 +1030,7 @@ public class CapacityPlanning extends JPanel {
             platz14.put("E", E_14);
         }
         {
-            JLabel lblStation_13 = new JLabel(Messages.getString("Kapazitaetsplanung.132"));
+            JLabel lblStation_13 = new JLabel(Messages.getString("capacity.place15"));
             lblStation_13.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblStation_13 = new GridBagConstraints();
             gbc_lblStation_13.fill = GridBagConstraints.BOTH;

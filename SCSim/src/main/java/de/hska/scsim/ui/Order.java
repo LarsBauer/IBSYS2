@@ -79,9 +79,9 @@ public class Order extends JPanel {
 		content.removeAll();
 
 		String[] StringsWith = {
-				Messages.getString("order.normal"), Messages.getString("order.fast"), "-" }; //$NON-NLS-2$
+				Messages.getString("order.standard"), Messages.getString("order.fast"), "-" }; //$NON-NLS-2$
 		String[] StringsWithout = {
-				Messages.getString("order.normal"), Messages.getString("order.fast") }; //$NON-NLS-2$
+				Messages.getString("order.standard"), Messages.getString("order.fast") }; //$NON-NLS-2$
 
 		int sum = 0;
 
@@ -128,7 +128,7 @@ public class Order extends JPanel {
 						}
 						else if(!textField.getText().equals("0") && (FieldtoLabel.get(textField).getItemCount() == 1)) {
 							FieldtoLabel.get(textField).removeItemAt(0);
-							FieldtoLabel.get(textField).addItem(makeObj(Messages.getString("order.normal")));
+							FieldtoLabel.get(textField).addItem(makeObj(Messages.getString("order.standard")));
 							FieldtoLabel.get(textField).addItem(makeObj(Messages.getString("order.fast")));
 							FieldtoLabel.get(textField).addItem(makeObj("-"));
 							FieldtoLabel.get(textField).setSelectedIndex(0);					
@@ -165,7 +165,7 @@ public class Order extends JPanel {
 				comboBoxesHash.put(data.get(i).getItemConfigId(), comboBox);
 				content.add(comboBox);
 				if (data.get(i).getPurchaseMode() == 5) {
-					comboBox.setSelectedItem(Messages.getString("order.normal"));
+					comboBox.setSelectedItem(Messages.getString("order.standard"));
 				} else if (data.get(i).getPurchaseMode() == 4) {
 					comboBox.setSelectedItem(Messages.getString("order.fast"));
 				}
