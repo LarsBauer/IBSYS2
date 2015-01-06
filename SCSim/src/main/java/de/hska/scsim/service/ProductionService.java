@@ -56,7 +56,7 @@ public class ProductionService {
         Collections.sort(productionPlaningResults, new Comparator<ProductionPlanningResult>() {
             @Override
             public int compare(ProductionPlanningResult o1, ProductionPlanningResult o2) {
-                return DEFAULT_ORDER.indexOf(o1.getItemConfigId()) - DEFAULT_ORDER.indexOf(o2.getItemConfigId());
+                return Integer.valueOf(o1.getItemConfigId().substring(1)).compareTo(Integer.valueOf(o2.getItemConfigId().substring(1)));
             }
         });
         return productionPlaningResults;
