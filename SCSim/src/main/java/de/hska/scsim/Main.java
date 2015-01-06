@@ -38,7 +38,7 @@ public class Main {
     private XmlParser xmlParser;
 
     public static void main(String[] args) {
-        final ApplicationContext ctx = new ClassPathXmlApplicationContext("/spring/application-context.xml");
+        final ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:META-INF/spring/application-context.xml");
         final Main app = ctx.getBean(Main.class);
 
         SwingUtilities.invokeLater(new Runnable() {
