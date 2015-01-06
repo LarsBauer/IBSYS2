@@ -90,7 +90,7 @@ public class ProductionOrder extends JPanel {
 			this.add(label, gbc_label);
 		}
 		{
-			JLabel lblProdukt = new JLabel(Messages.getString("product.1")); //$NON-NLS-1$
+			JLabel lblProdukt = new JLabel(Messages.getString("production.product1")); //$NON-NLS-1$
 			lblProdukt.setHorizontalAlignment(SwingConstants.CENTER);
 			GridBagConstraints gbc_lblProdukt = new GridBagConstraints();
 			gbc_lblProdukt.fill = GridBagConstraints.BOTH;
@@ -100,7 +100,7 @@ public class ProductionOrder extends JPanel {
 			this.add(lblProdukt, gbc_lblProdukt);
 		}
 		{
-			JLabel lblSichBestand = new JLabel(Messages.getString("Buffer.7"));
+			JLabel lblSichBestand = new JLabel(Messages.getString("production.safetystock"));
 			lblSichBestand.setHorizontalAlignment(SwingConstants.CENTER);
 			GridBagConstraints gbc_lblSichBestand = new GridBagConstraints();
 			gbc_lblSichBestand.fill = GridBagConstraints.BOTH;
@@ -119,7 +119,7 @@ public class ProductionOrder extends JPanel {
 			add(lblNewLabel_2, gbc_lblNewLabel_2);
 		}
 		{
-			JLabel lblProdukt_1 = new JLabel(Messages.getString("product.2")); //$NON-NLS-1$
+			JLabel lblProdukt_1 = new JLabel(Messages.getString("production.product2")); //$NON-NLS-1$
 			lblProdukt_1.setHorizontalAlignment(SwingConstants.CENTER);
 			GridBagConstraints gbc_lblProdukt_1 = new GridBagConstraints();
 			gbc_lblProdukt_1.fill = GridBagConstraints.BOTH;
@@ -129,7 +129,7 @@ public class ProductionOrder extends JPanel {
 			this.add(lblProdukt_1, gbc_lblProdukt_1);
 		}
 		{
-			JLabel lblSichBestand_1 = new JLabel(Messages.getString("Buffer.7"));
+			JLabel lblSichBestand_1 = new JLabel(Messages.getString("production.safetystock"));
 			lblSichBestand_1.setHorizontalAlignment(SwingConstants.CENTER);
 			GridBagConstraints gbc_lblSichBestand_1 = new GridBagConstraints();
 			gbc_lblSichBestand_1.fill = GridBagConstraints.BOTH;
@@ -148,7 +148,7 @@ public class ProductionOrder extends JPanel {
 			add(lblNewLabel_3, gbc_lblNewLabel_3);
 		}
 		{
-			JLabel lblPrdoukt = new JLabel(Messages.getString("product.3")); //$NON-NLS-1$
+			JLabel lblPrdoukt = new JLabel(Messages.getString("production.product3")); //$NON-NLS-1$
 			lblPrdoukt.setHorizontalAlignment(SwingConstants.CENTER);
 			GridBagConstraints gbc_lblPrdoukt = new GridBagConstraints();
 			gbc_lblPrdoukt.fill = GridBagConstraints.BOTH;
@@ -158,7 +158,7 @@ public class ProductionOrder extends JPanel {
 			this.add(lblPrdoukt, gbc_lblPrdoukt);
 		}
 		{
-			JLabel lblNewLabel_1 = new JLabel(Messages.getString("Buffer.7"));
+			JLabel lblNewLabel_1 = new JLabel(Messages.getString("production.safetystock"));
 			lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 			GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
 			gbc_lblNewLabel_1.fill = GridBagConstraints.BOTH;
@@ -1093,7 +1093,7 @@ public class ProductionOrder extends JPanel {
 		}
 		containerFields.put("E20", E20_Value);
 		{
-			JLabel lblFrAlleProdukte = new JLabel(Messages.getString("product.all")); //$NON-NLS-1$
+			JLabel lblFrAlleProdukte = new JLabel(Messages.getString("production.allproducts")); //$NON-NLS-1$
 			lblFrAlleProdukte.setHorizontalAlignment(SwingConstants.CENTER);
 			GridBagConstraints gbc_lblFrAlleProdukte = new GridBagConstraints();
 			gbc_lblFrAlleProdukte.gridwidth = 2;
@@ -1104,7 +1104,7 @@ public class ProductionOrder extends JPanel {
 			this.add(lblFrAlleProdukte, gbc_lblFrAlleProdukte);
 		}
 		{
-			JLabel lblSichBestand_2 = new JLabel(Messages.getString("Buffer.7"));
+			JLabel lblSichBestand_2 = new JLabel(Messages.getString("production.safetystock"));
 			lblSichBestand_2.setHorizontalAlignment(SwingConstants.CENTER);
 			GridBagConstraints gbc_lblSichBestand_2 = new GridBagConstraints();
 			gbc_lblSichBestand_2.fill = GridBagConstraints.BOTH;
@@ -1250,7 +1250,7 @@ public class ProductionOrder extends JPanel {
 		containerFields.put("E16", E16_Value);
 		{
 			btnFertigungsauftrgeNeuBerechnen = new JButton(
-					Messages.getString("Buffer.8"));
+					Messages.getString("production.recalculate"));
 			btnFertigungsauftrgeNeuBerechnen.setEnabled(false);
 			GridBagConstraints gbc_btnFertigungsauftrgeNeuBerechnen = new GridBagConstraints();
 			gbc_btnFertigungsauftrgeNeuBerechnen.gridwidth = 3;

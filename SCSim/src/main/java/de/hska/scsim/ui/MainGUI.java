@@ -276,7 +276,7 @@ public class MainGUI extends JFrame {
         backButton.setVisible(false);
         buttonPanel.add(backButton);
 
-        nextButton = new JButton(Messages.getString("MainGUI.12"));
+        nextButton = new JButton(Messages.getString("main.next"));
         nextButton.setHorizontalAlignment(SwingConstants.RIGHT);
         nextButton.addActionListener(new ActionListener() {
 
@@ -347,10 +347,10 @@ public class MainGUI extends JFrame {
 
                     //Dialog Lagermenge
                     if (stockValue < 250000.0) {
-                        JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.32") + stockValue + Messages.getString("main.limit"), Messages.getString("main.stockvalue"), JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null);
+                        JOptionPane.showOptionDialog(contentPanel, Messages.getString("dialog.stockvalue") + stockValue + Messages.getString("dialog.nocosts"), Messages.getString("main.stockvalue"), JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null);
 
                     } else {
-                        int selected = JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.32") + stockValue + Messages.getString("main.nocosts"), Messages.getString("main.stockvalue"), JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE, null, options, 0);
+                        int selected = JOptionPane.showOptionDialog(contentPanel, Messages.getString("dialog.stockvalue") + stockValue + Messages.getString("dialog.additionalcosts"), Messages.getString("main.stockvalue"), JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE, null, options, 0);
 
                         if (selected == 1) {
                             return;
