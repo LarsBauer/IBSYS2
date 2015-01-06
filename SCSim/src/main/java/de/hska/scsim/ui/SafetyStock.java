@@ -77,7 +77,7 @@ public class SafetyStock extends JPanel {
             this.add(label, gbc_label);
         }
         {
-            JLabel lblProdukt = new JLabel(Messages.getString("Buffer.2"));
+            JLabel lblProdukt = new JLabel(Messages.getString("product.1"));
             lblProdukt.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblProdukt = new GridBagConstraints();
             gbc_lblProdukt.fill = GridBagConstraints.BOTH;
@@ -96,7 +96,7 @@ public class SafetyStock extends JPanel {
             this.add(label, gbc_label);
         }
         {
-            JLabel lblProdukt_1 = new JLabel(Messages.getString("Buffer.4"));
+            JLabel lblProdukt_1 = new JLabel(Messages.getString("product.2"));
             lblProdukt_1.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblProdukt_1 = new GridBagConstraints();
             gbc_lblProdukt_1.fill = GridBagConstraints.BOTH;
@@ -115,7 +115,7 @@ public class SafetyStock extends JPanel {
             this.add(label, gbc_label);
         }
         {
-            JLabel lblPrdoukt = new JLabel(Messages.getString("Buffer.6"));
+            JLabel lblPrdoukt = new JLabel(Messages.getString("product.3"));
             lblPrdoukt.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblPrdoukt = new GridBagConstraints();
             gbc_lblPrdoukt.fill = GridBagConstraints.BOTH;
@@ -755,7 +755,7 @@ public class SafetyStock extends JPanel {
             this.add(lblGemeinsamGenutzeKomponenten, gbc_lblGemeinsamGenutzeKomponenten);
         }
         {
-            JLabel lblFrAlleProdukte = new JLabel(Messages.getString("Buffer.35"));
+            JLabel lblFrAlleProdukte = new JLabel(Messages.getString("product.all"));
             lblFrAlleProdukte.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblFrAlleProdukte = new GridBagConstraints();
             gbc_lblFrAlleProdukte.fill = GridBagConstraints.BOTH;

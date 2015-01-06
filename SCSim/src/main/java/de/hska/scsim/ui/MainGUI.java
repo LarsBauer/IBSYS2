@@ -147,7 +147,7 @@ public class MainGUI extends JFrame {
 
         menu = new JLabel[8];
 
-        setTitle(Messages.getString("MainGUI.ProgName"));
+        setTitle(Messages.getString("main.appname"));
         setBounds(100, 100, 1200, 600);
         getContentPane().setLayout(new BorderLayout());
         contentPanel.setBackground(Color.WHITE);
@@ -170,48 +170,48 @@ public class MainGUI extends JFrame {
         northPanel.add(bar, BorderLayout.NORTH);
         JPanel innerPanel = new JPanel(new GridLayout(1, 6));
 
-        JLabel welcomeLbl = new JLabel(Messages.getString("MainGUI.0")); //Willkommen
+        JLabel welcomeLbl = new JLabel(Messages.getString("main.welcome")); //Willkommen
         welcomeLbl.setHorizontalAlignment(SwingConstants.CENTER);
         innerPanel.add(welcomeLbl);
         menu[0] = welcomeLbl;
 
-        JLabel forecastLbl = new JLabel(Messages.getString("MainGUI.1")); //Prognose
+        JLabel forecastLbl = new JLabel(Messages.getString("main.forecast")); //Prognose
         forecastLbl.setForeground(Color.LIGHT_GRAY);
         forecastLbl.setHorizontalAlignment(SwingConstants.CENTER);
         innerPanel.add(forecastLbl);
         menu[1] = forecastLbl;
 
-        JLabel safetyLbl = new JLabel(Messages.getString("MainGUI.2")); //Sicherheitsbestand
+        JLabel safetyLbl = new JLabel(Messages.getString("main.safetystock")); //Sicherheitsbestand
         safetyLbl.setForeground(Color.LIGHT_GRAY);
         safetyLbl.setHorizontalAlignment(SwingConstants.CENTER);
         innerPanel.add(safetyLbl);
         menu[2] = safetyLbl;
 
-        JLabel productionLbl = new JLabel(Messages.getString("MainGUI.3")); //Fertigungsaufträge
+        JLabel productionLbl = new JLabel(Messages.getString("main.productionorder")); //Fertigungsaufträge
         productionLbl.setForeground(Color.LIGHT_GRAY);
         productionLbl.setHorizontalAlignment(SwingConstants.CENTER);
         innerPanel.add(productionLbl);
         menu[3] = productionLbl;
 
-        JLabel capacityLbl = new JLabel(Messages.getString("MainGUI.4")); //Kapazitätsplanung
+        JLabel capacityLbl = new JLabel(Messages.getString("main.capacityplan")); //Kapazitätsplanung
         capacityLbl.setForeground(Color.LIGHT_GRAY);
         capacityLbl.setHorizontalAlignment(SwingConstants.CENTER);
         innerPanel.add(capacityLbl);
         menu[4] = capacityLbl;
 
-        JLabel orderLbl = new JLabel(Messages.getString("MainGUI.5")); //Bestellung
+        JLabel orderLbl = new JLabel(Messages.getString("main.order")); //Bestellung
         orderLbl.setForeground(Color.LIGHT_GRAY);
         orderLbl.setHorizontalAlignment(SwingConstants.CENTER);
         innerPanel.add(orderLbl);
         menu[5] = orderLbl;
 
-        JLabel lblFertigstellung = new JLabel(Messages.getString("MainGUI.Nachplanung")); //Nachplanung
+        JLabel lblFertigstellung = new JLabel(Messages.getString("main.prioritization")); //Nachplanung
         lblFertigstellung.setForeground(Color.LIGHT_GRAY);
         lblFertigstellung.setHorizontalAlignment(SwingConstants.CENTER);
         innerPanel.add(lblFertigstellung);
         menu[6] = lblFertigstellung;
 
-        JLabel finishLbl = new JLabel(Messages.getString("MainGUI.6")); //
+        JLabel finishLbl = new JLabel(Messages.getString("main.completion")); //
         finishLbl.setForeground(Color.LIGHT_GRAY);
         finishLbl.setHorizontalAlignment(SwingConstants.CENTER);
         innerPanel.add(finishLbl);
@@ -238,15 +238,15 @@ public class MainGUI extends JFrame {
         buttonPanel.setLayout(new FlowLayout(FlowLayout.TRAILING));
         getContentPane().add(buttonPanel, BorderLayout.SOUTH);
 
-        backButton = new JButton(Messages.getString("MainGUI.8"));
+        backButton = new JButton(Messages.getString("main.back"));
         backButton.setHorizontalAlignment(SwingConstants.LEFT);
-        backButton.setActionCommand(Messages.getString("MainGUI.9"));
+        backButton.setActionCommand(Messages.getString("main.ok"));
         backButton.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                nextButton.setText(Messages.getString("MainGUI.10"));
+                nextButton.setText(Messages.getString("main.next"));
 
                 contentPanel.remove(screens[index]);
                 menu[index].setForeground(Color.LIGHT_GRAY);
@@ -287,7 +287,7 @@ public class MainGUI extends JFrame {
                     File xml = new File(screen1.getTextField().getText());
                     if (!xml.exists()) {
                         JOptionPane.showOptionDialog(contentPanel, Messages
-                                .getString("MainGUI.17"), Messages.getString("MainGUI.18"), //$NON-NLS-1$ //$NON-NLS-2$
+                                .getString("main.path"), Messages.getString("main.filenotfound"), //$NON-NLS-1$ //$NON-NLS-2$
                                 JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null,
                                 null, null);
                         return;
@@ -296,7 +296,7 @@ public class MainGUI extends JFrame {
                         xmlParser.checkXmlFile(xml);
                         xmlParser.parse(xml);
                     } catch (Exception ex) {
-                        JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.30"), Messages.getString("MainGUI.31"), //$NON-NLS-1$ //$NON-NLS-2$
+                        JOptionPane.showOptionDialog(contentPanel, Messages.getString("main.fileinvalid"), Messages.getString("main.parsingerror"), //$NON-NLS-1$ //$NON-NLS-2$
                                 JOptionPane.CLOSED_OPTION, JOptionPane.WARNING_MESSAGE, null,
                                 null, null);
                         return;
@@ -306,8 +306,8 @@ public class MainGUI extends JFrame {
                 if (index == 1) {
                     if (screen2.getPlanedSales() == null
                             || screen2.getPlanedSalesAndForecasts() == null) {
-                        JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.13"), //$NON-NLS-1$
-                                Messages.getString("MainGUI.14"), JOptionPane.CLOSED_OPTION, //$NON-NLS-1$
+                        JOptionPane.showOptionDialog(contentPanel, Messages.getString("main.check"), //$NON-NLS-1$
+                                Messages.getString("main.incomplete"), JOptionPane.CLOSED_OPTION, //$NON-NLS-1$
                                 JOptionPane.WARNING_MESSAGE, null, null, null);
                         return;
                     }
@@ -316,8 +316,8 @@ public class MainGUI extends JFrame {
 
                 if (index == 2) {
                     if (screen3.getSafetyStocks() == null) {
-                        JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.15"), //$NON-NLS-1$
-                                Messages.getString("MainGUI.16"), JOptionPane.CLOSED_OPTION, //$NON-NLS-1$
+                        JOptionPane.showOptionDialog(contentPanel, Messages.getString("main.fields"), //$NON-NLS-1$
+                                Messages.getString("main.data"), JOptionPane.CLOSED_OPTION, //$NON-NLS-1$
                                 JOptionPane.WARNING_MESSAGE, null, null, null);
                         return;
                     }
@@ -341,16 +341,16 @@ public class MainGUI extends JFrame {
                     screen7.setData(productionPlanningResult);
 
                     // Erstellung Array vom Datentyp Object, Hinzufügen der Optionen
-                    Object[] options = {Messages.getString("MainGUI.26"), Messages.getString("MainGUI.25")};
+                    Object[] options = {Messages.getString("main.continue"), Messages.getString("main.edit")};
 
                     double stockValue = inspector.checkStockValue(productionPlanningResult, screen6.getData(), screen2.getPlanedSales());
 
                     //Dialog Lagermenge
                     if (stockValue < 250000.0) {
-                        JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.32") + stockValue + Messages.getString("MainGUI.27"), Messages.getString("MainGUI.28"), JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null);
+                        JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.32") + stockValue + Messages.getString("main.limit"), Messages.getString("main.stockvalue"), JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null);
 
                     } else {
-                        int selected = JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.32") + stockValue + Messages.getString("MainGUI.29"), Messages.getString("MainGUI.28"), JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE, null, options, 0);
+                        int selected = JOptionPane.showOptionDialog(contentPanel, Messages.getString("MainGUI.32") + stockValue + Messages.getString("main.nocosts"), Messages.getString("main.stockvalue"), JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE, null, options, 0);
 
                         if (selected == 1) {
                             return;
@@ -379,7 +379,7 @@ public class MainGUI extends JFrame {
                     contentPanel.repaint();
 
                     if (index == 7) {
-                        nextButton.setText(Messages.getString("MainGUI.19"));
+                        nextButton.setText(Messages.getString("main.finish"));
                     }
                 }
 

@@ -1,20 +1,14 @@
 package de.hska.scsim.ui;
 
 import de.hska.scsim.util.Messages;
-import de.hska.scsim.util.IntegerDocumentFilter;
 import de.hska.scsim.domain.output.ProductionPlanningResult;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
 import java.awt.GridLayout;
-import java.awt.Insets;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,18 +21,15 @@ import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JList;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.ListModel;
 import javax.swing.ListSelectionModel;
-import javax.swing.SwingConstants;
 import javax.swing.TransferHandler;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-import javax.swing.text.AbstractDocument;
 
 public class Prioritization extends JPanel {
 
@@ -67,7 +58,7 @@ public class Prioritization extends JPanel {
         this.setAlignmentX(Component.RIGHT_ALIGNMENT);
         this.setBackground(Color.WHITE);
 
-        String[] columnNames = {Messages.getString("Nachplanung.1"), Messages.getString("Nachplanung.2"), Messages.getString("Nachplanung.3")}; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+        String[] columnNames = {Messages.getString("prioritization.order"), Messages.getString("prioritization.components"), Messages.getString("prioritization.amount")}; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 
         this.setOpaque(true);
 
