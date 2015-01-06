@@ -2,6 +2,7 @@ package de.hska.scsim.ui;
 
 import de.hska.scsim.util.Messages;
 import de.hska.scsim.domain.output.ProductionPlanningResult;
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
@@ -24,6 +25,7 @@ import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.ListModel;
 import javax.swing.ListSelectionModel;
@@ -105,18 +107,20 @@ public class Prioritization extends JPanel {
         });
         setLayout(new GridLayout(0, 2, 0, 0));
 
+        
         JScrollPane listScrollPane = new JScrollPane(list);
         listScrollPane.setAutoscrolls(true);
         add(listScrollPane);
-
         JPanel panel = new JPanel();
+        panel.setLayout(new BorderLayout());
         panel.setBorder(new EmptyBorder(0, 50, 0, 0));
         panel.setBackground(Color.WHITE);
         add(panel);
-        JLabel text = new JLabel(Messages.getString(Messages.getString("prio.text")));
-        
-        
-        panel.add(text);
+        JTextArea text = new JTextArea(Messages.getString("prio.text"));
+        text.setLineWrap(true);
+        text.setEditable(false);
+        text.setWrapStyleWord(true);
+        panel.add(text, BorderLayout.CENTER);
     }
 
     public List<ProductionPlanningResult> getData() {
