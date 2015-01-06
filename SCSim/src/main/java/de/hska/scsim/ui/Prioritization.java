@@ -6,7 +6,6 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
-import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
@@ -116,7 +115,7 @@ public class Prioritization extends JPanel {
         panel.setBorder(new EmptyBorder(0, 50, 0, 0));
         panel.setBackground(Color.WHITE);
         add(panel);
-        JTextArea text = new JTextArea(Messages.getString("prio.text"));
+        JTextArea text = new JTextArea(Messages.getString("prioritization.text"));
         text.setLineWrap(true);
         text.setEditable(false);
         text.setWrapStyleWord(true);

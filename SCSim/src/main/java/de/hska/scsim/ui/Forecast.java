@@ -16,7 +16,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-import javax.swing.border.EmptyBorder;
 import javax.swing.text.AbstractDocument;
 
 public class Forecast extends JPanel {
@@ -286,7 +285,7 @@ public class Forecast extends JPanel {
             this.add(lblNewLabel_18, gbc_lblNewLabel_18);
         }
         {
-            JLabel lblNewLabel_14 = new JLabel(Messages.getString("forecast.men1")); //$NON-NLS-1$
+            JLabel lblNewLabel_14 = new JLabel(Messages.getString("forecast.period3")); //$NON-NLS-1$
             lblNewLabel_14.setHorizontalAlignment(SwingConstants.CENTER);
             GridBagConstraints gbc_lblNewLabel_14 = new GridBagConstraints();
             gbc_lblNewLabel_14.fill = GridBagConstraints.BOTH;
