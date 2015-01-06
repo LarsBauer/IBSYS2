@@ -50,7 +50,7 @@ public class Completion extends JPanel {
 			txtrHerzlichWillkommenDas.setWrapStyleWord(true);
 			txtrHerzlichWillkommenDas.setBorder(new EmptyBorder(30, 30, 0, 30));
 			txtrHerzlichWillkommenDas.setLineWrap(true);
-			txtrHerzlichWillkommenDas.setText(Messages.getString("Fertigstellung.1"));
+			txtrHerzlichWillkommenDas.setText(Messages.getString("completion.text"));
 			GridBagConstraints gbc_txtrHerzlichWillkommenDas = new GridBagConstraints();
 			gbc_txtrHerzlichWillkommenDas.gridwidth = 2;
 			gbc_txtrHerzlichWillkommenDas.fill = GridBagConstraints.BOTH;
@@ -84,7 +84,7 @@ public class Completion extends JPanel {
 			FileNameExtensionFilter plainFilter = new FileNameExtensionFilter("xml files (*.xml)", "xml");
 			chooser.removeChoosableFileFilter(chooser.getAcceptAllFileFilter());
 			chooser.setFileFilter(plainFilter);
-			chooser.setDialogTitle(Messages.getString("Fertigstellung.2"));
+			chooser.setDialogTitle(Messages.getString("completion.saveas"));
 			chooser.setVisible(true);
 
 			int result = chooser.showSaveDialog(this);

@@ -50,6 +50,7 @@ public class Welcome extends JPanel {
             txtrHerzlichWillkommenDas.setEditable(false);
             //txtrHerzlichWillkommenDas.setBorder(new EmptyBorder(30, 30, 0, 30));
             txtrHerzlichWillkommenDas.setLineWrap(true);
+            txtrHerzlichWillkommenDas.setWrapStyleWord(true);
             txtrHerzlichWillkommenDas.setText(Messages.getString("welcome.text"));
             GridBagConstraints gbc_txtrHerzlichWillkommenDas = new GridBagConstraints();
             gbc_txtrHerzlichWillkommenDas.gridwidth = 3;
