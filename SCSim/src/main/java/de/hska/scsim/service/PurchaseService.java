@@ -89,6 +89,8 @@ public class PurchaseService {
         }
     }
 
+    //TODO
+    //Avg Zeit?
     protected double calculateAvgRequirement(List<Map<String, Integer>> purchasePartReqs, String itemConfigId) {
         double sum = 0.0;
         for (Map<String, Integer> item : purchasePartReqs) {

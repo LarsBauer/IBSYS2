@@ -21,6 +21,7 @@ public class PlanningResultInspector {
     @Autowired
     private XmlParser xmlParser;
 
+    //TODO
     public double checkStockValue(List<ProductionPlanningResult> productionPlaningResults, List<PurchasePlanningResult> purchasePlaningResults, Map<String, Integer> planedSales) {
         Map<String, Integer> sales = calculateSales(planedSales);
 

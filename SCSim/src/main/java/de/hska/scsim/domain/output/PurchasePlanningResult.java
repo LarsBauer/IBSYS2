@@ -77,6 +77,7 @@ public class PurchasePlanningResult {
 		return currentDeliveryTime < 1;
 	}
 	
+        //TODO
 	public double getPositionCosts() {
 		if(quantity <= 0) {
 			return 0d;

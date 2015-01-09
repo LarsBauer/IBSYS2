@@ -224,6 +224,7 @@ public class Order extends JPanel {
 		return data;
 	}
 
+        //TODO
 	public Integer summeBerechnen() {
 
 		int sum = 0;
@@ -242,10 +243,10 @@ public class Order extends JPanel {
 				
 			}
 			else if(box.getItemAt(box.getSelectedIndex()).equals("normal")) {
-				data.get(i).setPurchaseMode(5);
+				data.get(i).setPurchaseMode(de.hska.scsim.util.Constants.STANDARD_DELIVERY_ID);
 			}
 			else if(box.getItemAt(box.getSelectedIndex()).equals("schnell")) {
-				data.get(i).setPurchaseMode(4);
+				data.get(i).setPurchaseMode(de.hska.scsim.util.Constants.FAST_DELIVERY_ID);
 			}
 			else if(box.getItemAt(box.getSelectedIndex()).equals("-")) {
 				data.get(i).setPurchaseMode(0);
